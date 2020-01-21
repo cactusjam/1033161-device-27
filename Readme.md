@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Evgenia Alfimova](https://up.htmlacademy.ru/htmlcss/27/user/1033161).
-* Наставник: [Алексей Пудников] (https://htmlacademy.ru/profile/id71418).
+* Наставник: [Алексей Пудников] (https://up.htmlacademy.ru/htmlcss/27/user/71418).
 
 ---
 
