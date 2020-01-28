@@ -7,120 +7,158 @@
   <body>
     <header class="header">
 
-      <div class="logo">
+      <a class="logo">
         <img src="#" alt="Логотип">
+      </a>
+
+      <div class="menu_options">
+        <input type="search" name="search" value="Поиск по сайту">
+        <ul>
+          <li><a href="">Войти</a></li>
+          <li><a href="">Сравнить</a></li>
+          <li><a href="">Корзина</a></li>
+        </ul>
       </div>
 
+      <nav class="menu_links">
+        <ul>
+          <li><a>Каталог товаров</a>
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="">Виртуальная реальность</a></li>
+                  <li><a href="">Моноподы для селфи</a></li>
+                  <li><a href="">Экшн-камеры</a></li>
+                </ul>
+              </li>
+            </ul>
 
-      <input type="search" name="search" value="Поиск по сайту">
-      <input type="submit" value="Войти">
-      <button type="button">Сравнить</button>
-      <button type="button">Корзина</button>
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="">Фитнес-браслеты</a></li>
+                  <li><a href="">Умные часы</a></li>
+                </ul>
+              </li>
+            </ul>
 
-      <nav class="menu_catalog">
-          <a>Каталог товаров</a>
-          <a href="">Доставка</a>
-          <a href="">Гарантия</a>
-          <a href="">Контакты</a>
-      </nav>        
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="">Квадрокоптеры</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Гарантия</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>             
  
     </header>
 
     <main>
 
-      <section class="main_item">
+      <section class="promo">
         <div>
           <img src="#" alt="Самая длинная палка для селфи">
         </div>
         
-        <div class="product description">
+        <div class="promo_controls">
           <h1>Делай селфи, <br>   
             как Бен Стиллер! 
           </h1>
           <p>Самая длинная палка для селфи доступна в нашем магазине. <br>
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <div>
-            <a href="">Подробнее</a>  
-            <ul>
-              <li><a href="">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-            </ul>
+            <button>Подробнее</button>  
+            
+            <label for="one">
+              <input type="radio" name="slider" id="one" value="1" checked>
+            </label>
+            
+            <label for="two">
+              <input type="radio" name="slider" id="two" value="2">
+            </label>
+            
+            <label for="three">
+              <input type="radio" name="slider" id="three" value="3">
+            </label>
           </div>
          
-          <div class="Product Detail">
-            <div class="size_product">
-              <span>8,5 м</span>
+          <div class="promo_details">
+            <div class="promo_specific">
+              <p>8,5 м</p>
               <p>Длина палки</p>
             </div>
           
-            <div class="weight_product">
-              <span>5 кг</span>
+            <div class="promo_specific">
+              <p>5 кг</p>
               <p>Вес палки</p>
             </div>
             
-            <div class="material_product">
-              <span>Карбон</span>
+            <div class="promo_specific">
+              <p>Карбон</p>
               <p>Материал</p>
             </div>
           </div>
         </div> 
       </section>
 
-      <section class="kinds_menu_products">
+      <section class="category-list">
 
-        <article class="product_kinds">
+        <article class="category_card">
           <a href="">
-            <img src="#" alt="Виртуальная реальность">
+            <img src="https://placehold.it/120" alt="Виртуальная реальность">
             <h3>Виртуальная реальность</h3> 
           </a>
         </article>
 
-        <article class="product_kinds">
+        <article class="category_card">
           <a href="">
-            <img src="#" alt="Моноподы для селфи">
+            <img src="https://placehold.it/120" alt="Моноподы для селфи">
             <h3>Моноподы для селфи</h3> 
           </a>
         </article>
         
-        <article class="product_kinds">
+        <article class="category_card">
           <a href="">
-            <img src="#" alt="Экшн-камеры">
+            <img src="https://placehold.it/120" alt="Экшн-камеры">
             <h3>Экшн-камеры</h3> 
           </a>
         </article>
 
-        <article class="product_kinds">
+        <article class="category_card">
           <a href="">
-            <img src="#" alt="Фитнес-браслеты">
+            <img src="https://placehold.it/120" alt="Фитнес-браслеты">
             <h3>Фитнес-браслеты</h3> 
           </a>
         </article>
 
-        <article class="product_kinds">
+        <article class="category_card">
           <a href="">
-            <img src="#" alt="Умные часы">
+            <img src="https://placehold.it/120" alt="Умные часы">
             <h3>Умные часы</h3> 
           </a>
         </article>
             
-        <article class="product_kinds">
+        <article class="category_card">
           <a href="">
-            <img src="#" alt="Квадрокоптеры">
+            <img src="https://placehold.it/120" alt="Квадрокоптеры">
             <h3>Квадрокоптеры</h3> 
           </a>
         </article>
 
       </section>
 
-      <section class="delivery">
-        <div class="menu_delivery">
-          <ul>
-            <li><a>Доставка</a></li>
-            <li><a href="">Гарантия</a></li>
-            <li><a href="">Кредит</a></li>
-          </ul>
-        </div>
+      <section class="delivery_menu">
+
+        <ul class="delivery">
+          <li><button>Доставка</button></li>
+          <li><button>Гарантия</button></li>
+          <li><button>Кредит</button></li>
+        </ul>
 
       <div>
         <h2>Доставка</h2>
