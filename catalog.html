@@ -7,11 +7,11 @@
   <body>
     <header class="header">
       
-      <a href="index.html" class="logo">
+      <a href="/" class="header_logo">
         <img src="#" alt="Логотип">
       </a>
       
-      <div class="menu_options">
+      <div class="header_options">
         <input type="search" name="search" value="Поиск по сайту">
         <ul>
           <li><a href="">Валентин Петухов</a></li>
@@ -60,8 +60,8 @@
 
     <main>
       <h1>Моноподы для селфи</h1>
-      <div class="second_menu_catalog">
-        <a href="index.html">Главная</a>
+      <div class="submenu_catalog">
+        <a href="/">Главная</a>
         <a href="catalog.html">Каталог товаров</a>
         <a>Моноподы для селфи</a>
       </div>
@@ -116,7 +116,7 @@
             </label>
           </fieldset>
 
-          <button>Показать</button>
+          <button class="yellow_button">Показать</button>
         </form>
       </section>
 
@@ -124,11 +124,30 @@
         <h2>Сортировка:</h2>
         <div class="sorting_menu">
           <ul>
-            <li><button>По цене</button></li>
-            <li><button>По типу</button></li>
-            <li><button>По популярности</button></li>
-            <li><button><img src="#">По возрастанию</button></li>
-            <li><button><img src="#">По убыванию</button></li>
+            <li>
+              <input type="checkbox" id="price" name="option" value="1" checked>
+              <label for="price">По цене</label>
+            </li>
+
+            <li>
+              <input type="checkbox" id="type" name="option" value="2">
+              <label for="type">По типу</label>
+            </li>
+
+            <li>
+              <input type="checkbox" id="popular" name="option" value="3">
+              <label for="popular">По популярности</label> 
+            </li>
+
+            <li>
+              <input type="checkbox" id="up" name="option" value="4">
+              <label for="up">По возрастанию</label>  
+            </li>
+
+            <li>
+              <input type="checkbox" id="down" name="option" value="5" checked>
+              <label for="down">По убыванию</label>
+            </li>
           </ul>
         </div>
 
@@ -182,7 +201,7 @@
 
     
     <footer class="footer">
-      <div class="logo">
+      <div class="footer_logo">
         <a href="index.html">
           <img src="#" alt="Логотип">
         </a>
