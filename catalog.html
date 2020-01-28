@@ -73,42 +73,32 @@
         
         <form action="#" method="get">
 
-          <fieldset class=coast>
+          <!-- <fieldset class=coast>
             <label for="cost">Стоимость</label>
             от 0 <input type="range" id="cost" name="cost" min="0" max="5000" step="1"> до 5000
-          </fieldset>
+          </fieldset> -->
 
           <fieldset class="color_choose">
             <h3>Цвет</h3>
             <p>
-              <label>
-                <input type="checkbox" id="black_color" value="black" name="color" checked>
-                Черный
-              </label>
+              <input type="checkbox" id="black_color" value="black" name="color" checked>
+              <label for="black_color">Черный</label>
             </p>
             <p>
-              <label>
-                <input type="checkbox" id="white_color" value="white" name="color"> 
-                Белый
-              </label>
+              <input type="checkbox" id="white_color" value="white" name="color">  
+              <label for="white_color">Белый</label>
             </p>
             <p>
-              <label>
-                <input type="checkbox" value="blue" name="color" checked> 
-                Синий
-              </label>
+              <input type="checkbox" id="blue_color" value="blue" name="color" checked>  
+              <label for="blue_color">Синий</label>
             </p>
-            <P>
-              <label>
-                <input type="checkbox" value="red" name="color" checked> 
-                Красный
-              </label>
-            </P>
             <p>
-              <label>
-                <input type="checkbox" value="pink" name="color"> 
-                Розовый
-              </label>
+              <input type="checkbox" id="red_color" value="red" name="color" checked> 
+              <label for="red_color">Красный</label>
+            </p>
+            <p>
+              <input type="checkbox" id="pink_color" value="pink" name="color"> 
+              <label for="">Розовый</label>
             </p>
           </fieldset>
 
@@ -126,58 +116,66 @@
             </label>
           </fieldset>
 
-          <input type="submit" value="Показать">
+          <button>Показать</button>
         </form>
       </section>
 
       <section class="catalog_choose">
         <h2>Сортировка:</h2>
         <div class="sorting_menu">
-          <button type="button">По цене</button>
-          <button type="button">По типу</button>
-          <button type="button">По популярности</button>
+          <ul>
+            <li><button>По цене</button></li>
+            <li><button>По типу</button></li>
+            <li><button>По популярности</button></li>
+            <li><button><img src="#">По возрастанию</button></li>
+            <li><button><img src="#">По убыванию</button></li>
+          </ul>
         </div>
 
-        <article class="product">
-         <a href="">
-           <img src="#" alt="Любительская селфи-палка">
-           <h3>Любительская селфи-палка</h3>
-           <p>500 руб.</p>
-          </a>
-        </article>
+        <div class="product range">
+
+          <article class="product">
+            <a href="">
+              <img src="#" alt="Любительская селфи-палка">
+              <h3>Любительская селфи-палка</h3>
+              <p>500 руб.</p>
+             </a>
+           </article>
+      
+           <article class="product">
+             <a href="">
+               <img src="#" alt="Профессиональная селфи-палка">
+               <h3>Профессиональная селфи-палка </h3>
+               <p>1500 руб.</p>
+             </a>    
+           </article>
    
-        <article class="product">
-          <a href="">
-            <img src="#" alt="Профессиональная селфи-палка">
-            <h3>Профессиональная селфи-палка </h3>
-            <p>1500 руб.</p>
-          </a>    
-        </article>
+           <article class="product">
+             <a href="">
+               <img src="#" alt="Непотопляемая селфи-палка">
+               <h3>Непотопляемая селфи-палка</h3>
+               <p>2500 руб.</p>
+             </a>
+           </article>
+   
+           <article class="product">
+             <a href="">
+               <img src="#" alt="Селфи-палка «Следуй за мной»">
+               <h3>Селфи-палка «Следуй за мной»</h3>
+               <p>4900 руб.</p>
+             </a> 
+           </article>
+        </div>
+        
 
-        <article class="product">
-          <a href="">
-            <img src="#" alt="Непотопляемая селфи-палка">
-            <h3>Непотопляемая селфи-палка</h3>
-            <p>2500 руб.</p>
-          </a>
-        </article>
-
-        <article class="product">
-          <a href="">
-            <img src="#" alt="Селфи-палка «Следуй за мной»">
-            <h3>Селфи-палка «Следуй за мной»</h3>
-            <p>4900 руб.</p>
-          </a> 
-        </article>
-
-        <div class="item-list">
-          <a href="">Назад</a> 
+        <div class="pagination">
           <ul>
+            <li><a href="">Назад</a></li>
             <li><a>1</a></li>
             <li><a href="">2</a></li>
             <li><a href="">3</a></li>
-          </ul>
-           <a href="">Вперед</a> 
+            <li><a href="">Вперед</a></li>
+          </ul> 
          </div>
       </section>
     </main>
@@ -190,23 +188,25 @@
         </a>
       </div>
       
-    <div class="footer_content">
-      <a href="">Валентин Петухов</a>
-      <button>Выйти</button>
-      <a href="">Сравнить</a>
-      <a href="">Корзина</a>
-    </div>
+      <div class="footer_content">
+        <ul>
+          <li><a href="">Валентин Петухов</a></li>
+          <li><button>Выйти</button></li>
+          <li><a href="">Сравнить</a></li>
+          <li><a href="">Корзина</a></li>
+        </ul>
+      </div>
 
 
       <p>г. Москва, ул. Строителей, 15</p>
       <ul>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Гарантия</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
       <p>Тел.: +7 (495) 495-95-95</p>
 
-      <div class="social network">
+      <div class="social">
         <ul>
           <li><a href="">Фейсбук</a></li>
           <li><a href="">Инстаграм</a></li>
