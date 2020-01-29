@@ -8,11 +8,11 @@
     <header class="header">
       
       <a href="/" class="header_logo">
-        <img src="#" alt="Логотип">
+        <img src="img/device.svg" width="163" height="35" alt="Логотип">
       </a>
       
       <div class="header_options">
-        <input type="search" name="search" value="Поиск по сайту">
+        <input type="search" name="search"  placeholder="Поиск по сайту">
         <ul>
           <li><a href="">Валентин Петухов</a></li>
           <li><a href="">Сравнить</a></li>
@@ -98,22 +98,20 @@
             </p>
             <p>
               <input type="checkbox" id="pink_color" value="pink" name="color"> 
-              <label for="">Розовый</label>
+              <label for="pink_color">Розовый</label>
             </p>
           </fieldset>
 
          
           <fieldset class="bluetooth_choose">
             <h3>Bluetooth</h3>
-            <label>
-              <input type="radio" value="yes" name="bluetooth" checked>Есть
-            </label>
+            <input type="radio" id="bluetooth_yes" value="yes" name="bluetooth" checked>
+            <label for="bluetooth_yes">Есть</label>
 
             <br>
 
-            <label>
-              <input type="radio" value="no" name="bluetooth">Нет
-            </label>
+            <input type="radio" id="bluetooth_no" value="no" name="bluetooth">
+            <label for="bluetooth_no">Нет</label>
           </fieldset>
 
           <button class="yellow_button">Показать</button>
@@ -151,19 +149,19 @@
           </ul>
         </div>
 
-        <div class="product range">
+        <div class="product_range">
 
           <article class="product">
             <a href="">
-              <img src="#" alt="Любительская селфи-палка">
+              <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <h3>Любительская селфи-палка</h3>
               <p>500 руб.</p>
-             </a>
+            </a>
            </article>
       
            <article class="product">
              <a href="">
-               <img src="#" alt="Профессиональная селфи-палка">
+               <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                <h3>Профессиональная селфи-палка </h3>
                <p>1500 руб.</p>
              </a>    
@@ -171,7 +169,7 @@
    
            <article class="product">
              <a href="">
-               <img src="#" alt="Непотопляемая селфи-палка">
+               <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                <h3>Непотопляемая селфи-палка</h3>
                <p>2500 руб.</p>
              </a>
@@ -179,7 +177,7 @@
    
            <article class="product">
              <a href="">
-               <img src="#" alt="Селфи-палка «Следуй за мной»">
+               <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                <h3>Селфи-палка «Следуй за мной»</h3>
                <p>4900 руб.</p>
              </a> 
@@ -201,12 +199,10 @@
 
     
     <footer class="footer">
-      <div class="footer_logo">
-        <a href="index.html">
-          <img src="#" alt="Логотип">
+        <a href="/">
+          <img src="img/device.svg" class="footer_logo" width="163" height="35" alt="Логотип">
         </a>
-      </div>
-      
+    
       <div class="footer_content">
         <ul>
           <li><a href="">Валентин Петухов</a></li>
@@ -215,7 +211,6 @@
           <li><a href="">Корзина</a></li>
         </ul>
       </div>
-
 
       <p>г. Москва, ул. Строителей, 15</p>
       <ul>
@@ -227,10 +222,12 @@
 
       <div class="social">
         <ul>
-          <li><a href="">Фейсбук</a></li>
-          <li><a href="">Инстаграм</a></li>
-          <li><a href="">Твиттер</a></li> 
+          <li><a href=""><img src="img/fb.svg" width="32" height="32" alt="Facebook">Фейсбук</a></li>
+          <li><a href=""><img src="img/inst.svg" width="32" height="32" alt="Instagram">Инстаграм</a></li>
+          <li><a href=""><img src="img/tw.svg" width="32" height="32" alt="Twitter">Твиттер</a></li> 
+          <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="27" height="35"></a></li>
         </ul>
+        
       </div>
       
     </footer>    
