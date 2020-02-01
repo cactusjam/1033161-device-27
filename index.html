@@ -6,18 +6,25 @@
   </head>
   <body>
     <header class="header">
+      <h1 class="visually_hidden">Магазин гаджетов "DEVICE"</h1>
 
       <a class="header_logo">
         <img src="img/device.svg" width="163" height="35" alt="Device">
       </a>
 
       <div class="header_options">
-        <input type="search" name="search" placeholder="Поиск по сайту">
+
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" id="search" name="search" placeholder="Поиск по сайту">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+        </form>
+
         <ul>
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
           <li><a href="#">Корзина</a></li>
         </ul>
+
       </div>
 
       <nav class="menu_links">
@@ -26,9 +33,9 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">Виртуальная реальность</a></li>
-                  <li><a href="#">Моноподы для селфи</a></li>
-                  <li><a href="#">Экшн-камеры</a></li>
+                  <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
+                  <li><a href="catalog/monopod.html">Моноподы для селфи</a></li>
+                  <li><a href="catalog/camera.html">Экшн-камеры</a></li>
                 </ul>
               </li>
             </ul>
@@ -36,8 +43,8 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">Фитнес-браслеты</a></li>
-                  <li><a href="#">Умные часы</a></li>
+                  <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
+                  <li><a href="catalog/clock.html">Умные часы</a></li>
                 </ul>
               </li>
             </ul>
@@ -45,7 +52,7 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">Квадрокоптеры</a></li>
+                  <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
                 </ul>
               </li>
             </ul>
@@ -61,6 +68,7 @@
     <main>
 
       <section class="promo">
+        <h2 class="visually_hidden">Презентация товара</h2>
         <div>
           <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
         </div>
@@ -103,44 +111,45 @@
       </section>
 
       <section class="category-list">
+        <h2 class="visually_hidden">Каталог товаров по категориям</h2>
 
         <article class="category_card">
-          <a href="">
+          <a href="catalog/virtual.html">
             <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
             <h3>Виртуальная реальность</h3> 
           </a>
         </article>
 
         <article class="category_card">
-          <a href="">
+          <a href="catalog/monopod.html">
             <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
             <h3>Моноподы для селфи</h3> 
           </a>
         </article>
         
         <article class="category_card">
-          <a href="">
+          <a href="catalog/camera.html">
             <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
             <h3>Экшн-камеры</h3> 
           </a>
         </article>
 
         <article class="category_card">
-          <a href="">
+          <a href="catalog/fitness.html">
             <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
             <h3>Фитнес-браслеты</h3> 
           </a>
         </article>
 
         <article class="category_card">
-          <a href="">
+          <a href="catalog/clock.html">
             <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
             <h3>Умные часы</h3> 
           </a>
         </article>
             
         <article class="category_card">
-          <a href="">
+          <a href="catalog/quadrocopter.html">
             <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
             <h3>Квадрокоптеры</h3> 
           </a>
@@ -149,7 +158,7 @@
       </section>
 
       <section class="delivery_menu">
-
+        <h2 class="visually_hidden">Меню доставки</h2>
         <ul class="delivery">
           <li><button class="yellow_button">Доставка</button></li>
           <li><button class="yellow_button">Гарантия</button></li>
@@ -166,6 +175,7 @@
       </section>  
 
       <section class="company_cooperate">
+        <h2 class="visually_hidden">Компании с которыми мы сотрудничаем</h2>
           <a href="" class="cooperate">
             <img src="img/logo-1.jpg" width="260" height="100" alt="dji">
             <!-- при наведении <img src="img/logo-1_hidden.jpg" width="260" height="100" alt="dji"> --> 
@@ -188,6 +198,7 @@
       </section>
 
       <section class="about_company">
+        <h2 class="visually_hidden">О компании</h2>
 
         <div class="about_us">
           <h2>О нас</h2>
