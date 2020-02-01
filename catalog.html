@@ -6,17 +6,30 @@
   </head>
   <body>
     <header class="header">
-      
+      <h1 class="visually_hidden">Каталог товаров магазина гаджетов "DEVICE"</h1>
+
       <a href="/" class="header_logo">
-        <img src="img/device.svg" width="163" height="35" alt="Перейти на главную">
+        <img src="img/device.svg" width="163" height="35" alt="Device">
       </a>
       
       <div class="header_options">
-        <input type="search" name="search" placeholder="Поиск по сайту">
+
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <input type="search" id="search" name="search" placeholder="Поиск по сайту">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+        </form>
+        
         <ul>
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li>
+            <a href="#">Валентин Петухов</a>
+            <a href="#">Выйти</a>
+          </li>
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
         </ul>
       </div>
 
@@ -26,9 +39,9 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">Виртуальная реальность</a></li>
-                  <li><a href="#">Моноподы для селфи</a></li>
-                  <li><a href="#">Экшн-камеры</a></li>
+                  <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
+                  <li><a href="catalog/monopod.html">Моноподы для селфи</a></li>
+                  <li><a href="catalog/camera.html">Экшн-камеры</a></li>
                 </ul>
               </li>
             </ul>
@@ -36,8 +49,8 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">Фитнес-браслеты</a></li>
-                  <li><a href="#">Умные часы</a></li>
+                  <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
+                  <li><a href="catalog/clock.html">Умные часы</a></li>
                 </ul>
               </li>
             </ul>
@@ -45,7 +58,7 @@
             <ul>
               <li>
                 <ul>
-                  <li><a href="#">Квадрокоптеры</a></li>
+                  <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
                 </ul>
               </li>
             </ul>
@@ -59,7 +72,7 @@
     </header>
 
     <main>
-      <h1>Моноподы для селфи</h1>
+      <h2>Моноподы для селфи</h2>
       <div class="submenu_catalog">
         <a href="/">Главная</a>
         <a href="catalog.html">Каталог товаров</a>
@@ -68,43 +81,54 @@
 
       <section class="filter_menu">
         <div>
-          <h2>Фильтр</h2>
+          <h3>Фильтр</h3>
         </div>
         
-        <form action="#" method="get">
+        <form action="https://echo.htmlacademy.ru/" method="get">
 
           <!-- <fieldset class=coast>
             <label for="cost">Стоимость</label>
             от 0 <input type="range" id="cost" name="cost" min="0" max="5000" step="1"> до 5000
           </fieldset> -->
 
+          <!-- <div class="range-slider">
+            <label class="min">от 0 <input type="number" value="0" name="min"></label>
+            <label class="max">до 5000 <input type="number" value="5000" name="max"></label>
+            
+            <div class="range-slider-track">
+              <div class="range-slider-pin range-slider-pin-min"></div>
+              <div class="range-slider-pin range-slider-pin-max"></div>
+            </div>
+          </div>
+          <br> -->
+          
           <fieldset class="color_choose">
-            <h3>Цвет</h3>
+            <legend>Цвет</legend>
             <p>
-              <input type="checkbox" id="black_color" name="color_black" checked>
+              <input type="checkbox" id="black_color" name="color_black" value="1" checked>
               <label for="black_color">Черный</label>
             </p>
             <p>
-              <input type="checkbox" id="white_color" name="color_white">  
+              <input type="checkbox" id="white_color" name="color_white" value="2">  
               <label for="white_color">Белый</label>
             </p>
             <p>
-              <input type="checkbox" id="blue_color" name="color_blue" checked>  
+              <input type="checkbox" id="blue_color" name="color_blue" value="3" checked>  
               <label for="blue_color">Синий</label>
             </p>
             <p>
-              <input type="checkbox" id="red_color" name="color_red" checked> 
+              <input type="checkbox" id="red_color" name="color_red" value="4" checked> 
               <label for="red_color">Красный</label>
             </p>
             <p>
-              <input type="checkbox" id="pink_color" name="color_pink"> 
+              <input type="checkbox" id="pink_color" value="5" name="color_pink"> 
               <label for="pink_color">Розовый</label>
             </p>
           </fieldset>
 
          
           <fieldset class="bluetooth_choose">
-            <h3>Bluetooth</h3>
+            <legend>Bluetooth</legend>
             <input type="radio" id="bluetooth_yes" value="yes" name="bluetooth" checked>
             <label for="bluetooth_yes">Есть</label>
 
@@ -119,31 +143,31 @@
       </section>
 
       <section class="catalog_choose">
-        <h2>Сортировка:</h2>
+        <h3>Сортировка:</h3>
         <div class="sorting_menu">
           <ul>
             <li>
-              <input type="checkbox" id="sorting_price" name="option" checked>
+              <input type="checkbox" id="sorting_price" name="option" value="1" checked>
               <label for="sorting_price">По цене</label>
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_type" name="option">
+              <input type="checkbox" id="sorting_type" name="option" value="2">
               <label for="sorting_type">По типу</label>
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_popular" name="option">
+              <input type="checkbox" id="sorting_popular" name="option" value="3">
               <label for="sorting_popular">По популярности</label> 
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_up" name="option">
+              <input type="checkbox" id="sorting_up" name="option" value="4">
               <label for="sorting_up">По возрастанию</label>  
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_down" name="option" checked>
+              <input type="checkbox" id="sorting_down" name="option" checked value="5">
               <label for="sorting_down">По убыванию</label>
             </li>
           </ul>
@@ -200,7 +224,7 @@
     
     <footer class="footer">
         <a href="/" class="footer_logo">
-          <img src="img/device.svg" width="163" height="35" alt="Перейти на главную">
+          <img src="img/device.svg" width="163" height="35" alt=Device">
         </a>
     
       <div class="footer_content">
