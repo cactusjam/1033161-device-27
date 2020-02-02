@@ -86,44 +86,44 @@
         
         <form action="https://echo.htmlacademy.ru/" method="get">
 
-          <div class="filter-range">
-            <div class="range-slider-track">
-              <div class="range-slider-pin range-slider-pin-min"></div>
-              <div class="range-slider-pin range-slider-pin-max"></div>
+          <fieldset class="price_choose">
+            <legend>Стоимость</legend>
+            <div class="filter-range">
+              <div class="range-slider-track">
+                <div class="range-slider-pin range-slider-pin-min"></div>
+                <div class="range-slider-pin range-slider-pin-max"></div>
+              </div>
+  
+              <div class="range-slider">
+                <label for="range_minprice" class="min_price">от 0</label> 
+                <input type="number" id="range_minprice" value="0" min="0" name="min">
+                
+                <label for="range_maxprice" class="max_price">до 5000</label> 
+                <input type="number" id="range_maxprice" value="5000" max="5000" name="max">  
+              </div>
             </div>
-
-            <div class="range-slider">
-              <label class="min_price">от 0 
-                <input type="text" value="0" name="min">
-              </label>
-              <label class="max_price">до 5000 
-                <input type="text" value="5000" name="max">
-              </label> 
-            </div>
-          </div>
-          
-          <br> 
-          
+          </fieldset>
+           
           <fieldset class="color_choose">
             <legend>Цвет</legend>
             <p>
-              <input type="checkbox" id="black_color" name="color_black" value="1" checked>
+              <input type="checkbox" id="black_color" name="colors" value="black" checked>
               <label for="black_color">Черный</label>
             </p>
             <p>
-              <input type="checkbox" id="white_color" name="color_white" value="2">  
+              <input type="checkbox" id="white_color" name="colors" value="white">  
               <label for="white_color">Белый</label>
             </p>
             <p>
-              <input type="checkbox" id="blue_color" name="color_blue" value="3" checked>  
+              <input type="checkbox" id="blue_color" name="colors" value="blue" checked>  
               <label for="blue_color">Синий</label>
             </p>
             <p>
-              <input type="checkbox" id="red_color" name="color_red" value="4" checked> 
+              <input type="checkbox" id="red_color" name="colors" value="red" checked> 
               <label for="red_color">Красный</label>
             </p>
             <p>
-              <input type="checkbox" id="pink_color" value="5" name="color_pink"> 
+              <input type="checkbox" id="pink_color" name="colors" value="pink""> 
               <label for="pink_color">Розовый</label>
             </p>
           </fieldset>
@@ -149,27 +149,27 @@
         <div class="sorting_menu">
           <ul>
             <li>
-              <input type="checkbox" id="sorting_price" name="option" value="1" checked>
+              <input type="checkbox" id="sorting_price" name="option" value="price" checked>
               <label for="sorting_price">По цене</label>
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_type" name="option" value="2">
+              <input type="checkbox" id="sorting_type" name="option" value="type">
               <label for="sorting_type">По типу</label>
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_popular" name="option" value="3">
+              <input type="checkbox" id="sorting_popular" name="option" value="popular">
               <label for="sorting_popular">По популярности</label> 
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_up" name="option" value="4">
+              <input type="checkbox" id="sorting_up" name="option" value="up">
               <label for="sorting_up">По возрастанию</label>  
             </li>
 
             <li>
-              <input type="checkbox" id="sorting_down" name="option" checked value="5">
+              <input type="checkbox" id="sorting_down" name="option" value="down" checked>
               <label for="sorting_down">По убыванию</label>
             </li>
           </ul>
