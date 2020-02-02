@@ -86,15 +86,22 @@
         
         <form action="https://echo.htmlacademy.ru/" method="get">
 
-          <div class="range-slider">
-            <label class="min">от 0 <input type="number" value="0" name="min"></label>
-            <label class="max">до 5000 <input type="number" value="5000" name="max"></label>
-            
+          <div class="filter-range">
             <div class="range-slider-track">
               <div class="range-slider-pin range-slider-pin-min"></div>
               <div class="range-slider-pin range-slider-pin-max"></div>
             </div>
+
+            <div class="range-slider">
+              <label class="min_price">от 0 
+                <input type="text" value="0" name="min">
+              </label>
+              <label class="max_price">до 5000 
+                <input type="text" value="5000" name="max">
+              </label> 
+            </div>
           </div>
+          
           <br> 
           
           <fieldset class="color_choose">
@@ -241,9 +248,21 @@
 
       <div class="social">
         <ul>
-          <li><a href="#" target="_blank" rel="noopener">Фейсбук</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Инстаграм</a></li>
-          <li><a href="#" target="_blank" rel="noopener">Твиттер</a></li> 
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <span class="visually_hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <span class="visually_hidden">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <span class="visually_hidden">Twitter</span>
+            </a>
+          </li> 
           <li><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener"><img src="img/logo-htmlacademy.svg" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy"></a></li>  
         </ul> 
       </div>
