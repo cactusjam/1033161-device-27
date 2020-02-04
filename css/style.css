@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'gilroy';
+    src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+         url('../fonts/gilroyextrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroy';
+    src: url('../fonts/gilroylight.woff2') format('woff2'),
+         url('../fonts/gilroylight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Временно тут */
+.popup {
+    display: none;
+}
+/* -------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.header {
+    background-color: #f0c52e;
+}
+
+.visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    opacity: 0.6;
+}
+a:focus {
+    opacity: 0.3;
+}
+
+input[type="search"] {
+    opacity: 0.3;
+    border: none;
+    background-color: #f0c52e;
+    outline: none;
+    color: #000000
+}
+
+input[type="search"]:hover {
+    opacity: 0.6;
+}
+
+input[type="search"]:focus {
+    opacity: 1;
+}
+
+.menu_links {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+}
+
+.nav_item li {
+    font-weight: 300;
+    list-style: none;
+}
+.menu_links li {
+    list-style: none;
+}
+
+.dropdown_menu ul li{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: 300;
+    letter-spacing: 0.15px
+}
+
+h2 {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 48px;
+    letter-spacing: 0.47px;
+}
+
+.about_us p,
+.about_contacts p {
+    color: #464646;
+}
+
+.about_us ul li {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.btn {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f0c52e;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footer {
+    background-color: #464646;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.social li {
+    list-style: none;
+}
+
+/*----------------- каталог ----------------*/
+.logout {
+    opacity: 0.3;
+}
+
+.logout:hover {
+    opacity: 0.6;
+}
+
+.logout:focus {
+    opacity: 1;
+}
+
+.submenu_catalog a {
+    font-size: 14px;
+    letter-spacing: 0.14;
+    font-weight: 300;
+    line-height: 24px;
+    opacity: 0.3;
+}
+
+.submenu_catalog a:hover {
+    opacity: 0.6;
+}
+
+.submenu_catalog a:focus{
+    opacity: 0.1;
+}
+
+.filter_menu form,
+.sorting_menu {
+    background-color: #ebebeb;
+    font-size: 14px;
+}
+
+.filter_menu legend,
+.sorting_form legend {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+}
+
+.sorting_form li {
+    list-style: none;
+}
+
+h3 {
+    font-family: 'gilroy', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3.2px;
+}
+
+input[type="checkbox"]:hover{
+    opacity: 0.6;
+}
+
+input[type="checkbox"]:focus{
+    opacity: 1;
+}
+
+input[type="checkbox"]:disabled{
+    opacity: 0.25;
+}
+
+input[type="checkbox"]:disabled + label{
+    opacity: 0.25;
+}

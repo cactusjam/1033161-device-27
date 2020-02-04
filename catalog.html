@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -16,13 +19,13 @@
 
         <form method="get" action="https://echo.htmlacademy.ru">
           <input type="search" id="search" name="search" placeholder="Поиск по сайту">
-          <label for="search" class="visually-hidden">Поиск по сайту</label>
+          <label for="search" class="visually_hidden">Поиск по сайту</label>
         </form>
         
-        <ul>
+        <ul class="nav_item">
           <li>
             <a href="#">Валентин Петухов</a>
-            <a href="#">Выйти</a>
+            <a class="logout" href="#">Выйти</a>
           </li>
           <li>
             <a href="#">Сравнить</a>
@@ -35,8 +38,8 @@
 
       <nav class="menu_links">
         <ul>
-          <li><a>Каталог товаров</a>
-            <ul>
+          <li><a class="dropdown_catalog">Каталог товаров</a>
+            <ul class="dropdown_menu">
               <li>
                 <ul>
                   <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
@@ -44,18 +47,14 @@
                   <li><a href="catalog/camera.html">Экшн-камеры</a></li>
                 </ul>
               </li>
-            </ul>
-
-            <ul>
+            
               <li>
                 <ul>
                   <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
                   <li><a href="catalog/clock.html">Умные часы</a></li>
                 </ul>
               </li>
-            </ul>
-
-            <ul>
+          
               <li>
                 <ul>
                   <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
@@ -67,7 +66,7 @@
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-      </nav>      
+      </nav>             
  
     </header>
 
@@ -84,7 +83,7 @@
           <h3>Фильтр</h3>
         </div>
         
-        <form action="https://echo.htmlacademy.ru/" method="get">
+        <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
 
           <fieldset class="price_choose">
             <legend>Стоимость</legend>
@@ -140,7 +139,7 @@
             <label for="bluetooth_no">Нет</label>
           </fieldset>
 
-          <button class="yellow_button">Показать</button>
+          <button class="btn">Показать</button>
         </form>
       </section>
 
@@ -230,7 +229,7 @@
         </a>
     
       <div class="footer_content">
-        <ul>
+        <ul class="nav_item">
           <li><a href="#">Валентин Петухов</a></li>
           <li><a href="#">Выйти</a></li>
           <li><a href="#">Сравнить</a></li>
@@ -239,7 +238,7 @@
       </div>
 
       <p>г. Москва, ул. Строителей, 15</p>
-      <ul>
+      <ul class="menu_links footer_links">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
