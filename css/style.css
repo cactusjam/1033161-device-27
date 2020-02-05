@@ -52,7 +52,8 @@ a {
     color: #000000;
 }
 
-a:hover {
+a:hover,
+.submenu_catalog a:hover {
     opacity: 0.6;
 }
 
@@ -116,11 +117,10 @@ input[type="radio"]:disabled + label {
     letter-spacing: 3.6px;
 }
 
+.menu_links li,
+.about_us li,
+.delivery li,
 .nav_item li {
-    font-weight: 300;
-    list-style: none;
-}
-.menu_links li {
     list-style: none;
 }
 
@@ -135,13 +135,8 @@ input[type="radio"]:disabled + label {
 .submenu_catalog a {
     font-size: 14px;
     letter-spacing: 0.14;
-    font-weight: 300;
     line-height: 24px;
     opacity: 0.3;
-}
-
-.submenu_catalog a:hover {
-    opacity: 0.6;
 }
 
 .submenu_catalog a:focus{
@@ -176,7 +171,6 @@ h3 {
     font-weight: bold;
     font-size: 16px;
     line-height: 40px;
-    list-style: none;
 }
 
 
@@ -202,7 +196,8 @@ li .logout:focus {
 }
 
 .filter_menu legend,
-.product .product_name {
+.product .product_name,
+.category_card p {
     font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -252,4 +247,29 @@ li .logout:focus {
 
 .nav_footer {
     opacity: 0.7;
+}
+
+/* ----------промо---------- */
+
+.promo_slogan {
+    font-family: "gilroy", "Arial", sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+    letter-spacing: 0.47px;
+
+    text-align: left;
+}
+
+.promo_controls p:nth-child(3),
+.promo_controls p:nth-child(4),
+.promo_specific p:nth-child(2),
+.delivery_description p {
+    color: #464646;
+}
+
+.promo_specific p:first-child {
+    font-family: "gilroy", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.36px;
 }
