@@ -45,16 +45,35 @@ body {
     overflow: hidden;
 }
 
+/* ------------ ссылки ----------- */
+
 a {
     text-decoration: none;
     color: #000000;
 }
+
 a:hover {
     opacity: 0.6;
 }
+
 a:focus {
     opacity: 0.3;
 }
+
+/* -------- кнопки --------- */
+
+.btn {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f0c52e;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ---------- формы ------------ */
 
 input[type="search"] {
     opacity: 0.3;
@@ -62,15 +81,32 @@ input[type="search"] {
     background-color: #f0c52e;
     outline: none;
     color: #000000
-}
+} 
 
-input[type="search"]:hover {
+input[type="search"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"]:hover{
     opacity: 0.6;
 }
 
-input[type="search"]:focus {
+input[type="search"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
     opacity: 1;
 }
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+    opacity: 0.25;
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+    opacity: 0.25;
+}
+
+/* 
+---------- навигация ----------- */
 
 .menu_links {
     font-family: 'gilroy', sans-serif;
@@ -96,63 +132,6 @@ input[type="search"]:focus {
     letter-spacing: 0.15px
 }
 
-h2 {
-    font-family: 'gilroy', sans-serif;
-    font-weight: bold;
-    font-size: 47px;
-    line-height: 48px;
-    letter-spacing: 0.47px;
-}
-
-.about_us p,
-.about_contacts p {
-    color: #464646;
-}
-
-.about_us ul li {
-    font-family: 'gilroy', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 40px;
-    list-style: none;
-}
-
-.btn {
-    font-family: 'gilroy', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: #f0c52e;
-    line-height: 24px;
-    letter-spacing: 3.6px;
-    text-align: center;
-    text-transform: uppercase;
-}
-.footer {
-    background-color: #464646;
-    color: white;
-}
-
-.footer a {
-    color: white;
-}
-
-.social li {
-    list-style: none;
-}
-
-/*----------------- каталог ----------------*/
-.logout {
-    opacity: 0.3;
-}
-
-.logout:hover {
-    opacity: 0.6;
-}
-
-.logout:focus {
-    opacity: 1;
-}
-
 .submenu_catalog a {
     font-size: 14px;
     letter-spacing: 0.14;
@@ -169,6 +148,53 @@ h2 {
     opacity: 0.1;
 }
 
+/* ---------- заголовки ----------- */
+
+h2 {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 48px;
+    letter-spacing: 0.47px;
+}
+
+h3 {
+    font-family: 'gilroy', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3.2px;
+}
+
+/* ---------- о нас ---------- */
+
+.about_us p,
+.about_contacts p {
+    color: #464646;
+}
+
+.about_us ul li {
+    font-family: 'gilroy', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    list-style: none;
+}
+
+
+/* ------- выйти ------- */
+ li .logout {
+    opacity: 0.3;
+}
+
+li .logout:hover {
+    opacity: 0.6;
+}
+
+li .logout:focus {
+    opacity: 1;
+}
+
+/* ----------- фильтр ---------- */
+
 .filter_menu form,
 .sorting_menu {
     background-color: #ebebeb;
@@ -176,7 +202,8 @@ h2 {
 }
 
 .filter_menu legend,
-.sorting_form legend {
+.sorting_form legend,
+.product .product_name {
     font-family: 'gilroy', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -188,24 +215,28 @@ h2 {
     list-style: none;
 }
 
-h3 {
+.product span {
     font-family: 'gilroy', sans-serif;
     font-size: 16px;
-    letter-spacing: 3.2px;
+    line-height: 24px;
+    letter-spacing: 0.16px;
 }
 
-input[type="checkbox"]:hover{
-    opacity: 0.6;
+/* -------- футер --------- */
+
+.social li {
+    list-style: none;
+} 
+
+.footer {
+    background-color: #464646;
+    color: white;
 }
 
-input[type="checkbox"]:focus{
-    opacity: 1;
+.footer a {
+    color: white;
 }
 
-input[type="checkbox"]:disabled{
-    opacity: 0.25;
-}
-
-input[type="checkbox"]:disabled + label{
-    opacity: 0.25;
+.nav_footer {
+    opacity: 0.7;
 }
