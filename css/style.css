@@ -22,7 +22,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'OpenSans', sans-serif;
+    font-family: "OpenSans","Arial", sans-serif;
     font-size: 15px;
     line-height: 30px;
     font-weight: 300;
@@ -63,7 +63,7 @@ a:focus {
 /* -------- кнопки --------- */
 
 .btn {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
     background-color: #f0c52e;
@@ -109,7 +109,7 @@ input[type="radio"]:disabled + label {
 ---------- навигация ----------- */
 
 .menu_links {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -125,7 +125,7 @@ input[type="radio"]:disabled + label {
 }
 
 .dropdown_menu ul li{
-    font-family: 'OpenSans', sans-serif;
+    font-family: "OpenSans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 36px;
     font-weight: 300;
@@ -151,7 +151,7 @@ input[type="radio"]:disabled + label {
 /* ---------- заголовки ----------- */
 
 h2 {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 47px;
     line-height: 48px;
@@ -159,7 +159,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
     letter-spacing: 3.2px;
 }
@@ -172,7 +172,7 @@ h3 {
 }
 
 .about_us ul li {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 16px;
     line-height: 40px;
@@ -204,7 +204,7 @@ li .logout:focus {
 .filter_menu legend,
 .sorting_form legend,
 .product .product_name {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -216,7 +216,7 @@ li .logout:focus {
 }
 
 .product span {
-    font-family: 'gilroy', sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.16px;
