@@ -2,7 +2,7 @@
     font-family: 'gilroy';
     src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
          url('../fonts/gilroyextrabold.woff') format('woff');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -10,7 +10,7 @@
     font-family: 'gilroy';
     src: url('../fonts/gilroylight.woff2') format('woff2'),
          url('../fonts/gilroylight.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 /* Временно тут */
@@ -34,12 +34,20 @@ body {
     background-color: #f0c52e;
 }
 
+.font_extra {
+    font-family: "gilroy", "Arial", sans-serif;
+}
+
+.font_base {
+    font-family: "OpenSans","Arial", sans-serif;
+}
+
 .visually_hidden {
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
+    border: 0;_
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -64,7 +72,6 @@ a:focus {
 /* -------- кнопки --------- */
 
 .btn {
-    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
     background-color: #f0c52e;
@@ -76,7 +83,7 @@ a:focus {
 
 /* ---------- формы ------------ */
 
-input[type="search"] {
+.form_search {
     opacity: 0.3;
     border: none;
     background-color: #f0c52e;
@@ -84,25 +91,32 @@ input[type="search"] {
     color: #000000
 } 
 
-input[type="search"]:hover,
-input[type="checkbox"]:hover,
-input[type="radio"]:hover{
+.form_search:hover,
+.color_choose input[type="checkbox"]:hover,
+.sorting_menu input[type="checkbox"]:hover,
+.promo_controls input[type="radio"]:hover,
+.bluetooth_choose input[type="radio"]:hover{
     opacity: 0.6;
 }
 
-input[type="search"]:focus,
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
+.form_search:focus,
+.color_choose input[type="checkbox"]:focus,
+.sorting_menu input[type="checkbox"]:focus,
+.promo_controls input[type="radio"]:focus,
+.bluetooth_choose input[type="radio"]:focus {
     opacity: 1;
 }
 
-input[type="checkbox"]:disabled,
-input[type="radio"]:disabled {
+.color_choose input[type="checkbox"]:disabled,
+.sorting_menu input[type="checkbox"]:disabled,
+.promo_controls input[type="radio"]:disabled,
+.bluetooth_choose input[type="radio"]:disabled {
     opacity: 0.25;
 }
 
-input[type="checkbox"]:disabled + label,
-input[type="radio"]:disabled + label {
+.color_choose input[type="checkbox"]:disabled + label,
+.promo_controls input[type="radio"]:disabled + label,
+.bluetooth_choose input[type="radio"]:disabled + label {
     opacity: 0.25;
 }
 
@@ -110,7 +124,6 @@ input[type="radio"]:disabled + label {
 ---------- навигация ----------- */
 
 .menu_links {
-    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -120,7 +133,7 @@ input[type="radio"]:disabled + label {
 .menu_links li,
 .about_us li,
 .delivery li,
-.nav_item li {
+.nav_list li {
     list-style: none;
 }
 
@@ -145,29 +158,25 @@ input[type="radio"]:disabled + label {
 
 /* ---------- заголовки ----------- */
 
-h2 {
-    font-family: "gilroy", "Arial", sans-serif;
+.second_title {
     font-weight: bold;
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.47px;
 }
 
-h3 {
-    font-family: "gilroy", "Arial", sans-serif;
+.third_title {
     font-size: 16px;
     letter-spacing: 3.2px;
 }
 
 /* ---------- о нас ---------- */
 
-.about_us p,
-.about_contacts p {
+.about p {
     color: #464646;
 }
 
-.about_us ul li {
-    font-family: "gilroy", "Arial", sans-serif;
+.about_us li {
     font-weight: bold;
     font-size: 16px;
     line-height: 40px;
@@ -198,7 +207,6 @@ li .logout:focus {
 .filter_menu legend,
 .product .product_name,
 .category_card p {
-    font-family: "gilroy", "Arial", sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -210,7 +218,6 @@ li .logout:focus {
 }
 
 .product span {
-    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.16px;
@@ -252,7 +259,6 @@ li .logout:focus {
 /* ----------промо---------- */
 
 .promo_slogan {
-    font-family: "gilroy", "Arial", sans-serif;
     font-size: 47px;
     font-weight: bold;
     letter-spacing: 0.47px;
@@ -262,14 +268,46 @@ li .logout:focus {
 
 .promo_controls p:nth-child(3),
 .promo_controls p:nth-child(4),
-.promo_specific p:nth-child(2),
-.delivery_description p {
+.promo_specific p:nth-child(2) {
     color: #464646;
 }
 
 .promo_specific p:first-child {
-    font-family: "gilroy", "Arial", sans-serif;
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.36px;
+}
+
+/* ---------- каталог страницы ------- */
+
+.pagination {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ebebeb;
+    
+}
+
+.pagination li {
+    list-style: none;
+}
+
+.pagination li:first-child:hover,
+.pagination li:last-child:hover{
+    background-color: #d9d9d9;
+}
+
+.pagination a:first-child:focus,
+.pagination a:last-child:focus,
+.pagination_page {
+    opacity: 0.3;
+}
+
+.pagination a:first-child:hover,
+.pagination a:last-child:hover,
+.pagination_page:focus {
+    opacity: 1;
+}
+
+.pagination_page:hover {
+    opacity: 0.6;  
 }

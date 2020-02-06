@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
@@ -20,12 +20,12 @@
   
         <div class="header_options">
   
-          <form method="get" action="https://echo.htmlacademy.ru">
+          <form action="https://echo.htmlacademy.ru">
             <input type="search" id="search" name="search" placeholder="Поиск по сайту">
             <label class="visually_hidden" for="search">Поиск по сайту</label>
           </form>
   
-          <ul class="nav_item">
+          <ul class="nav_list">
             <li><a href="#">Войти</a></li>
             <li><a href="#">Сравнить</a></li>
             <li><a href="#">Корзина</a></li>
@@ -33,7 +33,7 @@
   
         </div>
   
-        <nav class="menu_links">
+        <nav class="menu_links font_extra">
           <ul>
             <li><a class="dropdown_catalog">Каталог товаров</a>
               <ul class="dropdown_menu">
@@ -76,12 +76,12 @@
           </div>
           
           <div class="promo_controls">
-            <p class="promo_slogan">Делай селфи, </p>   
-            <p class="promo_slogan">как Бен Стиллер!</p>
+            <p class="promo_slogan font_extra">Делай селфи, </p>   
+            <p class="promo_slogan font_extra">как Бен Стиллер!</p>
             <p>Самая длинная палка для селфи доступна в нашем магазине.</p> 
             <p>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <div>
-              <button class="btn">Подробнее</button>  
+              <button class="btn font_extra">Подробнее</button>  
               
               <input type="radio" name="slider" id="first_slider" value="1" checked>
               <label class="visually_hidden" for="first_slider">1</label>
@@ -95,17 +95,17 @@
            
             <div class="promo_details">
               <div class="promo_specific">
-                <p>8,5 м</p>
+                <p class="font_extra">8,5 м</p>
                 <p>Длина палки</p>
               </div>
             
               <div class="promo_specific">
-                <p>5 кг</p>
+                <p class="font_extra">5 кг</p>
                 <p>Вес палки</p>
               </div>
               
               <div class="promo_specific">
-                <p>Карбон</p>
+                <p class="font_extra">Карбон</p>
                 <p>Материал</p>
               </div>
             </div>
@@ -118,42 +118,42 @@
           <article class="category_card">
             <a href="catalog/virtual.html">
               <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
-              <p>Виртуальная реальность</p> 
+              <p class="font_extra">Виртуальная реальность</p> 
             </a>
           </article>
   
           <article class="category_card">
             <a href="catalog/monopod.html">
               <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
-              <p>Моноподы для селфи</p> 
+              <p class="font_extra">Моноподы для селфи</p> 
             </a>
           </article>
           
           <article class="category_card">
             <a href="catalog/camera.html">
               <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
-              <p>Экшн-камеры</p> 
+              <p class="font_extra">Экшн-камеры</p> 
             </a>
           </article>
   
           <article class="category_card">
             <a href="catalog/fitness.html">
               <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
-              <p>Фитнес-браслеты</p> 
+              <p class="font_extra">Фитнес-браслеты</p> 
             </a>
           </article>
   
           <article class="category_card">
             <a href="catalog/clock.html">
               <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
-              <p>Умные часы</p> 
+              <p class="font_extra">Умные часы</p> 
             </a>
           </article>
               
           <article class="category_card">
             <a href="catalog/quadrocopter.html">
               <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
-              <p>Квадрокоптеры</p> 
+              <p class="font_extra">Квадрокоптеры</p> 
             </a>
           </article>
   
@@ -163,14 +163,14 @@
           <h2 class="visually_hidden">Меню доставки</h2>
   
           <ul class="delivery">
-            <li><button class="btn">Доставка</button></li>
-            <li><button class="btn">Гарантия</button></li>
-            <li><button class="btn">Кредит</button></li>
+            <li><button class="btn font_extra">Доставка</button></li>
+            <li><button class="btn font_extra">Гарантия</button></li>
+            <li><button class="btn font_extra">Кредит</button></li>
           </ul>
   
-          <div class="delivery_description">
+          <div class="delivery_description about">
             <div>
-              <h2>Доставка</h2>
+              <h2 class="second_title font_extra">Доставка</h2>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
             <img src="img/delivery.svg" width="136" height="164" alt>
@@ -203,8 +203,8 @@
         <section class="about_company">
           <h2 class="visually_hidden">О компании</h2>
   
-          <div class="about_us">
-            <h2>О нас</h2>
+          <div class="about_us about font_extra">
+            <h2 class="second_title font_extra">О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
              
@@ -214,14 +214,14 @@
               <li>ЖелДорЭкспедиция</li>
             </ul>
     
-            <a href="#" class="btn">Подробнее о нас</a>
+            <a href="#" class="btn font_extra">Подробнее о нас</a>
           </div>
   
-          <div class="about_contacts">
-            <h2>Контакты</h2>
+          <div class="about_contacts about">
+            <h2 class="second_title font_extra">Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
             <img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"> <br>
-            <button class="btn">Напишите нам</button> 
+            <button class="btn font_extra">Напишите нам</button> 
           </div>
   
         </section>
@@ -234,7 +234,7 @@
         </a>
         
         <div class="footer_content">
-          <ul class="nav_item nav_footer">
+          <ul class="nav_list nav_footer">
             <li><a href="#">Войти</a></li>
             <li><a href="#">Сравнить</a></li>
             <li><a href="#">Корзина</a></li>
@@ -242,7 +242,7 @@
         </div>
   
         <p>г. Москва, ул. Строителей, 15</p>
-        <ul class="menu_links footer_links">
+        <ul class="menu_links font_extra footer_links">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
@@ -285,7 +285,7 @@
             <label for="user_message">Текст письма</label>
             <textarea id="user_message" name="user_message" rows="10" placeholder="В свободной форме"></textarea>
           </p>
-          <button type="submit" class="btn">Отправить</button>
+          <button type="submit" class="btn font_extra">Отправить</button>
           
         </form>
       </div>

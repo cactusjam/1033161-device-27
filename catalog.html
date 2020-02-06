@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -17,12 +17,12 @@
       
       <div class="header_options">
 
-        <form method="get" action="https://echo.htmlacademy.ru">
-          <input type="search" id="search" name="search" placeholder="Поиск по сайту">
+        <form action="https://echo.htmlacademy.ru">
+          <input class="form_search" type="search" id="search" name="search" placeholder="Поиск по сайту">
           <label for="search" class="visually_hidden">Поиск по сайту</label>
         </form>
         
-        <ul class="nav_item">
+        <ul class="nav_list">
           <li>
             <a href="#">Валентин Петухов</a>
             <a class="logout" href="#">Выйти</a>
@@ -36,7 +36,7 @@
         </ul>
       </div>
 
-      <nav class="menu_links">
+      <nav class="menu_links font_extra">
         <ul>
           <li><a class="dropdown_catalog">Каталог товаров</a>
             <ul class="dropdown_menu">
@@ -71,7 +71,7 @@
     </header>
 
     <main>
-      <h2>Моноподы для селфи</h2>
+      <h2 class="second_title font_extra">Моноподы для селфи</h2>
       <div class="submenu_catalog">
         <a href="/">Главная</a>
         <a href="catalog.html">Каталог товаров</a>
@@ -80,13 +80,13 @@
 
       <section class="filter_menu">
         <div>
-          <h3>Фильтр</h3>
+          <h3 class="third_title font_extra">Фильтр</h3>
         </div>
         
-        <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="filter_form" action="https://echo.htmlacademy.ru/">
 
           <fieldset class="price_choose">
-            <legend>Стоимость</legend>
+            <legend class="font_extra">Стоимость</legend>
             <div class="filter-range">
               <div class="range-slider-track">
                 <div class="range-slider-pin range-slider-pin-min"></div>
@@ -95,16 +95,16 @@
   
               <div class="range-slider">
                 <label for="range_minprice" class="min_price">от 0</label> 
-                <input type="number" id="range_minprice" value="0" min="0" name="min">
+                <input type="number" id="range_minprice" value="0" min="0" max="5000" name="min">
                 
                 <label for="range_maxprice" class="max_price">до 5000</label> 
-                <input type="number" id="range_maxprice" value="5000" max="5000" name="max">  
+                <input type="number" id="range_maxprice" value="5000" min="1" max="5000" name="max">  
               </div>
             </div>
           </fieldset>
           
           <fieldset class="color_choose">
-            <legend>Цвет</legend>
+            <legend class="font_extra">Цвет</legend>
             <p>
               <input type="checkbox" id="black_color" name="colors" value="black" checked>
               <label for="black_color">Черный</label>
@@ -129,7 +129,7 @@
 
          
           <fieldset class="bluetooth_choose">
-            <legend>Bluetooth</legend>
+            <legend class="font_extra">Bluetooth</legend>
             <input type="radio" id="bluetooth_yes" value="yes" name="bluetooth" checked>
             <label for="bluetooth_yes">Есть</label>
 
@@ -139,13 +139,13 @@
             <label for="bluetooth_no">Нет</label>
           </fieldset>
 
-          <button class="btn">Показать</button>
+          <button class="btn font_extra">Показать</button>
         </form>
       </section>
 
       <section class="catalog_choose">
         <div class="sorting_menu">
-          <h3>Сортировка:</h3>
+          <h3 class="third_title font_extra">Сортировка:</h3>
           <ul>
             <li>
               <input type="checkbox" id="sorting_price" name="option" value="price" checked>
@@ -179,43 +179,43 @@
           <article class="product">
             <a href="">
               <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              <p class="product_name">Любительская селфи-палка</p>
-              <span class="product_price">500 руб.</span>
+              <p class="product_name font_extra">Любительская селфи-палка</p>
+              <span class="font_extra">500 руб.</span>
             </a>
            </article>
       
            <article class="product">
              <a href="">
                <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-               <p class="product_name">Профессиональная селфи-палка </p>
-               <span class="product_price">1 500 руб.</span>
+               <p class="product_name font_extra">Профессиональная селфи-палка </p>
+               <span class="font_extra">1 500 руб.</span>
              </a>    
            </article>
    
            <article class="product">
              <a href="">
                <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-               <p class="product_name">Непотопляемая селфи-палка</p>
-               <span class="product_price">2 500 руб.</span>
+               <p class="product_name font_extra">Непотопляемая селфи-палка</p>
+               <span class="font_extra">2 500 руб.</span>
              </a>
            </article>
    
            <article class="product">
              <a href="">
                <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-               <p class="product_name">Селфи-палка «Следуй за мной»</p>
-               <span class="product_price">4 900 руб.</span>
+               <p class="product_name font_extra">Селфи-палка «Следуй за мной»</p>
+               <span class="font_extra">4 900 руб.</span>
              </a> 
            </article>
         </div>
         
 
-        <div class="pagination">
+        <div class="pagination font_extra">
           <ul>
             <li><a href="#">Назад</a></li>
-            <li><a>1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
+            <li><a class="pagination_page">1</a></li>
+            <li><a class="pagination_page" href="#">2</a></li>
+            <li><a class="pagination_page" href="#">3</a></li>
             <li><a href="#">Вперед</a></li>
           </ul> 
          </div>
@@ -229,7 +229,7 @@
         </a>
     
       <div class="footer_content">
-        <ul class="nav_item nav_footer">
+        <ul class="nav_list nav_footer">
           <li><a href="#">Валентин Петухов</a></li>
           <li><a class="logout" href="#">Выйти</a></li>
           <li><a href="#">Сравнить</a></li>
@@ -238,7 +238,7 @@
       </div>
 
       <p>г. Москва, ул. Строителей, 15</p>
-      <ul class="menu_links footer_links">
+      <ul class="menu_links font_extra footer_links">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
