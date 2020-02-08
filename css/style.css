@@ -83,15 +83,6 @@ a:focus {
 
 /* ---------- формы ------------ */
 
-.form_search {
-    opacity: 0.3;
-    border: none;
-    background-color: #f0c52e;
-    outline: none;
-    color: #000000
-} 
-
-.form_search:hover,
 .color_choose input[type="checkbox"]:hover,
 .sorting_menu input[type="checkbox"]:hover,
 .promo_controls input[type="radio"]:hover,
@@ -99,7 +90,6 @@ a:focus {
     opacity: 0.6;
 }
 
-.form_search:focus,
 .color_choose input[type="checkbox"]:focus,
 .sorting_menu input[type="checkbox"]:focus,
 .promo_controls input[type="radio"]:focus,
@@ -296,18 +286,54 @@ li .logout:focus {
     background-color: #d9d9d9;
 }
 
-.pagination a:first-child:focus,
-.pagination a:last-child:focus,
+.pagination a:first-child:active,
+.pagination a:last-child:active,
 .pagination_page {
     opacity: 0.3;
 }
 
 .pagination a:first-child:hover,
 .pagination a:last-child:hover,
-.pagination_page:focus {
+.pagination_page:active {
     opacity: 1;
 }
 
 .pagination_page:hover {
     opacity: 0.6;  
 }
+
+
+.container {
+    width: 1160px;
+}
+
+.dropdown_menu {
+    display: none;
+}
+
+.header_block {
+    background-color: #f0c52e;
+}
+
+.header_options,
+.menu_search,
+.nav_list {
+    display: flex;
+}
+ 
+.menu_search {
+    min-width: 55px;
+}
+
+.menu_search .search {
+    border:0;
+    width:355px;
+    height:49px;
+    background-color:transparent;
+    color:#000;
+    padding-left:40px;
+    opacity: 0.3;
+}
+/* .menu_catalog li {
+    display: inline-block;
+} */
