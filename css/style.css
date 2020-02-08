@@ -27,11 +27,6 @@ body {
     line-height: 30px;
     font-weight: 300;
     color: #000000;
-    background-color: #ffffff;
-}
-
-.header {
-    background-color: #f0c52e;
 }
 
 .font_extra {
@@ -305,6 +300,8 @@ li .logout:focus {
 
 .container {
     width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dropdown_menu {
@@ -313,6 +310,9 @@ li .logout:focus {
 
 .header_block {
     background-color: #f0c52e;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 40px;
 }
 
 .header_options,
@@ -320,20 +320,109 @@ li .logout:focus {
 .nav_list {
     display: flex;
 }
- 
+
+.header_options {
+    padding-top: 30px;
+} 
+
+.header_logo {
+    position: absolute;
+    top: 0;
+    transform: translate(0, 50%);
+}
+
 .menu_search {
-    min-width: 55px;
+    flex-basis: 50%;
+}
+
+.header {
+    width: auto;
 }
 
 .menu_search .search {
     border:0;
     width:355px;
-    height:49px;
     background-color:transparent;
     color:#000;
-    padding-left:40px;
     opacity: 0.3;
 }
-/* .menu_catalog li {
+
+.nav_list {
+    flex-basis: 50%;
+    padding-left: 0;
+}
+
+.nav_list li:first-child {
+    margin-right: auto;
+    flex-basis: 50%;
+}
+
+.nav_list li:nth-child(2) {
+    padding-right: 65px;
+}
+
+.menu_links ul {
+    padding-left: 0;
+}
+
+.menu_catalog li {
     display: inline-block;
-} */
+} 
+
+.menu_links,
+.links_navigation {
+    display: flex;
+}
+
+.menu_catalog,
+.links_navigation {
+    flex-basis: 50%;
+}
+
+.links_navigation li:last-child {
+    margin-left: auto;
+}
+
+.links_navigation li:nth-child(2) {
+    padding-left: 38px;
+}
+
+/* ------ блок доставка------- */
+
+.delivery_menu {
+    background-color : #e5e5e5;
+    width: auto;
+}
+
+.block_delivery {
+    display: flex;
+}
+
+.delivery {
+    flex-basis: 278px;
+    padding: 0px;
+}
+
+.aboutus_block {
+    min-height: 315px;
+}
+
+ul .dellivery_company {
+    align-items: flex-end;
+}
+
+/* -------- блок о нас --------- */
+
+.block_about {
+    display: flex;
+}
+
+.about_contacts {
+    margin-left: 138px;
+}
+
+.btn_more,
+.about_contacts .btn {
+    margin-top: 82px;
+    margin-bottom: 98px;
+}

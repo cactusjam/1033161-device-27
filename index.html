@@ -11,15 +11,16 @@
   <body>
     
     <header class="header">
+      
       <div class="container">
         <div class="header_block">
-
           <h1 class="visually_hidden">Магазин гаджетов "DEVICE"</h1>
-    
-          <a class="header_logo">
-            <img src="img/device.svg" width="163" height="35" alt="Device">
-          </a>
-    
+          <div class="header_logo">
+            <a>
+              <img src="img/device.svg" width="163" height="35" alt="Device">
+            </a>
+          </div>
+
           <div class="header_options">
             
             <form class="menu_search" action="https://echo.htmlacademy.ru">
@@ -63,7 +64,7 @@
               </li>
             </ul>
 
-            <ul>
+            <ul class="links_navigation">
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Гарантия</a></li>
               <li><a href="#">Контакты</a></li>
@@ -74,7 +75,6 @@
     </header>
   
       <main>
-        <div class="container">
           <section class="promo">
             <h2 class="visually_hidden">Презентация товара</h2>
             <div>
@@ -166,21 +166,27 @@
           </section>
     
           <section class="delivery_menu">
-            <h2 class="visually_hidden">Меню доставки</h2>
+            <div class="container">
+
+              <div class="block_delivery">
+                <h2 class="visually_hidden">Меню доставки</h2>
     
-            <ul class="delivery">
-              <li><button class="btn font_extra">Доставка</button></li>
-              <li><button class="btn font_extra">Гарантия</button></li>
-              <li><button class="btn font_extra">Кредит</button></li>
-            </ul>
-    
-            <div class="delivery_description about">
-              <div>
-                <h2 class="second_title font_extra">Доставка</h2>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-              </div>
-              <img src="img/delivery.svg" width="136" height="164" alt>
-            </div>
+                <ul class="delivery">
+                  <li><button class="btn font_extra">Доставка</button></li>
+                  <li><button class="btn font_extra">Гарантия</button></li>
+                  <li><button class="btn font_extra">Кредит</button></li>
+                </ul>
+        
+                <div class="delivery_description about">
+                  <div>
+                    <h2 class="second_title font_extra">Доставка</h2>
+                    <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                  </div>
+                  <img src="img/delivery.svg" width="136" height="164" alt>
+                </div>
+
+              </div> 
+            </div> 
           </section>  
     
           <section class="company_cooperate">
@@ -208,30 +214,39 @@
     
           <section class="about_company">
             <h2 class="visually_hidden">О компании</h2>
-    
-            <div class="about_us about font_extra">
-              <h2 class="second_title font_extra">О нас</h2>
-              <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-              <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-               
-              <ul>
-                <li>Деловые Линии</li>
-                <li>Автотрейдинг</li>
-                <li>ЖелДорЭкспедиция</li>
-              </ul>
-      
-              <a href="#" class="btn font_extra">Подробнее о нас</a>
-            </div>
-    
-            <div class="about_contacts about">
-              <h2 class="second_title font_extra">Контакты</h2>
-              <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-              <img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"> <br>
-              <button class="btn font_extra">Напишите нам</button> 
-            </div>
-    
-          </section>
-        </div>   
+
+            <div class="container">
+              <div class="block_about">
+                <div class="about_us about font_extra">
+
+                  <h2 class="second_title font_extra">О нас</h2>
+                  <div class="aboutus_block">
+                    <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+                    <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+                     
+                    <ul class="dellivery_company">
+                      <li>Деловые Линии</li>
+                      <li>Автотрейдинг</li>
+                      <li>ЖелДорЭкспедиция</li>
+                    </ul>
+                  </div>
+                 
+
+                  <div class="btn_more">
+                    <a href="#" class="btn font_extra">Подробнее о нас</a>
+                  </div>
+                </div>
+        
+                <div class="about_contacts about">
+                  <h2 class="second_title font_extra">Контакты</h2>
+                  <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+                  <img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15"> <br>
+                  <button class="btn font_extra">Напишите нам</button> 
+                </div>
+              </div>
+              </div>
+                  
+          </section>  
       </main>
       
       <footer class="footer">
@@ -239,7 +254,7 @@
         <div class="container">
 
           <a class="footer_logo">
-            <img src="img/device.svg" width="163" height="35" alt="Device">
+            <img src="img/footer_logo.png" width="163" height="35" alt="Device">
           </a>
           
           <div class="footer_content">
