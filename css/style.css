@@ -136,9 +136,9 @@ a:focus {
     letter-spacing: 0.15px
 }
 
-.submenu_catalog a {
+.submenu_catalog {
     font-size: 14px;
-    letter-spacing: 0.14;
+    letter-spacing: 0.14px;
     line-height: 24px;
     opacity: 0.3;
 }
@@ -146,6 +146,11 @@ a:focus {
 .submenu_catalog a:focus{
     opacity: 0.1;
 }
+
+.submenu_catalog a {
+    margin-right: 39px;
+}
+
 
 /* ---------- заголовки ----------- */
 
@@ -484,6 +489,59 @@ ul .dellivery_company {
 
 /* --------- каталог ---------- */
 
+.container_catalog {
+    background-color:#ebebeb;
+}
+
 .logout {
     padding-left: 20px;
+}
+
+.second_title {
+    margin-top: 44px;
+    margin-bottom: 30px;
+}
+
+.block_submenu {
+    padding-left: 60px;
+}
+
+.block_catalog,
+.sorting_menu,
+.sorting_menu ul {
+    display: flex;
+}
+
+.block_catalog {
+    padding-left: 60px;
+}
+
+.block_filter,
+.sorting_menu {
+    min-height: 71px;
+}
+
+.third_title {
+    margin: 0;
+}
+
+.sorting_list li {
+    margin-right: 30px;
+}
+
+/* .sort_updown {
+    flex-wrap: wrap;
+     flex-grow: 1;
+} */
+
+.sort_updown {
+    margin-left: auto;
+}
+
+.filter_menu {
+    flex-basis: 30%;
+}
+
+.catalog_choose {
+    flex-basis: 70%;
 }
