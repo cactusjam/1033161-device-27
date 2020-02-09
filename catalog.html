@@ -9,65 +9,70 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="visually_hidden">Каталог товаров магазина гаджетов "DEVICE"</h1>
+      <div class="container">
+        <div class="header_block">
+          <h1 class="visually_hidden">Каталог товаров магазина гаджетов "DEVICE"</h1>
+          <div class="header_logo">
+            <a class="header_logo" href="/">
+              <img src="img/device.svg" width="163" height="35" alt="Device">
+            </a>
+          </div>
+          <div class="header_options">
 
-      <a class="header_logo" href="/">
-        <img src="img/device.svg" width="163" height="35" alt="Device">
-      </a>
-      
-      <div class="header_options">
-
-        <form action="https://echo.htmlacademy.ru">
-          <input class="form_search" type="search" id="search" name="search" placeholder="Поиск по сайту">
-          <label for="search" class="visually_hidden">Поиск по сайту</label>
-        </form>
-        
-        <ul class="nav_list">
-          <li>
-            <a href="#">Валентин Петухов</a>
-            <a class="logout" href="#">Выйти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li>
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
-      </div>
-
-      <nav class="menu_links font_extra">
-        <ul>
-          <li><a class="dropdown_catalog">Каталог товаров</a>
-            <ul class="dropdown_menu">
-              <li>
-                <ul>
-                  <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
-                  <li><a href="catalog/monopod.html">Моноподы для селфи</a></li>
-                  <li><a href="catalog/camera.html">Экшн-камеры</a></li>
-                </ul>
-              </li>
+            <form class="menu_search" action="https://echo.htmlacademy.ru">
+              <input class="search" type="search" id="search" name="search" placeholder="Поиск по сайту">
+              <label class="visually_hidden" for="search">Поиск по сайту</label>
+            </form>
             
+            <ul class="nav_list">
               <li>
-                <ul>
-                  <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
-                  <li><a href="catalog/clock.html">Умные часы</a></li>
-                </ul>
+                <a href="#">Валентин Петухов</a>
+                <a class="logout" href="#">Выйти</a>
               </li>
-          
               <li>
-                <ul>
-                  <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
+                <a href="#">Сравнить</a>
+              </li>
+              <li>
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+
+          <nav class="menu_links font_extra">
+            <ul class="menu_catalog">
+              <li><a class="dropdown_catalog">Каталог товаров</a>
+                <ul class="dropdown_menu">
+                  <li>
+                    <ul>
+                      <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
+                      <li><a href="catalog/monopod.html">Моноподы для селфи</a></li>
+                      <li><a href="catalog/camera.html">Экшн-камеры</a></li>
+                    </ul>
+                  </li>
+                
+                  <li>
+                    <ul>
+                      <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
+                      <li><a href="catalog/clock.html">Умные часы</a></li>
+                    </ul>
+                  </li>
+              
+                  <li>
+                    <ul>
+                      <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
             </ul>
-          </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>             
- 
+            <ul class="links_navigation">
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>             
+        </div>
+      </div>
     </header>
 
     <main>
@@ -224,48 +229,61 @@
 
     
     <footer class="footer">
-        <a class="footer_logo" href="/" >
-          <img src="img/footer_logo.png" width="163" height="35" alt="Device">
-        </a>
-    
-      <div class="footer_content">
-        <ul class="nav_list nav_footer">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a class="logout" href="#">Выйти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
-      </div>
+      <div class="container">
+        <div class="block_footer">
+          <div class="footer_content">
 
-      <p>г. Москва, ул. Строителей, 15</p>
-      <ul class="menu_links footer_links">
-        <li class="font_extra"><a href="#">Доставка</a></li>
-        <li class="font_extra"><a href="#">Гарантия</a></li>
-        <li class="font_extra"><a href="#">Контакты</a></li>
-      </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
+            <div class="footer_logo">
+              <a class="footer_logo" href="/" >
+                <img src="img/footer_logo.png" width="163" height="35" alt="Device">
+              </a>
+            </div>  
+          
+            <div class="footer_options">
+              <ul class="nav_footer">
+                <li>
+                  <a href="#">Валентин Петухов</a>
+                  <a class="logout" href="#">Выйти</a>
+                </li>
+                <li><a href="#">Сравнить</a></li>
+                <li><a href="#">Корзина</a></li>
+              </ul>
+            </div>
+          </div>
 
-      <div class="social">
-        <ul>
-          <li>
-            <a href="#" target="_blank" rel="noopener">
-              <span class="visually_hidden">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener">
-              <span class="visually_hidden">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener">
-              <span class="visually_hidden">Twitter</span>
-            </a>
-          </li> 
-          <li><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener"><img src="img/logo-htmlacademy.svg" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy"></a></li>  
-        </ul> 
+          <div class="block_adress">
+            <div>г. Москва, ул. Строителей, 15</div>
+            <ul class="menu_links footer_links">
+              <li class="font_extra"><a href="#">Доставка</a></li>
+              <li class="font_extra"><a href="#">Гарантия</a></li>
+              <li class="font_extra"><a href="#">Контакты</a></li>
+            </ul>
+            <div>Тел.: +7 (495) 495-95-95</div>
+          </div>
+
+          <div class="social">
+            <ul class="social_list">
+              <li>
+                <a href="#" target="_blank" rel="noopener">
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener">
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener">
+                  <span>Twitter</span>
+                </a>
+              </li>
+              <li><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener"><img src="img/logo-htmlacademy.svg" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy"></a></li> 
+            </ul>
+          </div>
+
+        </div>
       </div>
-      
     </footer>    
 
   </body>
