@@ -233,6 +233,10 @@ li .logout:focus {
 .filter_form fieldset {
     border: none;
 }
+
+.filter_form {
+    padding-top: 87px;
+}
 /* -------- футер --------- */
 
 .social li {
@@ -489,9 +493,9 @@ ul .dellivery_company {
 
 /* --------- каталог ---------- */
 
-.container_catalog {
+/* .container_catalog {
     background-color:#ebebeb;
-}
+} */
 
 .logout {
     padding-left: 20px;
@@ -521,6 +525,10 @@ ul .dellivery_company {
     min-height: 71px;
 }
 
+.sorting_menu {
+    margin-bottom: 69px;
+}
+
 .third_title {
     margin: 0;
 }
@@ -537,11 +545,31 @@ ul .dellivery_company {
 .sort_updown {
     margin-left: auto;
 }
+.sort_updown li:last-child {
+    padding-left: 19px;
+}
 
 .filter_menu {
-    flex-basis: 30%;
+    flex-basis: 26%;
 }
 
 .catalog_choose {
-    flex-basis: 70%;
+    flex-basis: 74%;
+    padding-left: 70px;
+}
+
+.product_range {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.product_range article:nth-child(odd) {
+    margin-right: 40px;
+} 
+
+.pagination ul {
+    display: flex;
+    justify-content: space-between;
 }
