@@ -328,6 +328,7 @@ li .logout:focus {
     padding-left: 60px;
     padding-right: 60px;
     margin-top: 40px;
+    min-height: 186px;
 }
 
 .header_options,
@@ -516,6 +517,10 @@ ul .dellivery_company {
     display: flex;
 }
 
+.sorting_menu ul {
+    align-items: center;
+}
+
 .block_catalog {
     padding-left: 60px;
 }
@@ -524,6 +529,16 @@ ul .dellivery_company {
 .sorting_menu {
     min-height: 71px;
 }
+
+.block_filter,
+.block_sorting {
+    display: flex;
+ }
+ 
+ .block_filter h3,
+ .block_sorting h3 {
+     align-self: center;
+ }
 
 .sorting_menu {
     margin-bottom: 69px;
@@ -573,3 +588,4 @@ ul .dellivery_company {
     display: flex;
     justify-content: space-between;
 }
+
