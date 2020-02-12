@@ -36,36 +36,21 @@
     
           <nav class="menu_links font_extra">
             <ul class="menu_catalog">
-              <li><a class="dropdown_catalog">Каталог товаров</a>
+              <li class="catalog_item font_extra"><a class="dropdown_catalog">Каталог товаров</a>
                 <ul class="dropdown_menu">
-                  <li>
-                    <ul>
-                      <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
-                      <li><a href="catalog/monopod.html">Моноподы для селфи</a></li>
-                      <li><a href="catalog/camera.html">Экшн-камеры</a></li>
-                    </ul>
-                  </li>
-                
-                  <li>
-                    <ul>
-                      <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
-                      <li><a href="catalog/clock.html">Умные часы</a></li>
-                    </ul>
-                  </li>
-              
-                  <li>
-                    <ul>
-                      <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="catalog/virtual.html">Виртуальная реальность</a></li>
+                  <li><a href="catalog/monopod.html">Моноподы для селфи</a></li>
+                  <li><a href="catalog/camera.html">Экшн-камеры</a></li>
+                  <li><a href="catalog/fitness.html">Фитнес-браслеты</a></li>
+                  <li><a href="catalog/clock.html">Умные часы</a></li>
+                  <li><a href="catalog/quadrocopter.html">Квадрокоптеры</a></li>
                 </ul>
               </li>
             </ul>
-
             <ul class="links_navigation">
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Гарантия</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li class="font_extra"><a href="#">Доставка</a></li>
+              <li class="font_extra"><a href="#">Гарантия</a></li>
+              <li class="font_extra"><a href="#">Контакты</a></li>
             </ul>
           </nav>             
         </div>
@@ -73,17 +58,23 @@
     </header>
   
       <main>
+        <div class="container">
           <section class="promo">
             <h2 class="visually_hidden">Презентация товара</h2>
-            <div>
+
+            <div class="img_slider">
               <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
             </div>
             
             <div class="promo_controls">
-              <p class="promo_slogan font_extra">Делай селфи, </p>   
-              <p class="promo_slogan font_extra">как Бен Стиллер!</p>
-              <p>Самая длинная палка для селфи доступна в нашем магазине.</p> 
-              <p>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <div class="promo_title">
+                <p class="promo_slogan font_extra">Делай селфи, </p>   
+                <p class="promo_slogan font_extra">как Бен Стиллер!</p>
+                <!-- <span class="number font_extra">01</span> -->
+                <p>Самая длинная палка для селфи доступна в нашем магазине.</p> 
+                <p>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              </div>
+              
               <div>
                 <button class="btn font_extra">Подробнее</button>  
                 
@@ -95,31 +86,83 @@
                 
                 <input type="radio" name="slider" id="third_slider" value="3">
                 <label class="visually_hidden" for="third_slider">3</label>
-              </div>
-             
-              <div class="promo_details">
-                <div class="promo_specific">
-                  <p class="font_extra">8,5 м</p>
-                  <p>Длина палки</p>
-                </div>
-              
-                <div class="promo_specific">
-                  <p class="font_extra">5 кг</p>
-                  <p>Вес палки</p>
-                </div>
+
+                <div class="promo_details">
+                  <div class="promo_specific">
+                    <p class="font_extra">8,5 м</p>
+                    <p>Длина палки</p>
+                  </div>
                 
-                <div class="promo_specific">
-                  <p class="font_extra">Карбон</p>
-                  <p>Материал</p>
+                  <div class="promo_specific">
+                    <p class="font_extra">5 кг</p>
+                    <p>Вес палки</p>
+                  </div>
+                  
+                  <div class="promo_specific">
+                    <p class="font_extra">Карбон</p>
+                    <p>Материал</p>
+                  </div>
                 </div>
               </div>
             </div> 
           </section>
+        
+
     
           <section class="category-list">
             <h2 class="visually_hidden">Каталог товаров по категориям</h2>
     
-            <article class="category_card">
+            <ul class="category_card">
+              <li>
+                <a href="catalog/virtual.html">
+                  <div class="category_img">
+                    <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+                  </div>
+                  <p class="font_extra category_name">Виртуальная реальность</p> 
+                </a>
+              </li>
+              <li>
+                <a href="catalog/monopod.html">
+                  <div class="category_img">
+                    <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+                  </div>
+                  <p class="font_extra category_name">Моноподы для селфи</p> 
+                </a>
+              </li>
+              <li>
+                <a href="catalog/camera.html">
+                  <div class="category_img">
+                    <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+                  </div>
+                  <p class="font_extra category_name">Экшн-камеры</p> 
+                </a>
+              </li>
+              <li>
+                <a href="catalog/fitness.html">
+                  <div class="category_img">
+                    <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+                  </div>
+                  <p class="font_extra category_name">Фитнес-браслеты</p> 
+                </a>
+              </li>
+              <li>
+                <a href="catalog/clock.html">
+                  <div class="category_img">
+                    <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+                  </div>
+                  <p class="font_extra category_name">Умные часы</p> 
+                </a>
+              </li>
+              <li>
+                <a href="catalog/quadrocopter.html">
+                  <div class="category_img">
+                    <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+                  </div>
+                  <p class="font_extra category_name">Квадрокоптеры</p> 
+                </a>
+              </li>
+            </ul>
+            <!-- <article class="category_card">
               <a href="catalog/virtual.html">
                 <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
                 <p class="font_extra">Виртуальная реальность</p> 
@@ -159,10 +202,11 @@
                 <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
                 <p class="font_extra">Квадрокоптеры</p> 
               </a>
-            </article>
+            </article> -->
     
           </section>
-    
+        </div>
+
           <section class="delivery_menu">
             <div class="container">
 

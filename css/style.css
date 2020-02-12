@@ -13,6 +13,10 @@ html {
     font-style: normal;
 }
 
+.popup {
+    display: none;
+}
+
 @font-face {
     font-family: 'gilroy';
     src: url('../fonts/gilroylight.woff2') format('woff2'),
@@ -20,11 +24,6 @@ html {
     font-weight: 400;
     font-style: normal;
 }
-/* Временно тут */
-.popup {
-    display: none;
-}
-/* -------------- */
 
 body {
     margin: 0;
@@ -53,6 +52,11 @@ body {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ------------ ссылки ----------- */
@@ -115,12 +119,14 @@ a:focus {
 /* 
 ---------- навигация ----------- */
 
-.menu_links {
+.dropdown_catalog,
+.links_navigation li {
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 3.6px;
-}
+    text-transform: uppercase;
+} 
 
 .menu_links li,
 .about_us li,
@@ -130,12 +136,40 @@ a:focus {
     list-style: none;
 }
 
-.links_navigation li,
-.menu_catalog li:first-child {
-    text-transform: uppercase;
+
+.menu_catalog .dropdown_menu {
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    z-index: 3;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: flex-start;
+  
+    width: 1200px;
+    height: 135px;
+  
+    margin: 0;
+    padding-top: 25px;
+    background: #f0c52e;
+
+    display: none;
+}
+.dropdown_menu li {
+    margin-left: 60px;
 }
 
-.dropdown_menu ul li{
+.dropdown_menu a {
+    display: flex;
+    text-transform: none;
+}
+
+.menu_catalog:hover .dropdown_menu {
+    display: flex;
+  }
+
+.dropdown_menu li{
     font-family: "OpenSans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 36px;
@@ -285,13 +319,98 @@ li .logout:focus {
     letter-spacing: 0.36px;
 }
 
+.promo {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.img_slider {
+    flex-basis: 50%;
+}
+
+.number {
+    position: absolute;
+    top: -12px;
+    right: 50px;
+  
+    font-size: 179px;
+    line-height: 179px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+.promo_title {
+    position: relative;
+  z-index: 2;
+
+  margin-top: 80px;
+}
+
+.promo_details {
+    display: flex;
+}
+
+.promo_specific {
+    margin-right: 80px;
+}
+
+.promo_specific p {
+    margin: 0;
+}
+
+.promo_specific p:first-child {
+    margin-top: 70px;
+}
+
+.promo_specific p:last-child {
+    margin-bottom: 117px;
+}
+
+.category-list ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.category_card li {
+    list-style: none;
+}
+
+.category_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.category_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    background-color: #f0c52e;
+    opacity: 0.5;
+}
+
+.category_name {
+    width: 160px;
+    margin: 0;
+    padding-top: 33px;
+}
+/* .category_card a {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+} */
+
 /* ---------- каталог страницы ------- */
 
 .pagination {
     font-size: 16px;
     font-weight: bold;
-    background-color: #ebebeb;
-    
+    background-color: #ebebeb;  
 }
 
 .pagination li {
@@ -319,17 +438,12 @@ li .logout:focus {
     opacity: 0.6;  
 }
 
-
 .container {
     width: 1200px;
     margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
  
-}
-
-.dropdown_menu {
-    display: none;
 }
 
 .header_block {
@@ -387,13 +501,38 @@ li .logout:focus {
     padding-right: 65px;
 }
 
-.menu_links ul {
+.menu_links {
     padding-left: 0;
 }
-
-.menu_catalog li {
-    display: inline-block;
+.catalog_item {
+    position: relative;
+    width: 540px;
+  margin-left: 0;
+}
+.dropdown_menu {
+    padding-left: 0;
 } 
+.dropdown_catalog::after {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: 221px;
+  
+    width: 16px;
+    height: 16px;
+    margin-left: 9px;
+  
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.menu_catalog,
+.links_navigation {
+    padding: 0;
+}
 
 .menu_links,
 .links_navigation {
