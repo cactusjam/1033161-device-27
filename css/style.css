@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 @font-face {
     font-family: 'gilroy';
     src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
@@ -194,7 +201,7 @@ li .logout:focus {
 
 /* ----------- фильтр ---------- */
 
-.filter_menu form,
+.filter_menu,
 .sorting_menu {
     background-color: #ebebeb;
     font-size: 14px;
@@ -314,9 +321,11 @@ li .logout:focus {
 
 
 .container {
-    width: 1160px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1200px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+ 
 }
 
 .dropdown_menu {
@@ -342,6 +351,7 @@ li .logout:focus {
 } 
 
 .header_logo {
+    display: inline-block;
     position: absolute;
     top: 0;
     transform: translate(0, 50%);
@@ -397,6 +407,7 @@ li .logout:focus {
 
 .links_navigation li:last-child {
     margin-left: auto;
+    margin-right: -4px;
 }
 
 .links_navigation li:nth-child(2) {
@@ -493,9 +504,10 @@ ul .dellivery_company {
 }
 
 /* --------- каталог ---------- */
-
-/* .container_catalog {
-    background-color:#ebebeb;
+/* .filter_menu {
+    flex-basis: 467px;
+    padding-right: 67px;
+    padding-left: 60px;
 } */
 
 .logout {
@@ -519,10 +531,6 @@ ul .dellivery_company {
 
 .sorting_menu ul {
     align-items: center;
-}
-
-.block_catalog {
-    padding-left: 60px;
 }
 
 .block_filter,
@@ -564,28 +572,50 @@ ul .dellivery_company {
     padding-left: 19px;
 }
 
-.filter_menu {
-    flex-basis: 26%;
-}
-
-.catalog_choose {
-    flex-basis: 74%;
-    padding-left: 70px;
-}
-
 .product_range {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-
-
-.product_range article:nth-child(odd) {
-    margin-right: 40px;
-} 
 
 .pagination ul {
     display: flex;
     justify-content: space-between;
 }
 
+/* ---------- временно --------- */
+
+
+
+.filter_menu {
+    flex-basis: 467px;
+    /* padding-right: 67px; */
+    padding-left: 80px;
+}
+
+.catalog_choose {
+    flex: 1;
+}
+
+.sorting_menu {
+    padding-left: 74px;
+}
+
+.product-card {
+    margin-left: 74px;
+    margin-bottom: 49px;
+}
+
+.product_info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+.product_info span {
+    margin-left: auto;
+}
+
+.product_info p {
+    margin: 0;
+    width: 252px;
+}
