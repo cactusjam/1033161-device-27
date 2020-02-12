@@ -120,7 +120,8 @@ a:focus {
 ---------- навигация ----------- */
 
 .dropdown_catalog,
-.links_navigation li {
+.links_navigation li,
+.footer_links li {
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -507,7 +508,7 @@ li .logout:focus {
 .catalog_item {
     position: relative;
     width: 540px;
-  margin-left: 0;
+    margin-left: 0;
 }
 .dropdown_menu {
     padding-left: 0;
