@@ -165,7 +165,7 @@ a:focus {
     text-transform: none;
 }
 
-.menu_catalog:hover .dropdown_menu {
+.catalog_item:hover .dropdown_menu {
     display: flex;
   }
 
@@ -287,12 +287,16 @@ li .logout:focus {
     opacity: 0.7;
 }
 
+.social_list svg {
+    opacity: 0.3;
+}
+
 /* ----------слайдер---------- */
 
 .slideshow ul {
     position: absolute;
     left: 1200px;
-    bottom: 225px;
+    top: 540px;
     list-style: none;
     display: flex;
 }
@@ -369,19 +373,11 @@ li .logout:focus {
     margin-bottom: 117px;
 }
 
-.category-list {
-    margin-top: 106px;
-}
-.category-list ul{
-    display: flex;
-    justify-content: space-between;
-}
-
 .category_list li {
     list-style: none;
 }
 
-.category_list {
+.category ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -392,7 +388,7 @@ li .logout:focus {
 .category_item {
     display: flex;
     align-items: center;
-    justify-content: center;
+  
     width: 160px;
     height: 200px;
     position: relative;
@@ -406,13 +402,13 @@ li .logout:focus {
     height: 160px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-color: #f0c52e;
+    background-color: #f7e296;
     top: -100px;
 }
 
 .category_icon:hover::after,
 .category_icon:focus::after {
-    opacity: 1;
+    background-color: #f0c52e;
 }
 
 .category_icon1::after {
@@ -512,6 +508,7 @@ li .logout:focus {
 
 .menu_search {
     flex-basis: 50%;
+    position: relative;
 }
 
 .page_header {
@@ -524,6 +521,87 @@ li .logout:focus {
     background-color:transparent;
     color:#000;
     opacity: 0.3;
+}
+
+.search-button {
+    display: none;
+    background-color: transparent;
+    padding: 23px;
+}
+
+.search {
+    opacity: 0.6;
+    padding-left: 36px;
+}
+
+.search:focus {
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    opacity: 1;
+    outline: none;
+}
+
+.search:focus~.search-button {
+    border: 2px solid #000000;
+    display: inline-block;
+}
+
+.search-button:hover,
+.search-button:focus {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #000000;
+}
+/* ------- иконки для меню навигации-------- */
+.menu_search label::before {
+    content: "";
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-position: 0 0;
+    top: 23px;
+}
+
+.nav_list_user,
+.nav_list_compare,
+.nav_list_cart {
+    position: relative;
+    padding-left: 27px;
+}
+
+.nav_list_user::before {
+    content: "";
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.nav_list_compare::before {
+    content: "";
+    background-image: url("../img/compare.svg");
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+.nav_list_cart::before {
+    content: "";
+    background-image: url("../img/cart.svg");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    left: 0;
 }
 
 .nav_list {
@@ -585,10 +663,7 @@ li .logout:focus {
 
 .menu_catalog {
     display: flex;
-}
-
-.menu_catalog {
-    flex-basis: 50%;
+    flex-wrap: wrap;
 }
 
 /* ------ блок доставка------- */
