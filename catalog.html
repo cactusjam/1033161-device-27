@@ -76,72 +76,73 @@
      
        
 
-          <div class="block_catalog">
+          <section class="sort_filter">
   
-            <section class="filter_menu">
+            <div class="sort-filter__inner center">
+              <aside class="filter">
 
-              <h3 class="third_title font_extra">Фильтр</h3>
-             
-              <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
-      
-                <fieldset class="price_choose">
-                  <legend class="font_extra">Стоимость</legend>
-                  <div class="filter-range">
-                    <div class="range-slider-track">
-                      <div class="range-slider-pin range-slider-pin-min"></div>
-                      <div class="range-slider-pin range-slider-pin-max"></div>
-                    </div>
+                <p">Фильтр</p>
+              
+                <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
         
-                    <div class="range-slider">
-                      <label for="range_minprice" class="min_price">от 0</label> 
-                      <input type="number" id="range_minprice" value="0" min="0" max="5000" name="min">
-                      
-                      <label for="range_maxprice" class="max_price">до 5000</label> 
-                      <input type="number" id="range_maxprice" value="5000" min="1" max="5000" name="max">  
+                  <fieldset class="price_choose">
+                    <legend class="font_extra">Стоимость</legend>
+                    <div class="filter-range">
+                      <div class="range-slider-track">
+                        <div class="range-slider-pin range-slider-pin-min"></div>
+                        <div class="range-slider-pin range-slider-pin-max"></div>
+                      </div>
+          
+                      <div class="range-slider">
+                        <label for="range_minprice" class="min_price">от 0</label> 
+                        <input type="number" id="range_minprice" value="0" min="0" max="5000" name="min">
+                        
+                        <label for="range_maxprice" class="max_price">до 5000</label> 
+                        <input type="number" id="range_maxprice" value="5000" min="1" max="5000" name="max">  
+                      </div>
                     </div>
-                  </div>
-                </fieldset>
+                  </fieldset>
+                  
+                  <fieldset class="color_choose">
+                    <legend class="font_extra">Цвет</legend>
+                    <p>
+                      <input type="checkbox" id="black_color" name="color_black" checked>
+                      <label for="black_color">Черный</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="white_color" name="color_white">  
+                      <label for="white_color">Белый</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="blue_color" name="color_blue"checked>  
+                      <label for="blue_color">Синий</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="red_color" name="color_red"checked> 
+                      <label for="red_color">Красный</label>
+                    </p>
+                    <p>
+                      <input type="checkbox" id="pink_color" name="color_pink"> 
+                      <label for="pink_color">Розовый</label>
+                    </p>
+                  </fieldset>
+        
                 
-                <fieldset class="color_choose">
-                  <legend class="font_extra">Цвет</legend>
-                  <p>
-                    <input type="checkbox" id="black_color" name="color_black" checked>
-                    <label for="black_color">Черный</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="white_color" name="color_white">  
-                    <label for="white_color">Белый</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="blue_color" name="color_blue"checked>  
-                    <label for="blue_color">Синий</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="red_color" name="color_red"checked> 
-                    <label for="red_color">Красный</label>
-                  </p>
-                  <p>
-                    <input type="checkbox" id="pink_color" name="color_pink"> 
-                    <label for="pink_color">Розовый</label>
-                  </p>
-                </fieldset>
-      
-               
-                <fieldset class="bluetooth_choose">
-                  <legend class="font_extra">Bluetooth</legend>
-                  <p>
-                    <input type="radio" id="bluetooth_yes" value="yes" name="bluetooth" checked>
-                    <label for="bluetooth_yes">Есть</label>
-                  </p>
-                  <p>
-                    <input type="radio" id="bluetooth_no" value="no" name="bluetooth">
-                    <label for="bluetooth_no">Нет</label>
-                  </p>
-                </fieldset>
-      
-                <button class="btn font_extra">Показать</button>
-              </form>
-            </section>
+                  <fieldset class="bluetooth_choose">
+                    <legend class="font_extra">Bluetooth</legend>
+                    <p>
+                      <input type="radio" id="bluetooth_yes" value="yes" name="bluetooth" checked>
+                      <label for="bluetooth_yes">Есть</label>
+                    </p>
+                    <p>
+                      <input type="radio" id="bluetooth_no" value="no" name="bluetooth">
+                      <label for="bluetooth_no">Нет</label>
+                    </p>
+                  </fieldset>
+        
+                  <button class="btn font_extra">Показать</button>
+                </form>
+              </aside>
   
             <section class="catalog_choose">
               <div class="sorting_menu">
@@ -229,9 +230,9 @@
                 <button class="pagination_button">Вперед</button>
               </div>
 
-            </section>
-  
-          </div>
+              </section>
+            </div>
+          </section>
         
     </main>
 
