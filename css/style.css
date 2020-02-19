@@ -1042,6 +1042,7 @@ ul .dellivery_company {
 }
 .filter {
     flex-basis: 320px;
+    padding-left: 60px;
 }
 .catalog {
     flex-basis: 760px;
