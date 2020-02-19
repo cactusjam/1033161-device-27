@@ -420,23 +420,17 @@ li .logout:focus {
 }
 
 .category_item {
-    display: flex;
-    align-items: center;
-  
     width: 160px;
-    height: 238px;
-    position: relative;
-}
-
-.category_icon:hover {
-    opacity: 1;
-}
-.category_icon:focus {
-    opacity: 0.3;
 }
 
 .category_icon {
-    margin-top: auto;
+    position: relative;
+    padding-top: 200px;
+    display: flex;
+}
+
+.category_icon:active > .category_name {
+    opacity: 0.3;
 }
 
 .category_icon p {
@@ -446,28 +440,37 @@ li .logout:focus {
 .category_icon::after {
     content: "";
     position: absolute;
-    z-index: 1;
     width: 160px;
     height: 160px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    top: 0;
+    left: 0;
+}
+
+.category_icon::before {
+    position: absolute;
+    content: "";
     background-color: #f7e296;
     top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
 }
 
 .category_icon:hover::after,
-.category_icon:focus::after {
+.category_icon:active::after {
     background-color: #f0c52e;
 }
 
 .category_icon1::after {
     background-image: url("../img/popular-1.svg");
 }
-.catalog_icon div {
-    margin-bottom: 35px;
-    width: 160px;
-    height: 160px;
+
+.category_icon1:active::after {
+    opacity: 0.3;
 }
+
 
 .category_icon2::after {
     background-image: url("../img/popular-2.svg");
@@ -490,7 +493,7 @@ li .logout:focus {
 }
 
 .category {
-    padding-bottom: 215px;
+    margin-bottom: 215px;
 }
 
 /* ---------- хэдр------- */
@@ -796,15 +799,25 @@ ul .dellivery_company {
 }
 
 /* -----------клиенты------------- */
-
 .clients {
+    margin-top: 94px;
+    margin-bottom: 90px;
+}
+
+.clients .container {
     display: flex;
-    justify-content: space-between;
 }
 
 .clients_logo {
     width: 260px;
-    margin: 94px 40px 90px 0;
+}
+
+.clients_logo a {
+    display: block;
+}
+
+.clients_logo:not(:last-child) {
+    margin-right: 40px;
 }
 
 .client_dji:hover {
