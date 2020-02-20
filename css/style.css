@@ -463,32 +463,32 @@ li .logout:focus {
     background-color: #f0c52e;
 }
 
-.category_icon1::after {
+.category_vr::after {
     background-image: url("../img/popular-1.svg");
 }
 
-.category_icon1:active::after {
+.category_vr:active::after {
     opacity: 0.3;
 }
 
 
-.category_icon2::after {
+.category_monopod::after {
     background-image: url("../img/popular-2.svg");
 }
 
-.category_icon3::after {
+.category_camera::after {
     background-image: url("../img/popular-3.svg");
 }
 
-.category_icon4::after {
+.category_fitnes::after {
     background-image: url("../img/popular-4.svg");
 }
 
-.category_icon5::after {
+.category_clock::after {
     background-image: url("../img/popular-5.svg");
 }
 
-.category_icon6::after {
+.category_copter::after {
     background-image: url("../img/popular-6.svg");
 }
 
@@ -736,8 +736,8 @@ padding: 0;
 }
 
 .delivery_tab {
-    width: 436px;
-    margin-left: 241px;
+    width: 520px;
+    margin-left: 190px;
 }
 
 .tab_content p {
@@ -761,7 +761,7 @@ padding: 0;
     background-repeat: no-repeat;
     position: absolute;
     top: 10px;
-    left: 620px;
+    left: 520px;
     width: 136px;
     height: 164px;
 }
