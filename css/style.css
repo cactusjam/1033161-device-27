@@ -1280,13 +1280,12 @@ fieldset {
 /* ------------- Модальные окна --------------- */
 
 .modal {
-    position: fixed;
     display: none;
     box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
     z-index: 3;
 }
 
-.write_us {
+.feedback_block {
     display: flex;
     flex-wrap: wrap;
     padding-top: 99px;
@@ -1296,17 +1295,20 @@ fieldset {
     font-size: 18px;
     font-weight: bold;
 }
-
+.write_us {
+    padding-left: 100px;
+    padding-right: 100px;
+}
 
 .modal_feedback {
     background-color: #ffffff;
     width: 960px;
-    min-width: 553px;
-    top: 120px;
+    height: 553px;
+    position: fixed;
+    top: 50%;
     left: 50%;
+    margin-top: -276px;
     margin-left: -480px;
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 .modal_feedback .btn {
@@ -1325,7 +1327,6 @@ fieldset {
 .feedback_name,
 .feedback_email {
     width: 360px;
-
 }
 
 .feedback_text {
@@ -1346,8 +1347,10 @@ fieldset {
 
 .modal_close {
     border: 0;
+    font-size: 0;
+    background-color: transparent;
 }
-.modal_close::before {
+.modal .modal_close::before {
     content: "";
     position: absolute;
     top: 22px;
@@ -1366,4 +1369,58 @@ fieldset {
 
 .modal_show {
     display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
 }
+
+@keyframes bounce {
+    0% { 
+        transform: translateY(-2000px); 
+    }
+    70% { 
+        transform: translateY(30px); 
+    }
+    90% { 
+        transform: translateY(-10px); 
+    }
+    100% { 
+        transform: translateY(0); 
+    }
+} 
+
+@keyframes shake {
+    0%, 
+    100% { 
+        transform: translateX(0); 
+    }
+    10%,
+    30%,
+    50%, 
+    70%, 
+    90% { 
+        transform: translateX(-10px); 
+    }
+    20%, 
+    40%, 
+    60%,
+    80% {
+         transform: translateX(10px);
+        }
+}
+
+.modal_error {
+    animation-name: shake;
+    animation-duration: 0.6s;
+}
+
+.modal_map {
+    background-color: #ffffff;
+    width: 960px;
+    height: 559px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -279px;
+    margin-left: -480px;
+}
+
