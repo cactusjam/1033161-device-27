@@ -13,10 +13,6 @@ html {
     font-style: normal;
 }
 
-.popup {
-    display: none;
-}
-
 @font-face {
     font-family: 'gilroy';
     src: url('../fonts/gilroylight.woff2') format('woff2'),
@@ -1279,4 +1275,95 @@ fieldset {
 
 .filter button {
     margin-top: 53px;
+}
+
+/* ------------- Модальные окна --------------- */
+
+.modal {
+    position: fixed;
+    display: none;
+    box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+    z-index: 3;
+}
+
+.write_us {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 99px;
+}
+
+.write_us label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.modal_feedback {
+    background-color: #ffffff;
+    width: 960px;
+    min-width: 553px;
+    top: 120px;
+    left: 50%;
+    margin-left: -480px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.modal_feedback .btn {
+    margin-top: 55px;
+    margin-bottom: 92px;
+}
+.popup_feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback_name {
+    margin-right: 40px;
+}
+
+.feedback_name,
+.feedback_email {
+    width: 360px;
+
+}
+
+.feedback_text {
+    flex-grow: 1;
+    margin-top: 35px;
+}
+
+.feedback_name input,
+.feedback_email input {
+    height: 50px;
+    padding-left: 20px;
+}
+
+.feedback_text textarea {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.modal_close {
+    border: 0;
+}
+.modal_close::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 883px;
+    background-image: url(../img/modal-close.png);
+    width: 55px;
+    height: 55px;
+}
+
+.modal_feedback .btn {
+    width: 200px;
+
+    background: none;
+    border: none;
+}
+
+.modal_show {
+    display: block;
 }
