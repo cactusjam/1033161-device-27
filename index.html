@@ -58,17 +58,13 @@
               <li class="catalog_item font_extra"><a href="#">Контакты</a></li>
             </ul>
           </nav>            
-        </div>
-        <svg>
-          <rect width="100" height="7" fill="#ffffff"/>
-        </svg> 
+        </div> 
       </div>
     </header>
   
     <main class="page_content">
-      <div class="container">
-
-        <section class="slideshow">
+      <section class="slideshow">
+        <div class="container">
           <h2 class="visually_hidden">Промо-слайдер</h2>
           <ul>
             <li><input type="radio" name="slider" id="first_slider" checked></li>
@@ -145,10 +141,11 @@
 
             </div>
           </div>
-
-        </section>
+        </div>
+      </section>
       
-        <section class="category">
+      <section class="category">
+        <div class="container">
           <h2 class="visually_hidden">Каталог товаров по категориям</h2>
   
           <ul class="category_list">
@@ -188,115 +185,109 @@
               </a>
             </li>
           </ul>
-  
-        </section>
-      </div>
-
-        <section class="delivery_menu">
-          <div class="container">
-
-            <div class="block_delivery">
-              <h2 class="visually_hidden">Меню доставки</h2>
-  
-              <ul class="delivery_nav font_extra">
-                <li class="active"><a href="#tabs_1">Доставка</a></li>
-                <li><a href="#tabs_2">Гарантия</a></li>
-                <li><a href="#tabs_3">Кредит</a></li>
-              </ul>
+        </div>
+      </section>
       
-              <div class="delivery_tab">
-                <div id="tabs_1" class="tab_content delivery_content">
-                  <h2 class="second_title font_extra">Доставка</h2>
-                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-                  <div class="dellivery_icon"></div>
-                </div>
+      <section class="services_menu">
+        <div class="container">
 
-                <div id="tabs_2" class="tab_content warranty_content">
-                  <h2 class="second_title font_extra">Гарантия</h2>
-                  <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-                    Товар, не дом, конечно же.</p>
-                  <div class="warranty_icon"></div>
-                </div>
+          <div class="block_tabs">
+            <h2 class="visually_hidden">Меню сервисов</h2>
 
-                <div id="tabs_3" class="tab_content credit_content">
-                  <h2 class="second_title font_extra">Кредит</h2>
-                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
-                    условия кредита. Выгодные для нашего банка, разумеется.</p>
-                  <div class="credit_icon"></div>
-                </div>
-
-              </div>
-          
-            </div> 
-          </div> 
-        </section>  
-
-        <section class="clients">
-          <div class="container">
-            <h2 class="visually_hidden">Компании с которыми мы сотрудничаем</h2>
-
-            <div class="clients_logo client_dji">
-              <a href="#">
-                <img src="img/logo-1.jpg" width="260" height="100" alt="dji">
-              </a>
-            </div>
-              
-            <div class="clients_logo client_gadgets">
-              <a href="#">
-                <img src="img/logo-3.jpg" width="260" height="100" alt="gadgets">
-              </a> 
-            </div>
-            
-            <div class="clients_logo client_gopro">
-              <a href="#">
-                <img src="img/logo-4.jpg" width="260" height="100" alt="gopro">
-              </a>
-            </div>
-            
-            <div class="clients_logo client_vive">
-              <a href="#">
-                <img src="img/logo-5.jpg" width="260" height="100" alt="vive">
-              </a> 
-            </div>
-          </div>
-        </section>
-        
-        <section class="about_company">
-          <h2 class="visually_hidden">О компании</h2>
-          <div class="container">
-
-            <div class="about_us">
-              <svg>
-                <rect width="80" height="7" fill="#000000"/>
-              </svg>
-              <h2 class="second_title font_extra">О нас</h2>
-            
-              <p class="about_us_p">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-              <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-                  
-              <ul class="dellivery_company">
-                <li>Деловые Линии</li>
-                <li>Автотрейдинг</li>
-                <li>ЖелДорЭкспедиция</li>
-              </ul>
-             
-              <a href="#" class="btn font_extra btn_more">Подробнее о нас</a>
-            </div>
+            <nav class="tabs_nav font_extra">
+              <button class="btn active">Доставка</button>
+              <button class="btn">Гарантия</button>
+              <button class="btn">Кредит</button>
+            </nav>
     
-            <div class="about_contacts">
-              <svg>
-                <rect width="80" height="7" fill="#000000"/>
-              </svg>
-              <h2 class="second_title font_extra">Контакты</h2>
-              <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-              <a class="button_map" href="#">
-                <img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
-              </a>
-              <button class="btn btn_feedback font_extra">Напишите нам</button> 
-            </div>
+            <div class="tabs_wrappen">
+              <div id="tabs_1" class="tab_content delivery_content">
+                <h2 class="second_title font_extra">Доставка</h2>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </div>
 
-          </div>       
-        </section>  
+              <div id="tabs_2" class="tab_content warranty_content">
+                <h2 class="second_title font_extra">Гарантия</h2>
+                <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                  Товар, не дом, конечно же.</p>
+              </div>
+
+              <div id="tabs_3" class="tab_content credit_content">
+                <h2 class="second_title font_extra">Кредит</h2>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+                  условия кредита. Выгодные для нашего банка, разумеется.</p>
+              </div>
+
+            </div>
+        
+          </div> 
+        </div> 
+      </section>  
+
+      <section class="clients">
+        <div class="container">
+          <h2 class="visually_hidden">Компании с которыми мы сотрудничаем</h2>
+
+          <div class="clients_logo client_dji">
+            <a href="#">
+              <img src="img/logo-1.jpg" width="260" height="100" alt="dji">
+            </a>
+          </div>
+            
+          <div class="clients_logo client_gadgets">
+            <a href="#">
+              <img src="img/logo-3.jpg" width="260" height="100" alt="gadgets">
+            </a> 
+          </div>
+          
+          <div class="clients_logo client_gopro">
+            <a href="#">
+              <img src="img/logo-4.jpg" width="260" height="100" alt="gopro">
+            </a>
+          </div>
+          
+          <div class="clients_logo client_vive">
+            <a href="#">
+              <img src="img/logo-5.jpg" width="260" height="100" alt="vive">
+            </a> 
+          </div>
+        </div>
+      </section>
+      
+      <section class="about_company">
+        <h2 class="visually_hidden">О компании</h2>
+        <div class="container">
+
+          <div class="about_us">
+            <svg>
+              <rect width="80" height="7" fill="#000000"/>
+            </svg>
+            <h2 class="second_title font_extra">О нас</h2>
+          
+            <p class="about_us_p">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+                
+            <ul class="dellivery_company">
+              <li><span>Деловые Линии</span></li>
+              <li><span>Автотрейдинг</span></li>
+              <li><span>ЖелДорЭкспедиция</span></li>
+            </ul>
+            
+            <a href="#" class="btn font_extra btn_more">Подробнее о нас</a>
+          </div>
+  
+          <div class="about_contacts">
+            <svg>
+              <rect width="80" height="7" fill="#000000"/>
+            </svg>
+            <h2 class="second_title font_extra">Контакты</h2>
+            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+            <img class="button_map" src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
+            <button class="btn btn_feedback font_extra">Напишите нам</button> 
+          </div>
+
+        </div>       
+      </section>  
     </main>
       
     <footer class="page_footer">
@@ -352,14 +343,7 @@
             
       
           <div class="footer_bottom">
-            <ul class="svg_list">
-              <li>
-                <svg>
-                  <rect width="80" height="7" fill="#ffc600"/>
-                </svg>
-              </li>
-            </ul>
-
+          
             <ul class="social_list">
               <li>
                 <a class="social_button" href="#" target="_blank" rel="noopener">
@@ -391,14 +375,12 @@
               </li>
             </ul>
 
-            <ul class="academ_list">
-              <li>
-                <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
-                  <img src="img/logo-html.png" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy">
-                </a>
-              </li> 
-            </ul>
-
+            <section class="copyright">
+              <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
+                <img src="img/logo-html.png" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy">
+              </a>
+            </section>
+                
           </div>
 
       </div>     
@@ -419,7 +401,7 @@
           </div>
           <div class="popup_feedback feedback_text">
             <label for="user_message font_extra">Текст письма</label>
-            <textarea id="user_message" name="user_message" rows="10" placeholder="В свободной форме"></textarea>
+            <input id="user_message" name="user_message" rows="10" placeholder="В свободной форме"></input>
           </div>
         </div>
         

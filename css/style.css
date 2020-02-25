@@ -104,6 +104,7 @@ a {
     margin-top: -5px;
   
     background-color: #f0c52e;
+    transition: all 0.1s linear;
   }
 
   .btn:hover::before,
@@ -112,7 +113,6 @@ a {
 
     height: 40px;
     margin: 0;
-    transition: all 0.1s linear;
   }
 
   .btn:focus,
@@ -163,14 +163,16 @@ a {
 } 
 
 .menu_links li,
-.about_us li,
-.delivery_nav li,
 .nav_list li,
 .nav_list_catalog li,
 .footer_top li {
     list-style: none;
 }
 
+.about_us ul {
+    list-style-type: circle;
+
+}
 .menu_catalog .dropdown_menu {
     position: absolute;
     z-index: 3;
@@ -317,15 +319,15 @@ li .logout:focus {
 /* ----------слайдер---------- */
 .slideshow {
     margin-top: -111px;
-    position: relative;
-    padding-left: 60px;
-    padding-right: 60px;
     padding-bottom: 90px;
+}
+.slideshow .container {
+    position: relative;
 }
 
 .slideshow ul {
     position: absolute;
-    left: 980px;
+    right: 80px;
     top: 300px;
     list-style: none;
     display: flex;
@@ -360,33 +362,51 @@ li .logout:focus {
     width: 220px;
 }
 
+.slide_item .content::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 7px;
+    background-color: #ffffff;
+    top: 40px;
+    margin-left: 0;
+}
+
+.slide_item .content::after {
+    position: absolute;
+    content: "01";
+    font-size: 179px;
+    font-weight: bold;
+    font-family: "gilroy", "Arial", sans-serif;
+    letter-spacing: 1.79px;
+    color: #ffffff;
+    top: 60px;
+    right: -10px;
+}
+
 .slide_item .content {
     display: flex;
     flex-direction: column;
+    width: 500px;
+
+    position: relative;
 }
 
 .slide_item_1 .content {
-    margin-top: 75px;
-    margin-left: 125px;
+    padding-top: 75px;
 }
 
 .slide_item_2 .content {
-    margin-top: 80px;
-    margin-left: 138px;
-}
+    padding-top: 80px;
 
-.slide_item_3 .content {
-    margin-left: 40px;
 }
 
 .slide_item {
     display: flex;
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 60px;
 }
-
-.slide_item_1 {
-    margin-left: 30px;
-}
-
 
 .slide_item_2,
 .slide_item_3 {
@@ -554,18 +574,6 @@ li .logout:focus {
     padding-right: 60px;
     padding-bottom: 165px;
     background-color: #f7e296;
-}
-
-.header_block::before {
-    content: "01";
-    font-size: 179px;
-    font-weight: bold;
-    font-family: gilroy, Arial, sans-serif;
-    color: #ffffff;
-    letter-spacing: 1.79px;
-    position: absolute;
-    left: 930px;
-    top: 250px;
 }
 
 .page_header svg {
@@ -763,91 +771,83 @@ li .logout:focus {
 }
 /* ------ блок доставка------- */
 
-.delivery_menu {
+.services_menu {
     background-color : #e5e5e5;
-    width: auto;
-    position: relative;
     min-height: 288px;
 }
 
-.block_delivery {
+.block_tabs {
     display: flex;
-    position: absolute;
-    top: -25px;
+    justify-content: space-between;
+    min-height: 288px;
 }
 
-.delivery_nav {
+.tabs_nav {
     flex-basis: 278px;
-    padding: 0px;
+    border-right: 7px solid #000;
 }
 
-.delivery_nav li {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 24px;
-    text-transform: uppercase;
-    padding-bottom: 55px;
-    letter-spacing: 3.6px;
+.tabs_nav .btn {
+    margin-bottom: 36px;
+    width: 160px;
 }
 
-.delivery_tab h2 {
+.tabs_nav .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: -1;
+  
+    width: 0;
+    height: 40px;
+  
+    background-color: #000000;
+}
+
+.tabs_wrappen h2 {
    margin: 0;
 }
 
-.delivery_tab {
-    width: 520px;
-    margin-left: 190px;
+.tabs_wrappen {
+    width: 760px;
+    padding-right: 60px;
 }
 
 .tab_content p {
     color: #464646;
+    width: 426px;
+    margin: 0;
+    margin-top: 43px;
 }
 
 .tab_content {
-    padding-bottom: 50px;
- 
+    padding-bottom: 18px;
+}
+
+.delivery_content {
+    background-image: url("../img/delivery.svg");
+    background-repeat: no-repeat;
+    background-size: 136px 164px;
+    background-position: 100% 0%;
+}
+
+.warranty_content {
+    background-image: url("../img/warranty.svg");
+    background-repeat: no-repeat;
+    background-size: 171px 194px;
+    background-position: 100% 0%;
+}
+
+.credit_content {
+    background-image: url("../img/credit.svg");
+    background-repeat: no-repeat;
+    background-size: 156px 186px;
+    background-position: 100% 0%;
 }
 
 .delivery_content,
-.warranty_content,
-.credit_content {
-    position: relative;
-}
-
-.dellivery_icon::after {
-    content: "";
-    background-image: url("../img/delivery.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 10px;
-    left: 520px;
-    width: 136px;
-    height: 164px;
-}
-
-.warranty_icon::after {
-    content: "";
-    background-image: url("../img/warranty.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -10px;
-    left: 620px;
-    width: 171px;
-    height: 194px;
-}
-
-.credit_icon::after {
-    content: "";
-    background-image: url("../img/credit.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -10px;
-    left: 620px;
-    width: 156px;
-    height: 186px;
-}
-.warranty_content,
-.credit_content {
+.warranty_content {
     display: none;
 }
 
@@ -942,10 +942,15 @@ ul .dellivery_company {
     color: #464646;
 }
 
-.about_us li {
+.dellivery_company li {
+    color: #e5e5e5;
+}
+
+.dellivery_company span {
     font-weight: bold;
     font-size: 16px;
     line-height: 40px;
+    color: #000000;
 }
 
 .about_us .second_title,
@@ -1037,21 +1042,25 @@ ul .dellivery_company {
     justify-content: space-between;
 }
 
+.footer_bottom::before {
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+    margin: auto 0;
+}
+
 .footer_bottom ul {
     padding: 0;
     margin: 0;
 }
 .footer_bottom {
+    position: relative;
     padding-top: 70px;
 }
 
 .social_list li {
     padding-right: 32px;
-}
-
-.svg_list svg {
-    width: 80px;
-    height: 7px;
 }
 
 .page_footer p {
@@ -1072,11 +1081,11 @@ ul .dellivery_company {
     opacity: 0.1;
 }
 
-.academ_list a:hover {
+.copyright a:hover {
     opacity: 0.6;
 }
 
-.academ_list a:focus {
+.copyright a:focus {
     opacity: 0.3;
 }
 /* --------- каталог ---------- */
@@ -1153,11 +1162,15 @@ ul .dellivery_company {
     flex-wrap: wrap;
 }
 .catalog_items {
-    margin-top: 69px;
+    margin-top: 49px;
 }
 
-.catalog_items:nth-child(2n) {
+.catalog_items {
     margin-right: 40px;
+}
+
+.catalog_items:nth-of-type(2n) {
+    margin-right: 0;
 }
 
 .catalog_items_info {
@@ -1171,6 +1184,10 @@ ul .dellivery_company {
 
 .catalog_items_info span {
     margin-left: auto;
+}
+
+.catalog_items a {
+    display: flex;
 }
 
 .sort_filter {
@@ -1207,7 +1224,6 @@ ul .dellivery_company {
 }
 .catalog {
     flex-basis: 760px;
-    min-height: 480px;
     margin-bottom: 77px;
 }
 
@@ -1277,6 +1293,10 @@ fieldset {
     margin-top: 53px;
 }
 
+.hidden_block {
+    display: none;
+}
+
 /* ------------- Модальные окна --------------- */
 
 .modal {
@@ -1313,7 +1333,6 @@ fieldset {
 
 .modal_feedback .btn {
     margin-top: 55px;
-    margin-bottom: 92px;
 }
 .popup_feedback {
     display: flex;
@@ -1334,15 +1353,47 @@ fieldset {
     margin-top: 35px;
 }
 
+.feedback_text input {
+    padding-bottom: 100px;
+    padding-left: 20px;
+}
+.popup_feedback input {
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.popup_feedback input:hover{
+    background-color: #eaeaea;
+    border: none;
+}
+
+.popup_feedback input::-webkit-input-placeholder {
+    color: rgba(70, 70, 70, 0.4);
+}
+
+.popup_feedback input:focus::-webkit-input-placeholder {
+    color:#464646;
+}
+
+.feedback_text input {
+    height: 156px;
+}
+
+.popup_feedback input:focus {
+    border: 3px solid #f0c52e;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.popup_feedback input:invalid {
+    background-color: #f6dada;
+    border: none;
+}
+
 .feedback_name input,
 .feedback_email input {
     height: 50px;
     padding-left: 20px;
-}
-
-.feedback_text textarea {
-    padding-left: 20px;
-    padding-top: 20px;
 }
 
 .modal_close {
@@ -1358,6 +1409,15 @@ fieldset {
     background-image: url(../img/modal-close.png);
     width: 55px;
     height: 55px;
+    opacity: 0.5;
+}
+
+.modal_close:hover::before {
+    opacity: 1;
+}
+
+.modal_close:focus::before {
+    opacity: 0.3;
 }
 
 .modal_feedback .btn {
