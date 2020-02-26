@@ -83,12 +83,12 @@
         <div class="sort_filter_inner container">
           <aside class="filter">
     
-            <p class="p_filter font_extra">Фильтр</p>
+            <p class="third_title font_extra">Фильтр</p>
           
             <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
     
-              <fieldset class="price_choose">
-                <legend class="font_extra">Стоимость</legend>
+              <div class="choose price_choose">
+                <span class="filter_title font_extra">Стоимость</span>
                 <div class="filter-range">
                   <div class="range-slider-track">
                     <div class="range-slider-pin range-slider-pin-min"></div>
@@ -103,44 +103,64 @@
                     <input type="number" id="range_maxprice" value="5000" min="1" max="5000" name="max">  
                   </div>
                 </div>
-              </fieldset>
+              </div>
               
-              <fieldset class="color_choose">
-                <legend class="font_extra">Цвет</legend>
+              <div class=" choose color_choose">
+                <span class="filter_title font_extra">Цвет</span>
                 <p>
-                  <input type="checkbox" id="black_color" name="color_black" checked>
-                  <label for="black_color">Черный</label>
+                  <label class="color_checkbox">
+                    <input class="visually_hidden" type="checkbox" name="color_black" checked>
+                    <span class="checkbox_indicator"></span>
+                    Черный
+                  </label>
+                </p>
+                <p>  
+                  <label class="color_checkbox">
+                    <input class="visually_hidden" type="checkbox" name="color_white">
+                    <span class="checkbox_indicator"></span>
+                    Белый
+                  </label>
+                </p>
+                <p> 
+                  <label class="color_checkbox">
+                    <input class="visually_hidden" type="checkbox" name="color_blue" checked> 
+                    <span class="checkbox_indicator"></span>
+                    Синий
+                  </label>
+                </p>
+                <p> 
+                  <label class="color_checkbox">
+                    <input class="visually_hidden" type="checkbox" name="color_red" checked>
+                    <span class="checkbox_indicator"></span>
+                    Красный
+                  </label>
                 </p>
                 <p>
-                  <input type="checkbox" id="white_color" name="color_white">  
-                  <label for="white_color">Белый</label>
+                  <label class="color_checkbox">
+                    <input class="visually_hidden" type="checkbox" name="color_pink"> 
+                    <span class="checkbox_indicator"></span>
+                    Розовый
+                  </label>
                 </p>
-                <p>
-                  <input type="checkbox" id="blue_color" name="color_blue" checked>  
-                  <label for="blue_color">Синий</label>
-                </p>
-                <p>
-                  <input type="checkbox" id="red_color" name="color_red" checked> 
-                  <label for="red_color">Красный</label>
-                </p>
-                <p>
-                  <input type="checkbox" id="pink_color" name="color_pink"> 
-                  <label for="pink_color">Розовый</label>
-                </p>
-              </fieldset>
-    
+              </div>
             
-              <fieldset class="bluetooth_choose">
-                <legend class="font_extra">Bluetooth</legend>
+              <div class="choose bluetooth_choose">
+                <span class="filter_title font_extra">Bluetooth</span>
                 <p>
-                  <input type="radio" id="bluetooth_yes" value="yes" name="bluetooth" checked>
-                  <label for="bluetooth_yes">Есть</label>
+                  <label class="bluetooth_radio">
+                    <input class="visually_hidden" type="radio" value="yes" name="bluetooth" checked>
+                    <span class="radio_indicator"></span>
+                    Есть
+                  </label>
                 </p>
                 <p>
-                  <input type="radio" id="bluetooth_no" value="no" name="bluetooth">
-                  <label for="bluetooth_no">Нет</label>
+                  <label class="bluetooth_radio">
+                    <input class="visually_hidden" type="radio" value="no" name="bluetooth">
+                    <span class="radio_indicator"></span>
+                    Нет
+                  </label>
                 </p>
-              </fieldset>
+              </div>
     
               <button class="btn font_extra">Показать</button>
             </form>
@@ -149,11 +169,11 @@
         <section class="catalog">
           <h2 class="visually_hidden">Сортировка товаров</h2>
           <div class="sorting">
-            <p class="third_title font_extra">Сортировка:</p>
+            <span class="third_title  font_extra">Сортировка:</span>
             
             <ul class="sorting_list">
               <li class="sorting_item">
-                <a class="sorting_link" href="#">По цене</a>
+                <a class="sorting_link active" href="#">По цене</a>
               </li>
     
               <li class="sorting_item">
@@ -166,11 +186,11 @@
             </ul>
             
             <ul class="arrows">
-              <li class="arrows_item arrows_item_asc">
-                <a href="#">up</a>
+              <li class="arrows_item arrows_item_asc selected">
+                <a class="up" href="#"><img src="img/icon-down-dir.png" width="11" height="10"></a>
               </li>
               <li class="arrows_item arrows_item_desc">
-                <a href="#">down</a>
+                <a class="down" href="#"><img src="img/icon-down-dir.png" width="11" height="10"></a>
               </li>
             </ul>
           </div>
@@ -189,7 +209,7 @@
 
               <div class="hidden_block">
                 <button class="btn font_extra">В корзину</button>
-                <button>Добавить к сравнению</button>
+                <button class="btn_compare">Добавить к сравнению</button>
               </div>
             </article>
         
@@ -205,7 +225,7 @@
 
               <div class="hidden_block">
                 <button class="btn font_extra">В корзину</button>
-                <button>Добавить к сравнению</button>
+                <button class="btn_compare">Добавить к сравнению</button>
               </div>
             </article>
      
@@ -221,7 +241,7 @@
 
               <div class="hidden_block">
                 <button class="btn font_extra">В корзину</button>
-                <button>Добавить к сравнению</button>
+                <button class="btn_compare">Добавить к сравнению</button>
               </div>
             </article>
      
@@ -237,7 +257,7 @@
 
               <div class="hidden_block">
                 <button class="btn font_extra">В корзину</button>
-                <button>Добавить к сравнению</button>
+                <button class="btn_compare">Добавить к сравнению</button>
               </div>
             </article>
           </section>
@@ -312,14 +332,7 @@
         </div>
 
         <div class="footer_bottom">
-          <ul class="svg_list">
-            <li>
-              <svg>
-                <rect width="80" height="7" fill="#ffc600"/>
-              </svg>
-            </li>
-          </ul>
-
+          
           <ul class="social_list">
             <li>
               <a class="social_button" href="#" target="_blank" rel="noopener">
@@ -351,14 +364,12 @@
             </li>
           </ul>
 
-          <ul class="academ_list">
-            <li>
-              <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
-                <img src="img/logo-html.png" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy">
-              </a>
-            </li> 
-          </ul>
-
+          <section class="copyright">
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
+              <img src="img/logo-html.png" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy">
+            </a>
+          </section>
+              
         </div>
 
       </div>

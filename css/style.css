@@ -206,15 +206,11 @@ a {
     padding-right: 58px;
 }
 
-.breadcrumbs {
+.breadcrumbs a {
     font-size: 14px;
     letter-spacing: 0.14px;
     line-height: 24px;
-    opacity: 0.3;
-}
-
-.breadcrumbs a:focus{
-    opacity: 0.1;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumbs a:not(:last-child) {
@@ -237,11 +233,18 @@ a {
     width: 4px;
     height: 7px;
     background-repeat: no-repeat;
-    color: black;
 }
 
 .breadcrumbs_catalog::after {
     left: 123px;
+}
+
+.breadcrumbs a:not(:last-child):hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:not(:last-child):focus {
+   color: rgba(0, 0, 0, 0.1);
 }
 
 /* ---------- заголовки ----------- */
@@ -256,6 +259,7 @@ a {
 .third_title {
     font-size: 16px;
     letter-spacing: 3.2px;
+    text-transform: uppercase;
 }
 
 
@@ -312,9 +316,108 @@ li .logout:focus {
     line-height: 24px;
 }
 
-.filter_form fieldset {
-    border: none;
+.filter_form {
+    margin-top: 90px;
 }
+
+.filter_form .choose {
+    border-top: 2px solid black;
+    width: 201px;
+    padding-top: 10px;
+}
+
+.filter_form .btn {
+    margin-top: 53px;
+    width: 200px;
+}
+
+.filter_form .filter_title {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.18px;
+}
+
+
+/* -------------- чекбоксы и радио ---------------- */
+.color_checkbox,
+.bluetooth_radio {
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+}
+
+.color_checkbox input[type="checkbox"] + .checkbox_indicator {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 27px;
+    height: 23px;
+}
+
+.color_checkbox input[type="checkbox"]:checked + .checkbox_indicator::before {
+    content: url("../img/checkbox-on.svg");
+}
+
+.color_checkbox input[type="checkbox"]:checked:active + .checkbox_indicator::before {
+    content: url("../img/checkbox-off.svg");
+}
+
+.color_checkbox input[type="checkbox"]:not(:checked) + .checkbox_indicator::before {
+    content: url("../img/checkbox-off.svg");
+}
+
+.color_checkbox input[type="checkbox"]:not(:checked):active + .checkbox_indicator::before {
+    content: url("../img/checkbox-on.svg");
+}
+
+.color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::before {
+    opacity: 0.6;
+}
+
+.color_checkbox input[type="checkbox"]:active + .checkbox_indicator::before {
+    opacity: 1;
+}
+
+.color_checkbox input[type="checkbox"]:disabled + .checkbox_indicator::before {
+    opacity: 0.25;
+}
+
+.bluetooth_radio input[type="radio"] + .radio_indicator {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.bluetooth_radio input[type="radio"]:checked + .radio_indicator::before {
+    content: url("../img/radio-on.svg");
+}
+
+.bluetooth_radio input[type="radio"]:checked:active + .radio_indicator::before {
+    content: url("../img/radio-off.svg");
+}
+
+.bluetooth_radio input[type="radio"]:not(:checked) + .radio_indicator::before {
+    content: url("../img/radio-off.svg");
+}
+
+.bluetooth_radio input[type="radio"]:not(:checked):active + .radio_indicator::before {
+    content: url("../img/radio-on.svg");
+}
+
+.bluetooth_radio input[type="radio"]:hover + .radio_indicator::before {
+    opacity: 0.6;
+}
+
+.bluetooth_radio input[type="radio"]:active + .radio_indicator::before {
+    opacity: 1;
+}
+
+.bluetooth_radio input[type="radio"]:disabled + .radio_indicator::before {
+    opacity: 0.25;
+}
+
 
 /* ----------слайдер---------- */
 .slideshow {
@@ -552,7 +655,7 @@ li .logout:focus {
 }
 
 .category {
-    margin-bottom: 215px;
+    margin-bottom: 180px;
 }
 
 /* ---------- хэдр------- */
@@ -589,6 +692,7 @@ li .logout:focus {
 .nav_list,
 .nav_list_catalog {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header_options {
@@ -649,6 +753,7 @@ li .logout:focus {
     outline: none;
 }
 /* ------- иконки для меню навигации-------- */
+
 .menu_search label::before {
     content: "";
     background-image: url("../img/search.svg");
@@ -716,7 +821,11 @@ li .logout:focus {
 }
 
 .nav_list_catalog .compare_catalog {
-    margin-left: 85px;
+    margin-left: 66px;
+}
+
+.nav_list_catalog .logout {
+    margin-left: 20px;
 }
 
 .menu_links {
@@ -774,22 +883,28 @@ li .logout:focus {
 .services_menu {
     background-color : #e5e5e5;
     min-height: 288px;
+    position: relative;  
 }
 
 .block_tabs {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    min-height: 288px;
+    min-height: 319px;
+    margin-top: -100px;
 }
 
 .tabs_nav {
-    flex-basis: 278px;
+    width: 280px;
     border-right: 7px solid #000;
 }
 
 .tabs_nav .btn {
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     width: 160px;
+}
+
+.tabs_nav .btn:first-child {
+    margin-top: 80px;
 }
 
 .tabs_nav .btn::after {
@@ -810,43 +925,47 @@ li .logout:focus {
 }
 
 .tabs_wrappen {
-    width: 760px;
-    padding-right: 60px;
+    padding-left: 120px;
+    padding-top: 75px;
 }
 
 .tab_content p {
     color: #464646;
     width: 426px;
     margin: 0;
-    margin-top: 43px;
+    margin-top: 30px;
 }
-
 .tab_content {
-    padding-bottom: 18px;
+    position: relative;
+    width: 714px;
 }
 
-.delivery_content {
-    background-image: url("../img/delivery.svg");
-    background-repeat: no-repeat;
-    background-size: 136px 164px;
-    background-position: 100% 0%;
+.delivery_content::before {
+    content: url("../img/delivery.svg");
+    position: absolute;
+    right: 20px;
+    width: 136px;
+    height: 164px;
 }
 
-.warranty_content {
-    background-image: url("../img/warranty.svg");
-    background-repeat: no-repeat;
-    background-size: 171px 194px;
-    background-position: 100% 0%;
+.warranty_content::before {
+    content: url("../img/warranty.svg");
+    width: 171px;
+    height: 194px;
+    position: absolute;
+    right: 0;
+    top: -10px;
 }
 
-.credit_content {
-    background-image: url("../img/credit.svg");
-    background-repeat: no-repeat;
-    background-size: 156px 186px;
-    background-position: 100% 0%;
+.credit_content::before {
+    content: url("../img/warranty.svg");
+    width: 156px;
+    height: 186px;
+    position: absolute;
+    right: 0;
 }
 
-.delivery_content,
+.credit_content,
 .warranty_content {
     display: none;
 }
@@ -991,6 +1110,11 @@ ul .dellivery_company {
     opacity: 0.3;
 }
 
+.nav_footer .logout {
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .footer_top,
 .footer_options ul {
     display: flex;
@@ -1133,24 +1257,19 @@ ul .dellivery_company {
     opacity: 0.6;  
 }
 
-.block_submenu a:hover {
-    opacity: 0.6;
-}
-
-.block_submenu a:focus {
-    opacity: 0.1;
-}
-
 .block_submenu {
     padding-left: 60px;
     padding-right: 60px;
-    margin: 45px 0;
+    padding-top: 35px;
+    padding-bottom: 40px;
 }
 .block_submenu h1 {
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.47px;
     font-weight: bold;
+    margin: 0;
+    margin-bottom: 23px;
 }
 .catalog ul {
     list-style: none;
@@ -1162,7 +1281,7 @@ ul .dellivery_company {
     flex-wrap: wrap;
 }
 .catalog_items {
-    margin-top: 49px;
+    margin-top: 69px;
 }
 
 .catalog_items {
@@ -1175,6 +1294,7 @@ ul .dellivery_company {
 
 .catalog_items_info {
     display: flex;
+    padding-top: 38px;
 }
 
 .catalog_items_info p {
@@ -1198,7 +1318,7 @@ ul .dellivery_company {
     position: absolute;
     content: "";
     width: 100%;
-    min-height: 80px;
+    min-height: 71px;
     background-color: rgba(0,0,0,.08);
     z-index: -1;
 }
@@ -1230,7 +1350,7 @@ ul .dellivery_company {
 .sorting {
     display: flex;
     align-items: center;
-    min-height: 80px;
+    min-height: 71px;
 }
 
 .sorting_list {
@@ -1239,16 +1359,24 @@ ul .dellivery_company {
     margin-left: 55px;
 }
 
+.sorting_link {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .sorting_link:hover {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting_link:active {
+    color: #000000;
+}
+
+.sorting_item .active {
+    color: #000000;
 }
 
 .sorting_item {
     margin-right: 32px;
-}
-
-.sorting_item:not(:first-child) {
-    opacity: 0.3;
 }
 
 .sorting_link {
@@ -1259,6 +1387,28 @@ ul .dellivery_company {
 .arrows {
     margin-left: auto;
     display: flex;
+}
+
+.arrows_item_desc {
+    margin-left: 20px;
+}
+
+.arrows_item:hover {
+    opacity: 0.4;
+}
+
+.arrows_item:active {
+    opacity: 0.2;
+}
+
+.arrows_item_asc img {
+    transform: rotate(180deg);
+}
+
+.arrows .selected,
+.arrows .selected:hover,
+.arrows .selected:active {
+    opacity: 0.2;
 }
 
 fieldset {
@@ -1280,8 +1430,9 @@ fieldset {
     font-weight: bold;
 }
 
-.price_choose {
-    margin-top: 70px;
+.filter .third_title {
+    margin: 0;
+    margin-top: 25px;
 }
 
 .color_choose,
@@ -1289,13 +1440,50 @@ fieldset {
     margin-top: 16px;
 }
 
-.filter button {
-    margin-top: 53px;
+.catalog_items {
+    position: relative;
 }
-
 .hidden_block {
     display: none;
+    width: 360px;
+    height: 380px;
+    background-color: rgba(238, 238, 238, 0.7);
+    position:absolute;
+    top: 0;
 }
+
+.catalog_items:hover>.hidden_block {
+    display: block;
+}
+
+.hidden_block .btn {
+    display: block;
+    width: 200px;
+    margin:0 auto;
+    margin-top: 186px;
+
+}
+.hidden_block .btn_compare {
+    display: block;
+    width:150px;
+    margin:33px auto 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    letter-spacing: 0.13px;
+    padding: 0;
+    border: none;
+}
+
+.hidden_block .btn_compare:hover {
+    color: #000000;
+}
+
+.hidden_block .btn_compare:focus {
+    color: rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
 
 /* ------------- Модальные окна --------------- */
 
