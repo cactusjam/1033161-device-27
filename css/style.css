@@ -896,15 +896,12 @@ li .logout:focus {
 .tabs_nav {
     width: 280px;
     border-right: 7px solid #000;
+    padding-top: 80px;
 }
 
 .tabs_nav .btn {
     margin-bottom: 20px;
     width: 160px;
-}
-
-.tabs_nav .btn:first-child {
-    margin-top: 80px;
 }
 
 .tabs_nav .btn::after {
@@ -935,14 +932,17 @@ li .logout:focus {
     margin: 0;
     margin-top: 30px;
 }
+
 .tab_content {
     position: relative;
     width: 714px;
 }
 
 .delivery_content::before {
-    content: url("../img/delivery.svg");
+    content: "";
     position: absolute;
+    background-image: url("../img/delivery.svg");
+    background-repeat: no-repeat;
     right: 20px;
     width: 136px;
     height: 164px;
@@ -963,7 +963,7 @@ li .logout:focus {
     height: 186px;
     position: absolute;
     right: 0;
-}
+} 
 
 .credit_content,
 .warranty_content {
