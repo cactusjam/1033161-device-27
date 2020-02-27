@@ -153,8 +153,7 @@ a {
 ---------- навигация ----------- */
 
 .dropdown_catalog,
-.menu_catalog,
-.footer_links li {
+.menu_catalog {
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -477,7 +476,7 @@ li .logout:focus {
 
 .slide_item .content::after {
     position: absolute;
-    content: "01";
+    content: attr(data_counter);
     font-size: 179px;
     font-weight: bold;
     font-family: "gilroy", "Arial", sans-serif;
@@ -655,7 +654,7 @@ li .logout:focus {
 }
 
 .category {
-    margin-bottom: 180px;
+    margin-bottom: 80px;
 }
 
 /* ---------- хэдр------- */
@@ -878,52 +877,85 @@ li .logout:focus {
 .page_header .header_block_catalog {
     padding-bottom: 48px;
 }
-/* ------ блок доставка------- */
+/* ------ блок сервисов ----- */
 
 .services_menu {
+    position: relative;  
+    padding-top: 100px;
+}
+
+.services_inner {
     background-color : #e5e5e5;
     min-height: 288px;
-    position: relative;  
 }
 
 .block_tabs {
-    position: absolute;
     display: flex;
-    min-height: 319px;
-    margin-top: -100px;
+    transform: translateY(-27px);
+    padding-bottom: 90px;
 }
 
 .tabs_nav {
     width: 280px;
-    border-right: 7px solid #000;
-    padding-top: 80px;
+    position: relative;
+    padding-top: 5px;
+}
+
+.tabs_nav::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    width: 7px;
+    height: 319px;
+    background-color: #000000;
+    top: -75px;
 }
 
 .tabs_nav .btn {
     margin-bottom: 20px;
     width: 160px;
+    padding: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-.tabs_nav .btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: -1;
-  
-    width: 0;
+.tabs_nav .checked {
     height: 40px;
-  
+    color:#ffe27f;
+    background-color:#000;
+}
+
+.tabs_nav .btn:active::before,
+.tabs_nav .checked::before  {
+    content: "";
+    width: 278px;
+    height: 40px;
+    border: none;
     background-color: #000000;
 }
 
-.tabs_wrappen h2 {
+.tabs_nav .btn:active,
+.tabs_nav .btn:focus {
+    color:#ffe27f;
+}
+
+.tabs_nav .btn:focus::before {
+    content: "";
+    width: 278px;
+    height: 40px;
+    border: none;
+    background-color: #000000;
+    top: 0;
+    margin: 0;
+}
+
+.tabs_wrapper h2 {
    margin: 0;
 }
 
-.tabs_wrappen {
+.tabs_wrapper {
     padding-left: 120px;
-    padding-top: 75px;
+    width: 75%;
 }
 
 .tab_content p {
@@ -935,7 +967,6 @@ li .logout:focus {
 
 .tab_content {
     position: relative;
-    width: 714px;
 }
 
 .delivery_content::before {
@@ -943,7 +974,8 @@ li .logout:focus {
     position: absolute;
     background-image: url("../img/delivery.svg");
     background-repeat: no-repeat;
-    right: 20px;
+    right: 60px;
+    top: 10px;
     width: 136px;
     height: 164px;
 }
@@ -979,7 +1011,7 @@ ul .dellivery_company {
 /* -----------клиенты------------- */
 .clients {
     padding-top: 94px;
-    padding-bottom: 90px;
+    padding-bottom: 80px;
 }
 
 .clients .container {
@@ -1021,7 +1053,10 @@ ul .dellivery_company {
 
 .about_company .container {
     display: flex;
-    margin-bottom: 98px;
+}
+
+.about_company {
+    padding-bottom: 80px;
 }
 
 .about_us,
@@ -1053,12 +1088,17 @@ ul .dellivery_company {
 
 .about_us,
 .about_contacts {
-    min-height: 562px;
+    min-height: 575px;
 }
 
 .about_us p,
 .about_contacts p {
     color: #464646;
+}
+
+.dellivery_company {
+    margin: 0;
+    margin-top: 20px;
 }
 
 .dellivery_company li {
@@ -1078,7 +1118,7 @@ ul .dellivery_company {
 }
 
 .about_contacts img {
-    margin-top: 15px;;
+    margin-top: 20px;;
 }
 
 
@@ -1127,9 +1167,12 @@ ul .dellivery_company {
 .footer_logo {
     margin-right: auto;
 }
+.footer_options li:nth-child(2) {
+    margin-left: 52px;
 
+}
 .footer_options li {
-    padding-left: 65px;
+    margin-left: 50px;
 }
 
 .footer_options ul {
@@ -1141,7 +1184,7 @@ ul .dellivery_company {
 .footer_middle {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .footer_middle ul {
@@ -1159,6 +1202,13 @@ ul .dellivery_company {
     text-transform: uppercase;
     list-style: none;
 }
+
+.footer_links li {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+} 
 
 .footer_bottom,
 .footer_bottom ul {
@@ -1180,11 +1230,11 @@ ul .dellivery_company {
 }
 .footer_bottom {
     position: relative;
-    padding-top: 70px;
+    padding-top: 65px;
 }
 
 .social_list li {
-    padding-right: 32px;
+    margin-right: 25px;
 }
 
 .page_footer p {
@@ -1279,8 +1329,7 @@ ul .dellivery_company {
 .catalog_cards {
     display: flex;
     flex-wrap: wrap;
-}
-.catalog_items {
+}?] {
     margin-top: 69px;
 }
 
