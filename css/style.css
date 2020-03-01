@@ -748,7 +748,7 @@ li .logout:focus {
     opacity: 0.3;
 }
 
-.search-button {
+.search_button {
     display: none;
     background-color: transparent;
     padding: 19px;
@@ -759,17 +759,19 @@ li .logout:focus {
     padding-left: 36px;
 }
 
-.search:focus~.search-button {
+.search:focus~.search_button {
     border: 2px solid #000000;
     display: inline-block;
+    outline: none;
 }
 
-.search-button:hover,
-.search-button:focus {
+.search_button:hover,
+.search_button:focus {
     display: inline-block;
     color: #ffffff;
     background-color: #000000;
     outline: none;
+    border: 2px solid #000000;
 }
 
 .search:focus {
@@ -777,6 +779,12 @@ li .logout:focus {
     opacity: 1;
     outline: none;
 }
+
+.search_button:focus {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
 /* ------- иконки для меню навигации-------- */
 
 .menu_search label::before {
@@ -1016,7 +1024,7 @@ li .logout:focus {
 }
 
 .credit_content::before {
-    content: url("../img/warranty.svg");
+    content: url("../img/credit.svg");
     width: 156px;
     height: 186px;
     position: absolute;
@@ -1161,20 +1169,17 @@ ul .dellivery_company {
 }
 
 .page_footer a {
-    color: white;
+    color: #ffffff;
 }
 
-.nav_footer a {
-    opacity: 0.7;
+.page_footer a:hover {
+    opacity: 0.6;
 }
 
-.nav_footer a:hover {
-    opacity: 1;
-}
-
-.nav_footer a:focus {
+.page_footer a:focus {
     opacity: 0.3;
 }
+
 
 .nav_footer .logout {
     margin-left: 20px;
@@ -1193,6 +1198,7 @@ ul .dellivery_company {
 .footer_logo {
     margin-right: auto;
 }
+
 .footer_options li:nth-child(2) {
     margin-left: 52px;
 
@@ -1202,7 +1208,6 @@ ul .dellivery_company {
 }
 
 .footer_options ul {
-
     margin: 0;
     padding: 0;
 }
@@ -1281,7 +1286,7 @@ ul .dellivery_company {
     opacity: 0.6;
 }
 
-.social_button:focus {
+.social_list .social_button:focus {
     opacity: 0.1;
 }
 
@@ -1304,15 +1309,13 @@ ul .dellivery_company {
     background-color: #ebebeb;  
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px;
     text-transform: uppercase;
     letter-spacing: 3.2px;
 }
 
-
-
 .pagination ul {
     display: flex;
+    align-items: center;
     margin: 0;
 }
 
@@ -1320,30 +1323,38 @@ ul .dellivery_company {
     list-style: none;
 }
 
+.pagination_control {
+    cursor: pointer;
+    width: 136px;
+    padding: 20px 30px;
+}
+
+.pagination_control:hover {
+    background-color: #d9d9d9;
+}
+
+.pagination_control:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .pagination li:not(:last-child){
     margin-right: 30px;
 }
 
-.pagination li:first-child:hover,
-.pagination li:last-child:hover{
-    background-color: #d9d9d9;
-}
-
-.pagination a:first-child:active,
-.pagination a:last-child:active,
 .pagination_page {
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination a:first-child:hover,
-.pagination a:last-child:hover,
-.pagination_page:active {
-    opacity: 1;
-}
 
 .pagination_page:hover {
-    opacity: 0.6;  
+    color: rgba(0, 0, 0, 0.6);
+ }
+
+.pagination_page:focus,
+.pagination .current {
+    color: #000000;
 }
+
 
 .block_submenu {
     padding-left: 60px;
@@ -1373,6 +1384,37 @@ ul .dellivery_company {
 .catalog_items {
     margin-right: 40px;
     margin-bottom: 45px;
+}
+
+.product--special::before {
+    content: "New";
+    position: absolute;
+    right: 14px;
+    top: 47px;
+    width: 60px;
+    height: 60px;
+    font-family: gilroy, "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.product--special::after {
+    content: "";
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.product--special:hover::after {
+    opacity: 0.1;
 }
 
 .catalog_items:nth-of-type(2n) {
@@ -1458,7 +1500,8 @@ ul .dellivery_company {
     color: #000000;
 }
 
-.sorting_item .active {
+.sorting_item .active,
+.sorting_item .active:hover {
     color: #000000;
 }
 
@@ -1480,22 +1523,20 @@ ul .dellivery_company {
     margin-left: 20px;
 }
 
-.arrows_item:hover {
+.arrows .selected {
+    opacity: 0.2;
+}
+
+.arrows .selected:hover {
     opacity: 0.4;
 }
 
-.arrows_item:active {
-    opacity: 0.2;
+.arrows .selected:active {
+    opacity: 1;
 }
 
 .arrows_item_asc img {
     transform: rotate(180deg);
-}
-
-.arrows .selected,
-.arrows .selected:hover,
-.arrows .selected:active {
-    opacity: 0.2;
 }
 
 fieldset {
