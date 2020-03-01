@@ -2,9 +2,9 @@ var link = document.querySelector(".btn_feedback");
 var popup = document.querySelector(".modal_feedback");
 var close = popup.querySelector(".modal_close");
 var form = popup.querySelector("form");
-var login = popup.querySelector("[name=user_name]");
-var email = popup.querySelector("[name=user_email]");
-var message = popup.querySelector("[name=user_message]")
+var login = popup.querySelector("[name=username]");
+var email = popup.querySelector("[name=useremail]");
+var message = popup.querySelector("[name=usermessage]")
 
 link.addEventListener("click", function(evt) {
     evt.preventDefault();

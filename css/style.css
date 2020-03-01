@@ -326,7 +326,7 @@ li .logout:focus {
 }
 
 .filter_form .btn {
-    margin-top: 53px;
+    margin-top: 30px;
     width: 200px;
 }
 
@@ -343,14 +343,15 @@ li .logout:focus {
     cursor: pointer;
     padding-left: 40px;
     position: relative;
+    display: flex;
 }
 
 .color_checkbox input[type="checkbox"] + .checkbox_indicator {
     position: absolute;
-    top: -3px;
     left: 0;
     width: 27px;
     height: 23px;
+    top: 7px;
 }
 
 .color_checkbox input[type="checkbox"]:checked + .checkbox_indicator::before {
@@ -383,7 +384,7 @@ li .logout:focus {
 
 .bluetooth_radio input[type="radio"] + .radio_indicator {
     position: absolute;
-    top: -4px;
+    top: 6px;
     left: 0;
     width: 25px;
     height: 25px;
@@ -423,21 +424,6 @@ li .logout:focus {
     margin-top: -111px;
     padding-bottom: 90px;
 }
-.slideshow .container {
-    position: relative;
-}
-
-.slideshow ul {
-    position: absolute;
-    right: 80px;
-    top: 300px;
-    list-style: none;
-    display: flex;
-}
-
-.slideshow li {
-    margin-right: 21px;
-}
 
 .promo_slogan {
     font-size: 47px;
@@ -476,7 +462,6 @@ li .logout:focus {
 
 .slide_item .content::after {
     position: absolute;
-    content: attr(data_counter);
     font-size: 179px;
     font-weight: bold;
     font-family: "gilroy", "Arial", sans-serif;
@@ -486,23 +471,46 @@ li .logout:focus {
     right: -10px;
 }
 
+.slide_item_1 .content::after {
+    content: "01";
+}
+
+.slide_item_2 .content::after {
+    content: "02";
+}
+
+.slide_item_3 .content::after {
+    content: "03";
+    z-index: -1;
+}
+
 .slide_item .content {
     display: flex;
     flex-direction: column;
     width: 500px;
 
     position: relative;
+    z-index: 1;
 }
 
-.slide_item_1 .content {
-    padding-top: 75px;
-}
-
+.slide_item_1 .content,
 .slide_item_2 .content {
-    padding-top: 80px;
-
+    padding-top: 75px;
+    
 }
 
+.slide_item_3 .content,
+.slide_item_3 .img_wrap{
+    padding-top: 80px;
+}
+
+.slideshow .slide_item_3 {
+    padding-left: 30px;
+}
+
+.slide_item_3 .promo_slogan {
+    width: 501px;
+}
 .slide_item {
     display: flex;
     justify-content: space-between;
@@ -655,6 +663,24 @@ li .logout:focus {
 
 .category {
     margin-bottom: 80px;
+}
+
+/* ----------- анимация слайдера --------------- */
+
+.slideshow .container {
+    position: relative;
+}
+
+.slideshow ul {
+    position: absolute;
+    right: 80px;
+    top: 300px;
+    list-style: none;
+    display: flex;
+}
+
+.slideshow li {
+    margin-right: 21px;
 }
 
 /* ---------- хэдр------- */
@@ -1241,6 +1267,10 @@ ul .dellivery_company {
     margin: 0;
 }
 
+.social_button {
+    display: flex;
+}
+
 .social_button,
 .footer_links a:focus {
     opacity: 0.3;
@@ -1253,6 +1283,10 @@ ul .dellivery_company {
 
 .social_button:focus {
     opacity: 0.1;
+}
+
+.copyright a {
+    display: flex;
 }
 
 .copyright a:hover {
@@ -1270,8 +1304,12 @@ ul .dellivery_company {
     background-color: #ebebeb;  
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
 }
+
+
 
 .pagination ul {
     display: flex;
@@ -1329,12 +1367,12 @@ ul .dellivery_company {
 .catalog_cards {
     display: flex;
     flex-wrap: wrap;
-}?] {
     margin-top: 69px;
 }
 
 .catalog_items {
     margin-right: 40px;
+    margin-bottom: 45px;
 }
 
 .catalog_items:nth-of-type(2n) {
@@ -1343,7 +1381,7 @@ ul .dellivery_company {
 
 .catalog_items_info {
     display: flex;
-    padding-top: 38px;
+    padding-top: 36px;
 }
 
 .catalog_items_info p {
@@ -1484,25 +1522,41 @@ fieldset {
     margin-top: 25px;
 }
 
-.color_choose,
-.bluetooth_choose {
-    margin-top: 16px;
+.choose p {
+    font-size: 14px;
+    line-height: 40px;
+    letter-spacing: 0.14px;
+    margin: 0;
+}
+
+.choose span:first-child {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.color_choose {
+    padding-bottom: 30px;
 }
 
 .catalog_items {
     position: relative;
 }
+
 .hidden_block {
-    display: none;
     width: 360px;
     height: 380px;
     background-color: rgba(238, 238, 238, 0.7);
     position:absolute;
     top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35;
 }
 
 .catalog_items:hover>.hidden_block {
     display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .hidden_block .btn {
@@ -1514,14 +1568,15 @@ fieldset {
 }
 .hidden_block .btn_compare {
     display: block;
-    width:150px;
-    margin:33px auto 0;
+    width: 150px;
+    margin: 33px auto 0;
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0.5);
     font-size: 13px;
     letter-spacing: 0.13px;
     padding: 0;
     border: none;
+    cursor: pointer;
 }
 
 .hidden_block .btn_compare:hover {
@@ -1721,3 +1776,92 @@ fieldset {
     margin-left: -480px;
 }
 
+
+/* ---------------- filter-range ----------------- */
+
+.filter-range {
+    width: 216px;
+    margin-top: 18px;
+    margin-bottom: 30px;
+  
+    color: #000000;
+  }
+  
+  .price-controls {
+    position: relative;
+    
+    height: 36px;
+    
+    font-size: 0;
+  
+    border-radius: 2px;
+  }
+  
+  .price-controls label {
+    display: inline-block;
+  
+    font-size: 14px;
+    line-height: 34px;
+    vertical-align: top;
+    color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .price-controls .min-price,
+  .price-controls .max-price {
+    width: 90px;
+  }
+  
+  .price-controls input {
+    width: 50px;
+    margin: 0;
+  
+    color: inherit;
+    font: inherit;
+  
+    background: none;
+    border: none;
+  }
+  
+  .range-controls {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  
+  .range-controls .scale {
+    height: 2px;
+  
+    background: #d7dcde;
+  }
+  
+  .range-controls .bar {
+    width: 55%;
+    height: 2px;
+  
+    background: #91c92f;
+  }
+  
+  .range-toggle {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+  
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .range-toggle-min {
+    left: 0;
+  }
+  
+  .range-toggle-max {
+    left: 51%;
+  }
+  

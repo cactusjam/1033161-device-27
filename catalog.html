@@ -86,26 +86,24 @@
             <p class="third_title font_extra">Фильтр</p>
           
             <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
-    
-              <div class="choose price_choose">
+              <div class="choose">
                 <span class="filter_title font_extra">Стоимость</span>
                 <div class="filter-range">
-                  <div class="range-slider-track">
-                    <div class="range-slider-pin range-slider-pin-min"></div>
-                    <div class="range-slider-pin range-slider-pin-max"></div>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
                   </div>
-      
-                  <div class="range-slider">
-                    <label for="range_minprice" class="min_price">от 0</label> 
-                    <input type="number" id="range_minprice" value="0" min="0" max="5000" name="min">
-                    
-                    <label for="range_maxprice" class="max_price">до 5000</label> 
-                    <input type="number" id="range_maxprice" value="5000" min="1" max="5000" name="max">  
+                  <div class="price-controls">
+                    <label class="min-price"><input class="visually_hidden" type="number" name="min-price" value="0">от 0</label>
+                    <label class="max-price"><input class="visually_hidden" type="number" name="max-price" value="5000">до 5000</label>
                   </div>
                 </div>
               </div>
               
-              <div class=" choose color_choose">
+              <div class="choose color_choose">
                 <span class="filter_title font_extra">Цвет</span>
                 <p>
                   <label class="color_checkbox">
@@ -187,10 +185,10 @@
             
             <ul class="arrows">
               <li class="arrows_item arrows_item_asc selected">
-                <a class="up" href="#"><img src="img/icon-down-dir.png" width="11" height="10"></a>
+                <a class="up" href="#"><img src="img/icon-down-dir.png" width="11" height="10" alt="сортировать по возрастанию"></a>
               </li>
               <li class="arrows_item arrows_item_desc">
-                <a class="down" href="#"><img src="img/icon-down-dir.png" width="11" height="10"></a>
+                <a class="down" href="#"><img src="img/icon-down-dir.png" width="11" height="10" alt="сортировать по убыванию"></a>
               </li>
             </ul>
           </div>
@@ -199,11 +197,11 @@
             <h2 class="visually_hidden">Каталог товаров</h2>
             <article class="catalog_items font_extra">
               <h2 class="visually_hidden">Любительская селфи-палка</h2>
-                <a href="">
+                <a href="#">
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                 </a>
                 <div class="catalog_items_info">
-                  <p>Любительская селфи-палка</p>
+                  <p><a href="#">Любительская селфи-палка</a></p>
                   <span>500 руб.</span>
                 </div> 
 
@@ -215,11 +213,11 @@
         
             <article class="catalog_items font_extra">
               <h2 class="visually_hidden">Профессиональная селфи-палка</h2>
-              <a href="">
+              <a href="#">
                 <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               </a>  
               <div class="catalog_items_info">
-                <p>Профессиональная селфи-палка</p>
+                <p><a href="#">Профессиональная селфи-палка</a></p>
                 <span>1 500 руб.</span>
               </div>
 
@@ -231,11 +229,11 @@
      
             <article class="catalog_items font_extra">
               <h2 class="visually_hidden">Непотопляемая селфи-палка</h2>
-              <a href="">
+              <a href="#">
                 <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               </a>
               <div class="catalog_items_info">
-                <p>Непотопляемая селфи-палка</p>
+                <p><a href="#">Непотопляемая селфи-палка</a></p>
                 <span>2 500 руб.</span>
               </div>
 
@@ -247,11 +245,11 @@
      
             <article class="catalog_items font_extra">
               <h2 class="visually_hidden">Селфи-палка «Следуй за мной»</h2>
-              <a href="">
+              <a href="#">
                 <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               </a> 
               <div class="catalog_items_info">
-                <p>Селфи-палка «Следуй за мной»</p>
+                <p><a href="#">Селфи-палка «Следуй за мной»</a></p>
                 <span>4 900 руб.</span>
               </div>
 
@@ -260,16 +258,17 @@
                 <button class="btn_compare">Добавить к сравнению</button>
               </div>
             </article>
+            
           </section>
           
           <div class="pagination font_extra">
-            <button class="pagination_button pref">Назад</button>
+            <a class="pagination_previous pref">Назад</a>
             <ul>
               <li><a class="pagination_page current">1</a></li>
-              <li> <a class="pagination_page" href="#">2</a></li>
-              <li> <a class="pagination_page" href="#">3</a></li>
+              <li><a class="pagination_page" href="#">2</a></li>
+              <li><a class="pagination_page" href="#">3</a></li>
             </ul> 
-            <button class="pagination_button">Вперед</button>
+            <a class="pagination_next">Вперед</a>
           </div>
     
           </section>
@@ -365,6 +364,7 @@
           </ul>
 
           <section class="copyright">
+            <h2 class="visually_hidden">Копирайт</h2>
             <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener">
               <img src="img/logo-html.png" width="27" height="35" alt="Переход на страницу интенсивного курса HTML academy">
             </a>
