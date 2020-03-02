@@ -702,11 +702,11 @@ li .logout:focus {
     border: 1px solid #000000;
     border-radius: 2px;
 
-    display: none;
+    visibility: hidden;
 }
 
-.slideshow_controls input[type="radio"]:checked + slideshow_control::before {
-    display: block;
+.slideshow_controls input[type="radio"]:checked + .slideshow_control::before {
+    visibility: visible;
 }
 
 
