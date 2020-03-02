@@ -124,27 +124,23 @@ a {
 
 .color_choose input[type="checkbox"]:hover,
 .sorting_menu input[type="checkbox"]:hover,
-.slideshow input[type="radio"]:hover,
 .bluetooth_choose input[type="radio"]:hover{
     opacity: 0.6;
 }
 
 .color_choose input[type="checkbox"]:focus,
 .sorting_menu input[type="checkbox"]:focus,
-.slideshow input[type="radio"]:focus,
 .bluetooth_choose input[type="radio"]:focus {
     opacity: 1;
 }
 
 .color_choose input[type="checkbox"]:disabled,
 .sorting_menu input[type="checkbox"]:disabled,
-.slideshow input[type="radio"]:disabled,
 .bluetooth_choose input[type="radio"]:disabled {
     opacity: 0.25;
 }
 
 .color_choose input[type="checkbox"]:disabled + label,
-.slideshow input[type="radio"]:disabled + label,
 .bluetooth_choose input[type="radio"]:disabled + label {
     opacity: 0.25;
 }
@@ -671,17 +667,51 @@ li .logout:focus {
     position: relative;
 }
 
-.slideshow ul {
+.slideshow_controls {
     position: absolute;
-    right: 80px;
-    top: 300px;
-    list-style: none;
+    z-index: 1;
+    right: 110px;
+    top: 330px;
     display: flex;
+    justify-content: space-between;
+    width: 78px;
 }
 
-.slideshow li {
-    margin-right: 21px;
+.slideshow_control {
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+  
+    border: 1px solid #000000;
+    border-radius: 6px;
+    cursor: pointer;
 }
+
+.slideshow_control::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    box-sizing: border-box;
+    width: 4px;
+    height: 4px;
+  
+    border: 1px solid #000000;
+    border-radius: 2px;
+
+    display: none;
+}
+
+.slideshow_controls input[type="radio"]:checked + slideshow_control::before {
+    display: block;
+}
+
+
+
+
 
 /* ---------- хэдр------- */
 .page_header a:hover {

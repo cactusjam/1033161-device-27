@@ -66,11 +66,21 @@
       <section class="slideshow">
         <div class="container">
           <h2 class="visually_hidden">Промо-слайдер</h2>
-          <ul>
-            <li><input type="radio" name="slider" id="first_slider" checked></li>
-            <li><input type="radio" name="slider" id="second_slider"></li>
-            <li> <input type="radio" name="slider" id="third_slider"></li>
-          </ul>
+          
+          <div class="slideshow_controls">
+            <p>
+              <input class="visually_hidden" type="radio" name="slider" id="first_slider" checked>
+              <label class="slideshow_control" for="first_slider"></label>
+            </p>
+            <p>
+              <input class="visually_hidden" type="radio" name="slider" id="second_slider">
+              <label class="slideshow_control" for="second_slider"></label>
+            </p>
+            <p>
+              <input class="visually_hidden" type="radio" name="slider" id="third_slider">
+              <label class="slideshow_control" for="third_slider"></label>
+            </p> 
+          </div>
 
           <div class="slide_item slide_item_1">
             <div class="img_wrap">
