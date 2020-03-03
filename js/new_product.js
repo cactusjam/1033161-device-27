@@ -1,15 +1,15 @@
 var catalogData = [
     {
-        isSpecial: true
+        isNew: true
     },
     {
-        isSpecial: false
+        isNew: false
     },
     {
-        isSpecial: false
+        isNew: false
     },
     {
-        isSpecial: false
+        isNew: false
     }
 ];
 
@@ -18,8 +18,8 @@ var updateCards = function (products) {
     for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
         var product = products[i];
-        if (product.isSpecial) {
-            element.classList.add('product--special')
+        if (product.isNew) {
+            element.classList.add('new')
         }
     }
 };

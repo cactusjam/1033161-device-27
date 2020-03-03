@@ -37,7 +37,7 @@
           <nav class="menu_links font_extra">
             <ul class="menu_catalog">
               <li class="catalog_item font_extra">
-                <a class="dropdown_catalog">Каталог товаров</a>
+                <a class="dropdown_catalog" href="#">Каталог товаров</a>
                 <ul class="dropdown_menu">
                   <li>
                     <a href="#">Виртуальная реальность</a>
@@ -66,23 +66,25 @@
       <section class="slideshow">
         <div class="container">
           <h2 class="visually_hidden">Промо-слайдер</h2>
-          
-          <div class="slideshow_controls">
-            <p>
-              <input class="visually_hidden" type="radio" name="slider" id="first_slider" checked>
-              <label class="slideshow_control" for="first_slider"></label>
-            </p>
-            <p>
-              <input class="visually_hidden" type="radio" name="slider" id="second_slider">
-              <label class="slideshow_control" for="second_slider"></label>
-            </p>
-            <p>
-              <input class="visually_hidden" type="radio" name="slider" id="third_slider">
-              <label class="slideshow_control" for="third_slider"></label>
-            </p> 
-          </div>
 
-          <div class="slide_item slide_item_1">
+          <form class="slider_form" action="https://echo.htmlacademy.ru/" method="GET">
+            <ul class="slideshow_controls">
+              <li>
+                <input class="visually_hidden slider_input" type="radio" name="slider" id="first_slider" checked>
+                <label for="first_slider"></label>
+              </li>
+              <li>
+                <input class="visually_hidden slider_input" type="radio" name="slider" id="second_slider">
+                <label for="second_slider"></label>
+              </li>
+              <li>
+                <input class="visually_hidden slider_input" type="radio" name="slider" id="third_slider">
+                <label for="third_slider"></label>
+              </li> 
+            </ul>
+          </form>
+          
+          <div class="slide_item slide_item_1 active">
             <div class="img_wrap">
               <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
             </div>
@@ -431,5 +433,6 @@
 
     <script src="js/feedback.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
