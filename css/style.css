@@ -218,7 +218,7 @@ a {
   }
 
   .catalog_menu_item a:active {
-    color: color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
   }
 
 .dropdown_menu li{
@@ -386,17 +386,10 @@ li .logout:focus {
     content: url("../img/checkbox-on.svg");
 }
 
-.color_checkbox input[type="checkbox"]:checked:active + .checkbox_indicator::before {
-    content: url("../img/checkbox-off.svg");
-}
-
 .color_checkbox input[type="checkbox"]:not(:checked) + .checkbox_indicator::before {
     content: url("../img/checkbox-off.svg");
 }
 
-.color_checkbox input[type="checkbox"]:not(:checked):active + .checkbox_indicator::before {
-    content: url("../img/checkbox-on.svg");
-}
 
 .color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::before {
     opacity: 0.6;
@@ -422,17 +415,12 @@ li .logout:focus {
     content: url("../img/radio-on.svg");
 }
 
-.bluetooth_radio input[type="radio"]:checked:active + .radio_indicator::before {
-    content: url("../img/radio-off.svg");
-}
+
 
 .bluetooth_radio input[type="radio"]:not(:checked) + .radio_indicator::before {
     content: url("../img/radio-off.svg");
 }
 
-.bluetooth_radio input[type="radio"]:not(:checked):active + .radio_indicator::before {
-    content: url("../img/radio-on.svg");
-}
 
 .bluetooth_radio input[type="radio"]:hover + .radio_indicator::before {
     opacity: 0.6;
@@ -693,18 +681,18 @@ li .logout:focus {
     margin-bottom: 80px;
 }
 
-.slideshow_controls{
+.slider_form {
+    position: absolute;
+    z-index: 1;
+    right: 130px;
+    top: 325px;
+}
+
+.slideshow_controls {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
-}
-
-.slider_form  {
-    position: absolute;
-    z-index: 1;
-    right: 120px;
-    top: 325px;
 }
 
 .slideshow_controls label {
@@ -715,25 +703,25 @@ li .logout:focus {
     margin-left: 25px;
 }
 
-.slider_input + label::before {
+.slider_input:checked + label::after{
+    background-image: url(../img/slider_btn_checked.svg);
     content: "";
-    position: absolute;
     display: block;
-    background-image: url(../img/slider_btn.svg);
+    position: absolute;
     background-size: contain;
     width: 12px;
     height: 12px;
-    cursor: pointer;
 }
 
-.slider_input:checked + label::after {
+
+.slider_input:not(:checked) + label::before {
+    background-image: url(../img/slider_btn.svg);
     content: "";
+    display: block;
     position: absolute;
-    background-image: url(../img/slider_btn_checked.svg);
+    background-size: contain;
     width: 12px;
     height: 12px;
-    cursor: pointer;
-    background-size: contain;
 }
 
 /* ----------- анимация слайдера --------------- */
@@ -742,12 +730,9 @@ li .logout:focus {
     position: relative;
 }
 
-
-
-
-
 .slide_item.active {
     display: flex;
+
 }
 
 
