@@ -1011,7 +1011,6 @@ li .logout:focus {
     padding-top: 10px;
 }
 
-.tabs_nav .btn:focus::before,
 .tabs_nav .btn_active::before {
     content: "";
     width: 278px;
@@ -1049,6 +1048,11 @@ li .logout:focus {
 
 .tab_content {
     position: relative;
+    display: none;
+}
+
+.tab_content.active {
+    display: block;
 }
 
 .delivery_content::before {
@@ -1078,11 +1082,6 @@ li .logout:focus {
     position: absolute;
     right: 0;
 } 
-
-.credit_content,
-.warranty_content {
-    display: none;
-}
 
 /* ------------------------------ */
 
