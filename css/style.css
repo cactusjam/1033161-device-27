@@ -178,11 +178,11 @@ a {
     content: "";
     position: absolute;
     left: 0;
-    top: 15px;
+    top: 17px;
     display: block;
     width: 8px;
     height: 8px;
-    border: 3px solid #e6e6e6;
+    border: 2px solid #e6e6e6;
     border-radius: 4px;
 
 }
@@ -514,7 +514,7 @@ li .logout:focus {
 }
 
 .slide_item_3 .img_wrap{
-    padding-top: 80px;
+    padding-top: 65px;
 }
 
 .slideshow .slide_item_3 {
@@ -523,6 +523,10 @@ li .logout:focus {
 
 .slide_item_3 .promo_slogan {
     width: 501px;
+}
+
+.slide_item_3 .promo_details {
+    margin-top: 53px;
 }
 
 .slide_item {
@@ -550,9 +554,9 @@ li .logout:focus {
 
 .promo_title {
     position: relative;
-  z-index: 2;
+    z-index: 2;
 
-  margin-top: 80px;
+     margin-top: 80px;
 }
 
 .promo_details {
@@ -683,9 +687,9 @@ li .logout:focus {
 
 .slider_form {
     position: absolute;
-    z-index: 1;
     right: 130px;
     top: 325px;
+    z-index: 2;
 }
 
 .slideshow_controls {
@@ -1007,19 +1011,14 @@ li .logout:focus {
     padding-top: 10px;
 }
 
-.tabs_nav .checked {
-    height: 40px;
-    color:#ffe27f;
-    background-color:#000;
-}
-
-.tabs_nav .btn:active::before,
-.tabs_nav .checked::before  {
+.tabs_nav .btn:focus::before,
+.tabs_nav .btn_active::before {
     content: "";
     width: 278px;
     height: 40px;
-    border: none;
     background-color: #000000;
+    top: 0;
+    margin: 0;
 }
 
 .tabs_nav .btn:active,
@@ -1027,14 +1026,9 @@ li .logout:focus {
     color:#ffe27f;
 }
 
-.tabs_nav .btn:focus::before {
-    content: "";
-    width: 278px;
-    height: 40px;
-    border: none;
-    background-color: #000000;
-    top: 0;
-    margin: 0;
+.tabs_nav .btn_active,
+.tabs_nav .btn_active:focus {
+    color:#ffe27f;
 }
 
 .tabs_wrapper h2 {
