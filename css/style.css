@@ -715,6 +715,7 @@ li .logout:focus {
     background-size: contain;
     width: 12px;
     height: 12px;
+    cursor: default;
 }
 
 
@@ -736,7 +737,6 @@ li .logout:focus {
 
 .slide_item.active {
     display: flex;
-
 }
 
 
@@ -1030,6 +1030,10 @@ li .logout:focus {
     color:#ffe27f;
 }
 
+.btn_active {
+    cursor: default;
+}
+
 .tabs_wrapper h2 {
    margin: 0;
 }
@@ -1199,7 +1203,8 @@ ul .dellivery_company {
 }
 
 .about_contacts img {
-    margin-top: 20px;;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 
