@@ -1350,19 +1350,23 @@ ul .dellivery_company {
     display: flex;
 }
 
-.social_button,
-.footer_links a:focus {
+.social_button {
     opacity: 0.3;
 }
-
 .social_button:hover,
-.footer_links a:hover {
+.social_button:focus,
+.footer_links a:hover,
+.footer_links a:focus {
     opacity: 0.6;
 }
 
-.social_list .social_button:focus {
+.footer_bottom .social_button:active {
     opacity: 0.1;
 }
+
+.footer_links a:active {
+    opacity: 0.3;
+} 
 
 .copyright a {
     display: flex;
