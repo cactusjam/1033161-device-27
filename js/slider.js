@@ -7,14 +7,14 @@ var tabs = document.querySelectorAll(".tab_content");
 
 for (let i = 0; i < slider.length; i++) {
     sliderControl[i].addEventListener('click', function () {
-      if (sliderControl[i].checked) {
-        slider[i].classList.add("active");
-      };
       for (let i = 0; i < slider.length; i++)  {
         if (!sliderControl[i].checked) {
           slider[i].classList.remove("active");
         };
       }
+      if (sliderControl[i].checked) {
+        slider[i].classList.add("active");
+      };
     });
   };
 

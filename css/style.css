@@ -90,6 +90,8 @@ a {
     background: none;
     border: none;
     cursor: pointer;
+    outline: none;
+
 }
 
 .btn::before {
@@ -105,19 +107,20 @@ a {
   
     background-color: #f0c52e;
     transition: all 0.1s linear;
+    display: block;
   }
 
   .btn:hover::before,
-  .btn:active::before {
+  .btn:active::before,
+  .btn:focus::before {
     top: 0;
 
     height: 40px;
     margin: 0;
+    display: block;
   }
 
-  .btn:focus,
   .btn:active {
-    outline: none;
     color: rgba(0, 0, 0, 0.3);
   }
 /* ---------- формы ------------ */
@@ -179,12 +182,11 @@ a {
     position: absolute;
     left: 0;
     top: 17px;
-    display: block;
     width: 8px;
     height: 8px;
     border: 2px solid #e6e6e6;
     border-radius: 4px;
-
+    display: block;
 }
 
 
@@ -297,11 +299,12 @@ a {
     opacity: 0.3;
 }
 
-li .logout:hover {
+li .logout:hover,
+li .logout:focus {
     opacity: 0.6;
 }
 
-li .logout:focus {
+li .logout:active {
     opacity: 1;
 }
 
@@ -382,24 +385,46 @@ li .logout:focus {
     top: 7px;
 }
 
+.color_checkbox input[type="checkbox"] + .checkbox_indicator::before {
+    width: 24px;
+    height: 23px;
+    display: block;
+    content: "";
+    background-image: url("../img/checkbox-off.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.color_checkbox input[type="checkbox"] + .checkbox_indicator::after {
+    width: 27px;
+    height: 23px;
+    display: none;
+    content: "";
+    background-image: url("../img/checkbox-on.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.color_checkbox input[type="checkbox"]:checked + .checkbox_indicator::after {
+    display: block;
+}
+
 .color_checkbox input[type="checkbox"]:checked + .checkbox_indicator::before {
-    content: url("../img/checkbox-on.svg");
+    display: none;
 }
 
-.color_checkbox input[type="checkbox"]:not(:checked) + .checkbox_indicator::before {
-    content: url("../img/checkbox-off.svg");
-}
-
-
-.color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::before {
+.color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::before,
+.color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::after  {
     opacity: 0.6;
 }
 
-.color_checkbox input[type="checkbox"]:active + .checkbox_indicator::before {
+.color_checkbox input[type="checkbox"]:active + .checkbox_indicator::before,
+.color_checkbox input[type="checkbox"]:active + .checkbox_indicator::after {
     opacity: 1;
 }
 
-.color_checkbox input[type="checkbox"]:disabled + .checkbox_indicator::before {
+.color_checkbox input[type="checkbox"]:disabled + .checkbox_indicator::before,
+.color_checkbox input[type="checkbox"]:disabled + .checkbox_indicator::after  {
     opacity: 0.25;
 }
 
@@ -415,14 +440,12 @@ li .logout:focus {
     content: url("../img/radio-on.svg");
 }
 
-
-
 .bluetooth_radio input[type="radio"]:not(:checked) + .radio_indicator::before {
     content: url("../img/radio-off.svg");
 }
 
-
-.bluetooth_radio input[type="radio"]:hover + .radio_indicator::before {
+.bluetooth_radio input[type="radio"]:hover + .radio_indicator::before,
+.bluetooth_radio input[type="radio"]:focus + .radio_indicator::before {
     opacity: 0.6;
 }
 
@@ -447,7 +470,7 @@ li .logout:focus {
     font-weight: bold;
     letter-spacing: 0.47px;
     margin: 0;
-    width: 396px;
+    width: 399px;
 }
 
 .content p:nth-child(2) {
@@ -474,6 +497,7 @@ li .logout:focus {
     background-color: #ffffff;
     top: 40px;
     margin-left: 0;
+    display: block;
 }
 
 .slide_item .content::after {
@@ -534,6 +558,7 @@ li .logout:focus {
     justify-content: space-between;
     padding-left: 90px;
     padding-right: 60px;
+    min-height: 496px;
 }
 
 .slide_item_2,
@@ -629,6 +654,7 @@ li .logout:focus {
     left: 0;
     width: 160px;
     height: 160px;
+    display: block;
 }
 
 .category_vr::after {
@@ -642,8 +668,10 @@ li .logout:focus {
     opacity: 0.3;
 }
 
-.category_icon:hover::before {
+.category_icon:hover::before,
+.category_icon:focus::before {
     background-color: #f0c52e;
+    display: block;
 }
 
 .category_monopod::after {
@@ -685,49 +713,33 @@ li .logout:focus {
     margin-bottom: 80px;
 }
 
-.slider_form {
+.slider_control {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
     position: absolute;
     right: 130px;
     top: 325px;
-    z-index: 2;
 }
 
-.slideshow_controls {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.slideshow_controls label {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    font-size: 0;
-    margin-left: 25px;
-}
-
-.slider_input:checked + label::after{
-    background-image: url(../img/slider_btn_checked.svg);
-    content: "";
-    display: block;
-    position: absolute;
-    background-size: contain;
-    width: 12px;
-    height: 12px;
-    cursor: default;
-}
-
-
-.slider_input:not(:checked) + label::before {
+.slider_btn {
+  
+    width: 16px; 
+    height: 16px;
+  
+    border: none;
     background-image: url(../img/slider_btn.svg);
-    content: "";
-    display: block;
-    position: absolute;
     background-size: contain;
-    width: 12px;
-    height: 12px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-color: transparent;
 }
+
+.slider_btn.current_btn {
+    background-image: url(../img/slider_btn_checked.svg);
+}
+
+
 
 /* ----------- анимация слайдера --------------- */
 
@@ -741,11 +753,12 @@ li .logout:focus {
 
 
 /* ---------- хэдр------- */
-.page_header a:hover {
+.page_header a:hover,
+.page_header a:focus {
     opacity: 0.6;
 }
 
-.page_header a:focus {
+.page_header a:active {
     opacity: 0.3;
 }
 
@@ -837,7 +850,7 @@ li .logout:focus {
     outline: none;
 }
 
-.search_button:focus {
+.search_button:active {
     color: rgba(255, 255, 255, 0.3);
 }
 
@@ -853,6 +866,7 @@ li .logout:focus {
     position: absolute;
     background-position: 0 0;
     top: 23px;
+    display: block;
 }
 .nav_list {
     padding: 0;
@@ -1020,8 +1034,7 @@ li .logout:focus {
     margin: 0;
 }
 
-.tabs_nav .btn:active,
-.tabs_nav .btn:focus {
+.tabs_nav .btn:active {
     color:#ffe27f;
 }
 
@@ -1176,6 +1189,14 @@ ul .dellivery_company {
     min-height: 575px;
 }
 
+.about_contacts {
+    width: 560px;
+}
+
+.about_us {
+   width: 462px;
+}
+
 .about_us p,
 .about_contacts p {
     color: #464646;
@@ -1224,11 +1245,12 @@ ul .dellivery_company {
     color: #ffffff;
 }
 
-.page_footer a:hover {
+.page_footer a:hover,
+.page_footer a:focus {
     opacity: 0.6;
 }
 
-.page_footer a:focus {
+.page_footer a:active {
     opacity: 0.3;
 }
 
@@ -1346,11 +1368,12 @@ ul .dellivery_company {
     display: flex;
 }
 
-.copyright a:hover {
+.copyright a:hover,
+.copyright a:focus {
     opacity: 0.6;
 }
 
-.copyright a:focus {
+.copyright a:active {
     opacity: 0.3;
 }
 /* --------- каталог ---------- */
@@ -1398,11 +1421,12 @@ ul .dellivery_company {
 }
 
 
-.pagination_page:hover {
+.pagination_page:hover,
+.pagination_page:focus {
     color: rgba(0, 0, 0, 0.6);
  }
 
-.pagination_page:focus,
+.pagination_page:active,
 .pagination .current {
     color: #000000;
 }
@@ -1425,6 +1449,7 @@ ul .dellivery_company {
 .catalog ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .catalog_cards {
@@ -1467,7 +1492,7 @@ ul .dellivery_company {
 
 .catalog_items_info {
     display: flex;
-    padding-top: 36px;
+    padding-top: 23px;
 }
 
 .catalog_items_info p {
@@ -1526,13 +1551,13 @@ ul .dellivery_company {
 
 .sorting {
     display: flex;
-    align-items: center;
-    min-height: 71px;
+    padding: 20px 0;
 }
 
-.sorting_list {
+.sorting  .sorting_list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
     margin-left: 55px;
 }
 
@@ -1562,7 +1587,7 @@ ul .dellivery_company {
     line-height: 18px;
 }
 
-.arrows {
+.sorting .arrows {
     margin-left: auto;
     display: flex;
 }
@@ -1601,7 +1626,6 @@ fieldset {
 .p_filter,
 .third_title {
     font-size: 16px;
-    line-height: 24px;
     letter-spacing: 3.2px;
     font-weight: bold;
 }
@@ -1620,7 +1644,7 @@ fieldset {
 
 .choose span:first-child {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 }
 
 .color_choose {
@@ -1668,11 +1692,12 @@ fieldset {
     cursor: pointer;
 }
 
-.hidden_block .btn_compare:hover {
+.hidden_block .btn_compare:hover,
+.hidden_block .btn_compare:focus {
     color: #000000;
 }
 
-.hidden_block .btn_compare:focus {
+.hidden_block .btn_compare:active {
     color: rgba(0, 0, 0, 0.2);
     outline: none;
 }
@@ -1871,7 +1896,7 @@ fieldset {
 .filter-range {
     width: 216px;
     margin-top: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   
     color: #000000;
   }
