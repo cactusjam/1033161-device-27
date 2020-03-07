@@ -68,13 +68,13 @@
           <h2 class="visually_hidden">Промо-слайдер</h2>
 
           <div class="slider_control">
-            <button class="slider_btn current_btn"></button>
-            <button class="slider_btn"></button>
-            <button class="slider_btn"></button>
+            <button class="slider_btn current_btn" data-slide="first_slide"></button>
+            <button class="slider_btn" data-slide="second_slide"></button>
+            <button class="slider_btn" data-slide="third_slide"></button>
           </div>
 
           
-          <div class="slide_item slide_item_1 active">
+          <div class="slide_item slide_item_1" data-slide="first_slide">
             <div class="img_wrap">
               <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
             </div>
@@ -102,7 +102,7 @@
             </div>
           </div>
 
-          <div class="slide_item slide_item_2">
+          <div class="slide_item slide_item_2 hidden" data-slide="second_slide">
             <div class="img_wrap">
               <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующие фитнес-браслеты">
             </div>
@@ -121,7 +121,7 @@
             </div>
           </div>
 
-          <div class="slide_item slide_item_3">
+          <div class="slide_item slide_item_3 hidden" data-slide="third_slide">
             <div class="img_wrap">
               <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер оснащенный мощным лазером">
             </div>

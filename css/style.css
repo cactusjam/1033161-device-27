@@ -35,10 +35,6 @@ body {
     font-family: "gilroy", "Arial", sans-serif;
 }
 
-.font_base {
-    font-family: "OpenSans","Arial", sans-serif;
-}
-
 .visually_hidden {
     position: absolute;
     width: 1px;
@@ -99,11 +95,11 @@ a {
     position: absolute;
     top: 50%;
     left: -2px;
+    transform: translateY(-50%);
     z-index: -1;
   
     width: inherit;
     height: 8px;
-    margin-top: -5px;
   
     background-color: #f0c52e;
     transition: all 0.1s linear;
@@ -113,8 +109,6 @@ a {
   .btn:hover::before,
   .btn:active::before,
   .btn:focus::before {
-    top: 0;
-
     height: 40px;
     margin: 0;
     display: block;
@@ -132,8 +126,7 @@ a {
 }
 
 .color_choose input[type="checkbox"]:focus,
-.sorting_menu input[type="checkbox"]:focus,
-.bluetooth_choose input[type="radio"]:focus {
+.sorting_menu input[type="checkbox"]:focus {
     opacity: 1;
 }
 
@@ -219,8 +212,13 @@ a {
     color: rgba(0, 0, 0, 0.6);
   }
 
-  .catalog_menu_item a:active {
+  .catalog_menu_item:active {
     color: rgba(0, 0, 0, 0.3);
+  }
+
+  .catalog_menu_item.active:hover {
+      color: #000000;
+      opacity: 1;
   }
 
 .dropdown_menu li{
@@ -386,7 +384,7 @@ li .logout:active {
 }
 
 .color_checkbox input[type="checkbox"] + .checkbox_indicator::before {
-    width: 24px;
+    width: 27px;
     height: 23px;
     display: block;
     content: "";
@@ -413,47 +411,73 @@ li .logout:active {
     display: none;
 }
 
-.color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::before,
-.color_checkbox input[type="checkbox"]:hover + .checkbox_indicator::after  {
+label.color_checkbox:hover > .checkbox_indicator::before,
+label.color_checkbox:hover > .checkbox_indicator::after,
+input.visually_hidden:focus + .checkbox_indicator::before,
+input.visually_hidden:focus + .checkbox_indicator::after,
+input.visually_hidden:focus + .radio_indicator::before,
+input.visually_hidden:focus + .radio_indicator::after {
     opacity: 0.6;
 }
 
-.color_checkbox input[type="checkbox"]:active + .checkbox_indicator::before,
-.color_checkbox input[type="checkbox"]:active + .checkbox_indicator::after {
+label.color_checkbox:active > .checkbox_indicator::before,
+label.color_checkbox:active > .checkbox_indicator::after {
     opacity: 1;
 }
 
-.color_checkbox input[type="checkbox"]:disabled + .checkbox_indicator::before,
-.color_checkbox input[type="checkbox"]:disabled + .checkbox_indicator::after  {
+label.color_checkbox:disabled > .checkbox_indicator::before,
+label.color_checkbox:disabled > .checkbox_indicator::after  {
     opacity: 0.25;
 }
 
 .bluetooth_radio input[type="radio"] + .radio_indicator {
     position: absolute;
-    top: 6px;
     left: 0;
     width: 25px;
     height: 25px;
+    top: 7px;
+}
+
+.bluetooth_radio input[type="radio"] + .radio_indicator::before {
+    display: block;
+    content: "";
+    background-image: url("../img/radio-off.svg");
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bluetooth_radio input[type="radio"]:checked + .radio_indicator::after {
+    display: none;
+    content: "";
+    content: url("../img/radio-on.svg");
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bluetooth_radio input[type="radio"]:checked + .radio_indicator::after {
+    display: block;
 }
 
 .bluetooth_radio input[type="radio"]:checked + .radio_indicator::before {
-    content: url("../img/radio-on.svg");
-}
-
-.bluetooth_radio input[type="radio"]:not(:checked) + .radio_indicator::before {
-    content: url("../img/radio-off.svg");
+    display: none;
 }
 
 .bluetooth_radio input[type="radio"]:hover + .radio_indicator::before,
-.bluetooth_radio input[type="radio"]:focus + .radio_indicator::before {
+.bluetooth_radio input[type="radio"]:hover + .radio_indicator::after {
     opacity: 0.6;
 }
 
-.bluetooth_radio input[type="radio"]:active + .radio_indicator::before {
+.bluetooth_radio input[type="radio"]:active + .radio_indicator::before,
+.bluetooth_radio input[type="radio"]:active + .radio_indicator::after {
     opacity: 1;
 }
 
-.bluetooth_radio input[type="radio"]:disabled + .radio_indicator::before {
+.bluetooth_radio input[type="radio"]:disabled + .radio_indicator::before,
+.bluetooth_radio input[type="radio"]:disabled + .radio_indicator::after {
     opacity: 0.25;
 }
 
@@ -521,7 +545,6 @@ li .logout:active {
 
 .slide_item_3 .content::after {
     content: "03";
-    z-index: -1;
 }
 
 .slide_item .content {
@@ -530,7 +553,6 @@ li .logout:active {
     width: 500px;
 
     position: relative;
-    z-index: 1;
 }
 
 .slide_item .content {
@@ -547,6 +569,7 @@ li .logout:active {
 
 .slide_item_3 .promo_slogan {
     width: 501px;
+    z-index: 1;
 }
 
 .slide_item_3 .promo_details {
@@ -554,16 +577,11 @@ li .logout:active {
 }
 
 .slide_item {
-    display: none;
+    display: flex;
     justify-content: space-between;
     padding-left: 90px;
     padding-right: 60px;
     min-height: 496px;
-}
-
-.slide_item_2,
-.slide_item_3 {
-    display: none;
 }
 
 .number {
@@ -720,12 +738,13 @@ li .logout:active {
     position: absolute;
     right: 130px;
     top: 325px;
+    z-index: 1;
 }
 
 .slider_btn {
   
-    width: 16px; 
-    height: 16px;
+    width: 12px; 
+    height: 12px;
   
     border: none;
     background-image: url(../img/slider_btn.svg);
@@ -737,6 +756,7 @@ li .logout:active {
 
 .slider_btn.current_btn {
     background-image: url(../img/slider_btn_checked.svg);
+    cursor: auto;
 }
 
 
@@ -746,11 +766,6 @@ li .logout:active {
 .slideshow .container {
     position: relative;
 }
-
-.slide_item.active {
-    display: flex;
-}
-
 
 /* ---------- хэдр------- */
 .page_header a:hover,
@@ -1030,7 +1045,6 @@ li .logout:active {
     width: 278px;
     height: 40px;
     background-color: #000000;
-    top: 0;
     margin: 0;
 }
 
@@ -1810,7 +1824,9 @@ fieldset {
     border: 0;
     font-size: 0;
     background-color: transparent;
+    cursor: pointer;
 }
+
 .modal .modal_close::before {
     content: "";
     position: absolute;
@@ -1969,7 +1985,8 @@ fieldset {
     cursor: pointer;
   }
 
-  .range-toggle:active {
+  .range-toggle:active,
+  .range-toggle:focus {
       width: 22px;
       height: 22px;
   }
@@ -1982,3 +1999,6 @@ fieldset {
     left: 51%;
   }
   
+.hidden {
+    display: none;
+}

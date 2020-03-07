@@ -1,22 +1,24 @@
 
-var sliderControl = document.querySelectorAll(".slider_input");
+var sliderControl = document.querySelectorAll(".slider_btn");
 var slider = document.querySelectorAll(".slide_item");
+
 var tabsControl = document.querySelectorAll(".tabs_nav .btn");
 var tabs = document.querySelectorAll(".tab_content");
 
 
-for (let i = 0; i < slider.length; i++) {
-    sliderControl[i].addEventListener('click', function () {
-      for (let i = 0; i < slider.length; i++)  {
-        if (!sliderControl[i].checked) {
-          slider[i].classList.remove("active");
-        };
+sliderControl.forEach(function (element) {
+  element.addEventListener('click', function () {
+    let dataSlide = element.getAttribute('data-slide');
+    slider.forEach(function (element) {
+      if (dataSlide === element.getAttribute('data-slide')) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
       }
-      if (sliderControl[i].checked) {
-        slider[i].classList.add("active");
-      };
     });
-  };
+  });
+});
+
 
   for (let i = 0; i < tabs.length; i++) {
       tabsControl[i].addEventListener('click', function() {
