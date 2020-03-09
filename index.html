@@ -102,7 +102,7 @@
             </div>
           </div>
 
-          <div class="slide_item slide_item_2 hidden" data-slide="second_slide">
+          <div class="slide_item slide_item_2 covered" data-slide="second_slide">
             <div class="img_wrap">
               <img src="img/slider-2.png" width="345" height="485" alt="Мотивирующие фитнес-браслеты">
             </div>
@@ -121,7 +121,7 @@
             </div>
           </div>
 
-          <div class="slide_item slide_item_3 hidden" data-slide="third_slide">
+          <div class="slide_item slide_item_3 covered" data-slide="third_slide">
             <div class="img_wrap">
               <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер оснащенный мощным лазером">
             </div>
@@ -197,24 +197,24 @@
               <h2 class="visually_hidden">Меню сервисов</h2>
 
               <nav class="tabs_nav font_extra">
-                <button class="btn btn_active">Доставка</button>
-                <button class="btn">Гарантия</button>
-                <button class="btn">Кредит</button>
+                <button class="btn btn_active" data-slide="tabs_1">Доставка</button>
+                <button class="btn" data-slide="tabs_2">Гарантия</button>
+                <button class="btn" data-slide="tabs_3">Кредит</button>
               </nav>
       
               <div class="tabs_wrapper">
-                <div id="tabs_1" class="tab_content delivery_content active">
+                <div class="tab_content delivery_content" data-slide="tabs_1">
                   <h2 class="second_title font_extra">Доставка</h2>
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 </div>
 
-                <div id="tabs_2" class="tab_content warranty_content">
+                <div class="tab_content warranty_content covered" data-slide="tabs_2">
                   <h2 class="second_title font_extra">Гарантия</h2>
                   <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
                     Товар, не дом, конечно же.</p>
                 </div>
 
-                <div id="tabs_3" class="tab_content credit_content">
+                <div class="tab_content credit_content covered" data-slide="tabs_3">
                   <h2 class="second_title font_extra">Кредит</h2>
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
                     условия кредита. Выгодные для нашего банка, разумеется.</p>
