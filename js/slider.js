@@ -6,9 +6,9 @@ var tabsControl = document.querySelectorAll(".tabs_nav .btn");
 var tabs = document.querySelectorAll(".tab_content");
 
 
-if (typeof NodeList.prototype.forEach !== 'function') {
+if (!NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
-}  
+} 
 
 sliderControl.forEach(function (component) {
   component.addEventListener('click', function () {
