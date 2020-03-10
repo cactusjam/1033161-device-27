@@ -117,19 +117,8 @@ a {
   }
 /* ---------- формы ------------ */
 
-.color_choose input[type="checkbox"]:hover,
-.sorting_menu input[type="checkbox"]:hover,
-.bluetooth_choose input[type="radio"]:hover{
-    opacity: 0.6;
-}
 
-.color_choose input[type="checkbox"]:focus,
-.sorting_menu input[type="checkbox"]:focus {
-    opacity: 1;
-}
-
-/* 
----------- навигация ----------- */
+/* ---------- навигация ----------- */
 
 .dropdown_catalog,
 .menu_catalog {
@@ -405,6 +394,13 @@ input.visually_hidden:focus + .checkbox_indicator::after,
 input.visually_hidden:focus + .radio_indicator::before,
 input.visually_hidden:focus + .radio_indicator::after {
     opacity: 0.6;
+}
+
+input.visually_hidden:focus + .checkbox_indicator::before,
+input.visually_hidden:focus + .checkbox_indicator::after,
+input.visually_hidden:focus + .radio_indicator::before,
+input.visually_hidden:focus + .radio_indicator::after {
+    outline: 3px solid #6495ED;
 }
 
 input.visually_hidden:disabled + .checkbox_indicator,
