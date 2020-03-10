@@ -88,17 +88,17 @@
             <form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
               <div class="choose">
                 <span class="filter_title font_extra">Стоимость</span>
-                <div class="filter-range">
-                  <div class="range-controls">
+                <div class="filter_range">
+                  <div class="range_controls">
                     <div class="scale">
                       <div class="bar"></div>
                     </div>
-                    <div class="range-toggle range-toggle-min"></div>
-                    <div class="range-toggle range-toggle-max"></div>
+                    <div class="range_toggle range_toggle_min" tabindex="0"></div>
+                    <div class="range_toggle range_toggle_max" tabindex="0"></div>
                   </div>
-                  <div class="price-controls">
-                    <label class="min-price"><input class="visually_hidden" type="number" name="min-price" value="0">от 0</label>
-                    <label class="max-price"><input class="visually_hidden" type="number" name="max-price" value="5000">до 5000</label>
+                  <div class="price_controls">
+                    <label class="min_price"><input class="visually_hidden" type="number" name="min-price" value="0" tabindex="-1">от 0</label>
+                    <label class="max_price"><input class="visually_hidden" type="number" name="max-price" value="5000" tabindex="-1">до 5000</label>
                   </div>
                 </div>
               </div>
@@ -109,35 +109,35 @@
                   <label class="color_checkbox">
                     <input class="visually_hidden" type="checkbox" name="color_black" checked>
                     <span class="checkbox_indicator"></span>
-                    Черный
+                    <span class="checkbox_content">Черный</span>
                   </label>
                 </p>
                 <p>  
                   <label class="color_checkbox">
                     <input class="visually_hidden" type="checkbox" name="color_white">
                     <span class="checkbox_indicator"></span>
-                    Белый
+                    <span class="checkbox_content">Белый</span> 
                   </label>
                 </p>
                 <p> 
                   <label class="color_checkbox">
                     <input class="visually_hidden" type="checkbox" name="color_blue" checked> 
                     <span class="checkbox_indicator"></span>
-                    Синий
+                    <span class="checkbox_content">Синий</span>                   
                   </label>
                 </p>
                 <p> 
                   <label class="color_checkbox">
                     <input class="visually_hidden" type="checkbox" name="color_red" checked>
                     <span class="checkbox_indicator"></span>
-                    Красный
+                    <span class="checkbox_content">Красный</span>
                   </label>
                 </p>
                 <p>
                   <label class="color_checkbox">
                     <input class="visually_hidden" type="checkbox" name="color_pink"> 
                     <span class="checkbox_indicator"></span>
-                    Розовый
+                    <span class="checkbox_content">Розовый</span>
                   </label>
                 </p>
               </div>
@@ -148,14 +148,14 @@
                   <label class="bluetooth_radio">
                     <input class="visually_hidden" type="radio" value="yes" name="bluetooth" checked>
                     <span class="radio_indicator"></span>
-                    Есть
+                    <span class="radio_content">Есть</span>
                   </label>
                 </p>
                 <p>
                   <label class="bluetooth_radio">
                     <input class="visually_hidden" type="radio" value="no" name="bluetooth">
                     <span class="radio_indicator"></span>
-                    Нет
+                    <span class="radio_content">Нет</span>
                   </label>
                 </p>
               </div>

@@ -128,17 +128,6 @@ a {
     opacity: 1;
 }
 
-.color_choose input[type="checkbox"]:disabled,
-.sorting_menu input[type="checkbox"]:disabled,
-.bluetooth_choose input[type="radio"]:disabled {
-    opacity: 0.25;
-}
-
-.color_choose input[type="checkbox"]:disabled + label,
-.bluetooth_choose input[type="radio"]:disabled + label {
-    opacity: 0.25;
-}
-
 /* 
 ---------- навигация ----------- */
 
@@ -186,9 +175,9 @@ a {
     z-index: 3;
     left: 0;
     width: 100%;
-    min-height: 165px;
-    padding-left: 80px;
-    padding-top: 38px;
+    min-height: 160px;
+    padding-left: 60px;
+    padding-top: 25px;
     display: none;
 }
 
@@ -199,10 +188,12 @@ a {
 
   .catalog_item:hover .dropdown_menu,
   .catalog_item > a:focus + .dropdown_menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     background-color: #f7e296;
+  }
+
+  .catalog_item {
+      margin-left: 20px;
   }
 
   .catalog_menu_item:focus,
@@ -343,7 +334,7 @@ li .logout:active {
 }
 
 .filter_form {
-    margin-top: 90px;
+    margin-top: 86px;
 }
 
 .filter_form .choose {
@@ -387,7 +378,6 @@ li .logout:active {
     display: block;
     content: "";
     background-image: url("../img/checkbox-off.svg");
-    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -397,7 +387,6 @@ li .logout:active {
     display: none;
     content: "";
     background-image: url("../img/checkbox-on.svg");
-    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -418,6 +407,14 @@ input.visually_hidden:focus + .radio_indicator::after {
     opacity: 0.6;
 }
 
+input.visually_hidden:disabled + .checkbox_indicator,
+input.visually_hidden:disabled ~ .checkbox_content,
+input.visually_hidden:disabled + .radio_indicator,
+input.visually_hidden:disabled ~ .radio_content {
+    cursor: auto;
+    opacity: 0.25;
+}
+
 label.color_checkbox:active > .checkbox_indicator::before,
 label.color_checkbox:active > .checkbox_indicator::after {
     opacity: 1;
@@ -426,6 +423,7 @@ label.color_checkbox:active > .checkbox_indicator::after {
 label.color_checkbox:disabled > .checkbox_indicator::before,
 label.color_checkbox:disabled > .checkbox_indicator::after  {
     opacity: 0.25;
+    cursor: auto;
 }
 
 .bluetooth_radio input[type="radio"] + .radio_indicator {
@@ -438,22 +436,24 @@ label.color_checkbox:disabled > .checkbox_indicator::after  {
 
 .bluetooth_radio input[type="radio"] + .radio_indicator::before {
     display: block;
-    content: "";
-    background-image: url("../img/radio-off.svg");
     width: 25px;
     height: 25px;
-    background-size: contain;
+    content: "";
+    background-image: url("../img/radio-off.svg");
+    background-size: 25px 25px;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .bluetooth_radio input[type="radio"]:checked + .radio_indicator::after {
     display: none;
-    content: "";
-    content: url("../img/radio-on.svg");
     width: 25px;
     height: 25px;
-    background-size: contain;
+    content: "";
+    content: url("../img/radio-on.svg");
+    background-size: 25px 25px;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .bluetooth_radio input[type="radio"]:checked + .radio_indicator::after {
@@ -734,7 +734,7 @@ label.color_checkbox:disabled > .checkbox_indicator::after  {
     justify-content: space-between;
     width: 80px;
     position: absolute;
-    right: 130px;
+    right: 100px;
     top: 325px;
     z-index: 1;
 }
@@ -800,6 +800,10 @@ label.color_checkbox:disabled > .checkbox_indicator::after  {
 .nav_list,
 .nav_list_catalog {
     display: flex;
+}
+
+.nav_list,
+.nav_list_catalog {
     flex-wrap: wrap;
 }
 
@@ -817,6 +821,7 @@ label.color_checkbox:disabled > .checkbox_indicator::after  {
 .menu_search {
     position: relative;
     margin-right: auto;
+    max-height: 60px;
 }
 
 .page_header {
@@ -945,14 +950,20 @@ label.color_checkbox:disabled > .checkbox_indicator::after  {
     margin-left: 20px;
 }
 
+.nav_list_catalog {
+    padding: 0;
+    max-width: 501px;
+}
+
 .menu_links {
     padding-left: 0;
     margin-top: 25px;
 }
 .catalog_item:first-child {
-    margin-left: 0;
     margin-right: auto;
+    margin-left: 0;
 }
+
 .catalog_item:last-child {
     margin-left: 105px;
 }
@@ -1135,7 +1146,8 @@ ul .dellivery_company {
     margin-right: 40px;
 }
 
-.client_dji:hover {
+.client_dji:hover,
+.client_dji:focus {
     background-image: url("../img/logo-1_hidden.jpg");  
 }
 
@@ -1261,11 +1273,18 @@ ul .dellivery_company {
     opacity: 0.3;
 }
 
+.nav_footer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 792px;
+}
 
 .nav_footer .logout {
     margin-left: 20px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(31, 22, 22, 0.3);
 }
+
+
 
 .footer_top,
 .footer_options ul {
@@ -1307,6 +1326,8 @@ ul .dellivery_company {
     display: flex;
     margin: 0;
     padding-right: 0;
+    flex-wrap: wrap;
+    max-width: 640px;
 }
 
 .footer_links li {
@@ -1557,7 +1578,7 @@ ul .dellivery_company {
 }
 .catalog {
     flex-basis: 760px;
-    margin-bottom: 77px;
+    margin-bottom: 70px;
 }
 
 .sorting {
@@ -1906,19 +1927,19 @@ fieldset {
 
 /* ---------------- filter-range ----------------- */
 
-.filter-range {
+.filter_range {
     width: 216px;
-    margin-top: 18px;
-    margin-bottom: 23px;
+    margin-top: 20px;
+    margin-bottom: 16px;
   
     color: #000000;
   }
   
-  .price-controls {
+  .price_controls {
     margin-top: 10px;
   }
   
-  .price-controls label {
+  .price_controls label {
     display: inline-block;
     font-family: gilroy, "Arial", sans-serif;
     font-size: 14px;
@@ -1928,12 +1949,12 @@ fieldset {
     cursor: pointer;
   }
   
-  .price-controls .min-price,
-  .price-controls .max-price {
+  .price_controls .min_price,
+  .price_controls .max_price {
     width: 90px;
   }
   
-  .price-controls input {
+  .price_controls input {
     width: 50px;
     margin: 0;
   
@@ -1944,26 +1965,26 @@ fieldset {
     border: none;
   }
   
-  .range-controls {
+  .range_controls {
     position: relative;
     padding-left: 10px;
     padding-right: 20px;
   }
   
-  .range-controls .scale {
+  .range_controls .scale {
     height: 2px;
   
     background: #d7dcde;
   }
   
-  .range-controls .bar {
+  .range_controls .bar {
     width: 55%;
     height: 2px;
   
     background: #91c92f;
   }
   
-  .range-toggle {
+  .range_toggle {
     position: absolute;
     left: 0;
     top: -8px;
@@ -1978,17 +1999,17 @@ fieldset {
     cursor: pointer;
   }
 
-  .range-toggle:active,
-  .range-toggle:focus {
+  .range_toggle:active,
+  .range_toggle:focus {
       width: 22px;
       height: 22px;
   }
 
-  .range-toggle-min {
+  .range_toggle_min {
     left: 0;
   }
   
-  .range-toggle-max {
+  .range_toggle_max {
     left: 51%;
   }
 
