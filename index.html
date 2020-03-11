@@ -3,12 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Девайс</title>
-		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/normalize_min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+		<link rel="stylesheet" href="css/style_min.css">
+  </head>
+  
 	<body class="page">
 		<header class="page_header">
+
 			<div class="container">
 				<div class="header_block">
 					<div class="header_logo">
@@ -52,7 +54,8 @@
 					</nav>
 				</div>
 			</div>
-		</header>
+    </header>
+    
 		<main class="page_content">
 			<section class="slideshow">
 				<div class="container">
@@ -248,7 +251,8 @@
 					</div>
 				</div>
 			</section>
-		</main>
+    </main>
+    
 		<footer class="page_footer">
 			<div class="container">
 				<div class="footer_top">
@@ -333,7 +337,8 @@
 					</section>
 				</div>
 			</div>
-		</footer>
+    </footer>
+    
 		<section class="modal modal_feedback">
 			<h2 class="visually_hidden">Форма обратной связи</h2>
 			<form class="write_us" method="post" action="https://echo.htmlacademy.ru/">
@@ -351,17 +356,20 @@
 						<input id="usermessage" name="usermessage" placeholder="В свободной форме">
 					</div>
 				</div>
-				<button class="btn font_extra" type="submit">Отправить</button> 
+        <button class="btn font_extra" type="submit">Отправить</button> 
+        
+        <button class="modal_close" type="button"><span class="visually_hidden">Закрыть</span></button>
 			</form>
-			<button class="modal_close" type="button"><span class="visually_hidden">Закрыть</span></button>
-		</section>
+    </section>
+    
 		<section class="modal modal_map">
 			<h2 class="visually_hidden">Карта</h2>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6361.572655676862!2d37.52673662659867!3d55.68628279579961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2slv!4v1582573308087!5m2!1sru!2slv" width="960" height="559" style="border:0;" allowfullscreen=""></iframe>
 			<button class="modal_close" type="button"><span class="visually_hidden">Закрыть</span></button>
 		</section>
-		<script src="js/feedback.js"></script>
-		<script src="js/map.js"></script>
-		<script src="js/slider.js"></script>
+		<script src="js/feedback_min.js"></script>
+		<script src="js/map_min.js"></script>
+    <script src="js/slider_min.js"></script>
+    
 	</body>
 </html>
