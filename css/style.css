@@ -387,7 +387,11 @@ li .logout:active {
 }
 
 label.color_checkbox:hover>.checkbox_indicator::before,
-label.color_checkbox:hover>.checkbox_indicator::after {
+label.color_checkbox:hover>.checkbox_indicator::after,
+input.visually_hidden:focus+.checkbox_indicator::before,
+input.visually_hidden:focus+.checkbox_indicator::after,
+input.visually_hidden:focus+.radio_indicator::before,
+input.visually_hidden:focus+.radio_indicator::after {
     opacity: 0.6;
 }
 
@@ -1854,18 +1858,20 @@ fieldset {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	padding-top: 99px;
 }
 
 .write_us label {
 	font-size: 18px;
 	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 .write_us {
     position: relative;
 	padding-left: 100px;
 	padding-right: 100px;
+	padding-top: 99px;
+	padding-bottom: 90px;
 }
 
 .modal_feedback {
