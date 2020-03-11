@@ -21,6 +21,9 @@ close.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
 	if (!login.value || !email.value || !message.value) {
 		evt.preventDefault();
+		login.classList.add('modal_invalid');
+		email.classList.add('modal_invalid');
+		message.classList.add('modal_invalid');
 		popup.classList.remove("modal_error");
 		popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add("modal_error");

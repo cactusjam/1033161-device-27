@@ -5,7 +5,7 @@
 		<title>HTML Academy: Девайс</title>
 		<link rel="stylesheet" href="css/normalize_min.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
-		<link rel="stylesheet" href="css/style_min.css">
+		<link rel="stylesheet" href="css/style.css">
   </head>
   
 	<body class="page">
@@ -13,8 +13,8 @@
 
 			<div class="container">
 				<div class="header_block">
-					<div class="header_logo">
-						<img src="img/device.svg" width="163" height="35" alt="Device">
+					<div class="header_logo logo_index">
+						<a><img src="img/device.svg" width="163" height="35" alt="Device"></a>
 					</div>
 					<div class="header_options">
 						<form class="menu_search" action="https://echo.htmlacademy.ru" method="get">
@@ -74,21 +74,20 @@
 							<p>Самая длинная палка для селфи доступна в нашем магазине.
 								Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 							</p>
-							<a href="#" class="btn font_extra">Подробнее</a>  
-							<dl class="promo_details">
-								<div class="promo_specific">
-									<dt class="font_extra">8,5 м</dt>
-									<dd>Длина палки</dd>
-								</div>
-								<div class="promo_specific">
-									<dt class="font_extra">5 кг</dt>
-									<dd>Вес палки</dd>
-								</div>
-								<div class="promo_specific">
-									<dt class="font_extra">Карбон</dt>
-									<dd>Материал</dd>
-								</div>
-							</dl>
+							<a href="#" class="btn font_extra">Подробнее</a> 
+							<table class="promo_details">
+								<caption class="visually_hidden">Характеристика палки для селфи</caption>
+								<tr class="font_extra">
+								  <td>8,5 м</td>
+								  <td>5 кг</td>
+								  <td>Карбон</td>
+								</tr>
+								<tr>
+								  <th>Длина палки</th>
+								  <th>Вес палки</th>
+								  <th>Материал</th>
+								</tr>
+							  </table> 
 						</div>
 					</div>
 					<div class="slide_item slide_item_2 covered" data-slide="second_slide">
@@ -99,12 +98,16 @@
 							<p class="promo_slogan font_extra">Худеем правильно!</p>
 							<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 							<a class="btn font_extra">Подробнее</a>
-							<dl class="promo_details">
-								<div class="promo_specific">
-									<dt class="font_extra">48 часов</dt>
-									<dd>Без подзарядки</dd>
-								</div>
-							</dl>
+
+							<table class="promo_details">
+								<caption class="visually_hidden">Характеристика фитнес-браслета</caption>
+								<tr class="font_extra">
+								  <td>48 часов</td>
+								</tr>
+								<tr>
+								  <th>Без подзарядки</th>
+								</tr>
+							</table> 
 						</div>
 					</div>
 					<div class="slide_item slide_item_3 covered" data-slide="third_slide">
@@ -115,16 +118,19 @@
 							<p class="promo_slogan font_extra">Порхает как бабочка, жалит как пчела!</p>
 							<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 							<a class="btn font_extra">Подробнее</a>  
-							<dl class="promo_details">
-								<div class="promo_specific">
-									<dt class="font_extra">800 м</dt>
-									<dd>Дальность полета</dd>
-								</div>
-								<div class="promo_specific">
-									<dt class="font_extra">50 м</dt>
-									<dd>Радиус поражения</dd>
-								</div>
-							</dl>
+
+							<table class="promo_details">
+								<caption class="visually_hidden">Характеристика квадрокоптера</caption>
+								<tr class="font_extra">
+								  <td>800 м</td>
+								  <td>50 м</td>
+								</tr>
+								<tr>
+								  <th>Дальность полета</th>
+								  <th>Радиус поражения</th>
+								</tr>
+							</table> 
+
 						</div>
 					</div>
 				</div>
@@ -171,11 +177,11 @@
 					<div class="container">
 						<div class="block_tabs">
 							<h2 class="visually_hidden">Меню сервисов</h2>
-							<nav class="tabs_nav font_extra">
+							<div class="tabs_nav font_extra">
 								<button class="btn btn_active" data-slide="tabs_1">Доставка</button>
 								<button class="btn" data-slide="tabs_2">Гарантия</button>
 								<button class="btn" data-slide="tabs_3">Кредит</button>
-							</nav>
+							</div>
 							<div class="tabs_wrapper">
 								<div class="tab_content delivery_content" data-slide="tabs_1">
 									<h2 class="second_title font_extra">Доставка</h2>
@@ -227,9 +233,6 @@
 				<h2 class="visually_hidden">О компании</h2>
 				<div class="container">
 					<div class="about_us">
-						<svg>
-							<rect width="80" height="7" fill="#000000"/>
-						</svg>
 						<h2 class="second_title font_extra">О нас</h2>
 						<p class="about_us_p">Огромный выбор гаджетов не оставит равнодушным гика,  который есть в каждом из нас.</p>
 						<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -241,13 +244,10 @@
 						<a href="#" class="btn font_extra btn_more">Подробнее о нас</a>
 					</div>
 					<div class="about_contacts">
-						<svg>
-							<rect width="80" height="7" fill="#000000"/>
-						</svg>
 						<h2 class="second_title font_extra">Контакты</h2>
 						<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 						<img class="button_map" src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15" tabindex="0">
-						<button class="btn btn_feedback font_extra">Напишите нам</button> 
+						<a class="btn btn_feedback font_extra">Напишите нам</a> 
 					</div>
 				</div>
 			</section>
@@ -353,7 +353,7 @@
 					</div>
 					<div class="popup_feedback feedback_text">
 						<label for="usermessage" class="font_extra">Текст письма</label>
-						<input id="usermessage" name="usermessage" placeholder="В свободной форме">
+						<input id="usermessage" name="user_message" placeholder="В свободной форме">
 					</div>
 				</div>
         <button class="btn font_extra" type="submit">Отправить</button> 
@@ -367,9 +367,9 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6361.572655676862!2d37.52673662659867!3d55.68628279579961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2slv!4v1582573308087!5m2!1sru!2slv" width="960" height="559" style="border:0;" allowfullscreen=""></iframe>
 			<button class="modal_close" type="button"><span class="visually_hidden">Закрыть</span></button>
 		</section>
-		<script src="js/feedback_min.js"></script>
-		<script src="js/map_min.js"></script>
-    <script src="js/slider_min.js"></script>
+		<script src="js/feedback.js"></script>
+		<script src="js/map.js"></script>
+    <script src="js/slider.js"></script>
     
 	</body>
 </html>

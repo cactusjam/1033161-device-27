@@ -497,8 +497,7 @@ label.color_checkbox:disabled>.checkbox_indicator::after {
 	margin-top: 20px;
 }
 
-.content p:nth-child(2),
-.promo_specific dd {
+.promo_specific {
 	color: #464646;
 }
 
@@ -610,22 +609,31 @@ label.color_checkbox:disabled>.checkbox_indicator::after {
 	margin-bottom: 10px;
 }
 
-.promo_specific dd {
+.promo_details th{
 	font-size: 13px;
 	line-height: 20px;
 	letter-spacing: 0.13px;
 	margin: 0;
 	margin-top: 10px;
+	color: #464646;
 }
 
-.promo_details .promo_specific:not(:last-child) {
-	margin-right: 80px;
-}
-
-.promo_specific dt {
+.promo_details td {
 	font-size: 36px;
 	line-height: 48px;
 	letter-spacing: 0.36px;
+}
+
+.promo_details td,
+.promo_details th {
+  padding: 0;
+  text-align: left;
+  width: 160px;
+}
+
+.promo_details th {
+  padding-top: 9px;
+  font-weight: 300;
 }
 
 .category_list li {
@@ -789,6 +797,12 @@ label.color_checkbox:disabled>.checkbox_indicator::after {
 .page_header a:active {
 	opacity: 0.3;
 }
+
+.logo_index a:hover,
+.logo_index a:active {
+	opacity: 1;
+}
+
 
 .page_header .container {
 	position: relative;
@@ -1226,10 +1240,12 @@ ul .dellivery_company {
 	        flex-direction: column;
 }
 
-.about_us svg,
-.about_contacts svg {
+.about_us::before,
+.about_contacts::before {
+	content: "";
 	width: 80px;
 	height: 7px;
+	background-color: #000000;
 	margin-bottom: 46px;
 }
 
@@ -1968,6 +1984,11 @@ fieldset {
     right: 22px;
     width: 55px;
     height: 55px;
+}
+
+.modal_feedback .modal_invalid {
+	background-color: rgba(237, 181, 181, 0.5);
+	border: 0;
 }
 
 .modal .modal_close::before {
