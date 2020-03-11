@@ -1624,16 +1624,24 @@ ul .dellivery_company {
     margin-left: 20px;
 }
 
-.arrows .selected {
+.arrows a {
     opacity: 0.2;
+    cursor: pointer;
 }
 
-.arrows .selected:hover {
+.arrows a:hover,
+.arrows a:focus {
     opacity: 0.4;
 }
 
-.arrows .selected:active {
+.arrows a:active {
     opacity: 1;
+}
+
+.arrows .selected,
+.arrows .selected:hover {
+    opacity: 1;
+    cursor: auto;
 }
 
 .arrows_item_asc img {
