@@ -21,12 +21,24 @@ close.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
 	if (!login.value || !email.value || !message.value) {
 		evt.preventDefault();
-		login.classList.add('modal_invalid');
-		email.classList.add('modal_invalid');
-		message.classList.add('modal_invalid');
 		popup.classList.remove("modal_error");
 		popup.offsetWidth = popup.offsetWidth;
 		popup.classList.add("modal_error");
+		if (login.value === '') {
+			login.classList.add('modal_invalid');
+		} else {
+			login.classList.remove('modal_invalid');
+		}
+		if (email.value === '') {
+			email.classList.add('modal_invalid');
+		} else {
+			email.classList.remove('modal_invalid');
+		}
+		if (message.value === '') {
+			message.classList.add('modal_invalid');
+		} else {
+			message.classList.remove('modal_invalid');
+		}
 	}
 });
 
@@ -38,4 +50,4 @@ window.addEventListener("keydown", function (evt) {
 			popup.classList.remove("modal_error");
 		}
 	}
-});
+});	
