@@ -1371,6 +1371,7 @@ ul .dellivery_company {
 .nav_footer .logout {
 	margin-left: 20px;
 	color: rgba(255, 255, 255);
+	padding: 0;
 }
 
 .nav_footer a {
@@ -1414,7 +1415,7 @@ ul .dellivery_company {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-top: 23px;
+	margin-top: 21px;
 }
 
 .footer_middle a {
@@ -1441,13 +1442,13 @@ ul .dellivery_company {
 .footer_links li {
 	font-weight: bold;
 	font-size: 18px;
-	letter-spacing: 3.1px;
+	letter-spacing: 3.6px;
 	text-transform: uppercase;
 	list-style: none;
 }
 
 .footer_links li:not(:last-child) {
-	margin-right: 30px;
+	margin-right: 32px;
 }
 
 .footer_bottom,
@@ -1728,7 +1729,7 @@ ul .dellivery_company {
 .catalog {
 	-ms-flex-preferred-size: 760px;
 	flex-basis: 760px;
-	margin-bottom: 73px;
+	margin-bottom: 76px;
 }
 
 .sorting {

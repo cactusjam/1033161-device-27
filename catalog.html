@@ -78,13 +78,13 @@
 						<form class="filter_form" action="https://echo.htmlacademy.ru/" method="get">
 							<div class="choose">
 								<span class="filter_title font_extra">Стоимость</span>
-								<div class="filter_range" aria-label="Переключение слайдера">
+								<div class="filter_range">
 									<div class="range_controls">
 										<div class="scale">
 											<div class="bar"></div>
 										</div>
-										<div class="range_toggle range_toggle_min" tabindex="0"></div>
-										<div class="range_toggle range_toggle_max" tabindex="0"></div>
+										<div class="range_toggle range_toggle_min" tabindex="0" aria-label="Стоимость от"></div>
+										<div class="range_toggle range_toggle_max" tabindex="0" aria-label="Стоимость до"></div>
 									</div>
 									<div class="price_controls">
 										<label class="min_price"><input class="visually_hidden" type="number" name="min-price" value="0" tabindex="-1">от 0</label>
@@ -167,10 +167,10 @@
 							</ul>
 							<ul class="arrows">
 								<li class="arrows_item arrows_item_asc">
-									<a class="up" href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="сортировать по возрастанию"></a>
+									<a class="up" href="#" aria-label="сортировка по возрастанию"><img src="img/icon-up-dir.svg" width="11" height="10" alt="сортировать по возрастанию"></a>
 								</li>
 								<li class="arrows_item arrows_item_desc">
-									<a class="down selected"><img src="img/icon-down-dir.svg" width="11" height="10" alt="сортировать по убыванию"></a>
+									<a class="down selected" aria-label="сортировка по убыванию"><img src="img/icon-down-dir.svg" width="11" height="10" alt="сортировать по убыванию"></a>
 								</li>
 							</ul>
 						</div>
