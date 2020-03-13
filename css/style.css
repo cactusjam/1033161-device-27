@@ -1260,6 +1260,14 @@ ul .dellivery_company {
 	margin-bottom: 46px;
 }
 
+.about_us p {
+	margin: 0;
+}
+
+.about_us p:nth-of-type(2) {
+	margin-top: 30px;
+}
+
 .about_us .about_us_p,
 .about_contacts p {
 	margin-top: 44px;
@@ -1284,7 +1292,7 @@ ul .dellivery_company {
 }
 
 .about_us {
-	width: 472px;
+	width: 473px;
 }
 
 .about_us p,
@@ -1301,7 +1309,7 @@ ul .dellivery_company {
 
 .dellivery_company {
 	margin: 0;
-	margin-top: 50px;
+	margin-top: 65px;
 }
 
 .dellivery_company li {
@@ -1668,6 +1676,8 @@ ul .dellivery_company {
 
 .catalog_items_info span {
 	margin-left: auto;
+	font-size: 16px;
+	letter-spacing: 0.16px;
 }
 
 .catalog_items a {
